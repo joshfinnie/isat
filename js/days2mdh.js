@@ -1,6 +1,3 @@
-/*global
-  jday : true
-*/
 // ------------------------------------------------------------------------------
 //
 //                           function days2mdh
@@ -36,10 +33,11 @@
 //
 // [mon,day,hr,minute,sec] = days2mdh ( year,days);
 // -----------------------------------------------------------------------------
+import jday from './jday';
 
-var i, lmonth = [], dayofyr, i, inttemp, mon, day, temp, hr, minute, sec, julianday;
+let i, lmonth = [], dayofyr, inttemp, mon, day, temp, hr, minute, sec, julianday;
 
-function days2mdh(year, days) {
+export default function days2mdh(year, days) {
     // --------------- set up array of days in month  --------------
     // This is crazy, why not just:
     // lmonth = [undefined, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

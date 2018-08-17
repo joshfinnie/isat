@@ -33,12 +33,11 @@
 // jd = jday(yr, mon, day, hr, min, sec)
 // -----------------------------------------------------------------------------
 
-function jday(yr, mon, day, hr, min, sec) {
+export default function jday(yr, mon, day, hr, min, sec) {
     return 367.0 * yr -
         Math.floor((7 * (yr + Math.floor((mon + 9) / 12.0))) * 0.25) +
         Math.floor(275 * mon / 9.0) +
         day + 1721013.5 +
         ((sec / 60.0 + min) / 60.0 + hr) / 24.0;
-        //  - 0.5 * sign(100.0 * yr + mon - 190002.5) + 0.5;
 }
 

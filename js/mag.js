@@ -25,13 +25,12 @@
 // mag = ( vec );
 // ----------------------------------------------------------------------------- }
 
-function mag(vec) {
-    var temp = vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2],
-        mymag = 0.0;
+export default function mag(vec) {
+    const temp = vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2];
+    let mymag = 0.0;
 
     if (Math.abs(temp) >= 1.0e-16) {
         mymag = Math.sqrt(temp);
     }
     return mymag;
 }
-

@@ -1,6 +1,6 @@
 // Math Utilities to replicate functions used by MATLAB/Octave.
 
-function sign(val) {
+export function sign(val) {
     if (val < 0) {
         return -1;
     }
@@ -10,7 +10,7 @@ function sign(val) {
     return 0;
 }
 
-function cross(v1, v2) {
+export function cross(v1, v2) {
     // Return 3d cross product vector from two 3d vectors.
     // http://knol.google.com/k/dot-product-cross-product-in-3d
     // http://rosettacode.org/wiki/Vector_products
@@ -24,7 +24,7 @@ function cross(v1, v2) {
     return [y1 * z2 - y2 * z1, z1 * x2 - z2 * x1, x1 * y2 - x2 * y1];
 }
 
-function dot(a, b) {
+export function dot(a, b) {
     // Return a scalar dot product of two multidimensional vectors.
     // http://c2.com/cgi/wiki?DotProductInManyProgrammingLanguages
     var n = 0,
@@ -35,6 +35,3 @@ function dot(a, b) {
     }
     return n;
 }
-
-
-

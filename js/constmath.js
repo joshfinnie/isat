@@ -24,21 +24,20 @@
 // constmath;
 // ------------------------------------------------------------------------------
 
-var small       = 0.00000001,
+export const small = 0.00000001;
 
-    infinite    = 999999.9,
-    UNDEFINED   = 999999.1,       // lowercase is JavaScript reserved word
+export const infinite = 999999.9;
+export const UNDEFINED = 999999.1;       // lowercase is JavaScript reserved word
 
-    // -------------------------  mathematical  --------------------
-    rad         = 180.0 / Math.PI,
-    twopi       = 2.0 * Math.PI,
-    halfpi      = Math.PI * 0.5,
+// -------------------------  mathematical  --------------------
+export const rad = 180.0 / Math.PI;
+export const twopi = 2.0 * Math.PI;
+export const halfpi = Math.PI * 0.5;
 
-    // -------------------------  conversions  ---------------------
-    ft2m        =    0.3048,
-    mile2m      = 1609.344,
-    nm2m        = 1852,
-    mile2ft     = 5280,
-    mileph2kmph = 0.44704,
-    nmph2kmph   = 0.5144444;
-
+// -------------------------  conversions  ---------------------
+export const ft2m = 0.3048;
+export const mile2m = 1609.344;
+export const nm2m = 1852;
+export const mile2ft = 5280;
+export const mileph2kmph = 0.44704;
+export const nmph2kmph = 0.5144444;

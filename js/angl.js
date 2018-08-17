@@ -6,14 +6,16 @@
 //
 // [theta] = angl ( vec1,vec2 );
 // -----------------------------------------------------------------------------
+import mag from './mag';
+import { dot } from './math_utils';
 
-function angl(vec1, vec2) {
-    var SMALL     = 0.00000001,
-        UNDEFINED = 999999.1,
-        magv1     = mag(vec1),
-        magv2     = mag(vec2),
-        temp,
-        theta;
+export default function angl(vec1, vec2) {
+    const SMALL = 0.00000001;
+    const UNDEFINED = 999999.1;
+    const magv1 = mag(vec1);
+    const magv2 = mag(vec2);
+    let temp;
+    let theta = UNDEFINED;
 
     if (magv1 * magv2 > SMALL * SMALL) {
         temp = dot(vec1, vec2) / (magv1 * magv2);
@@ -22,8 +24,6 @@ function angl(vec1, vec2) {
         }
         theta = Math.acos(temp);
     }
-    else {
-        theta = UNDEFINED;
-    }
+
     return theta;
 }
