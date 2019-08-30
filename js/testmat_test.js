@@ -3,4 +3,4 @@
 
 // insert test code here!
 var rets = testmat();
-equal(1,1);
+equal(1, 1);

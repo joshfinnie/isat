@@ -33,9 +33,19 @@
 //
 // [mon,day,hr,minute,sec] = days2mdh ( year,days);
 // -----------------------------------------------------------------------------
-import jday from './jday';
+import jday from "./jday";
 
-let i, lmonth = [], dayofyr, inttemp, mon, day, temp, hr, minute, sec, julianday;
+let i,
+    lmonth = [],
+    dayofyr,
+    inttemp,
+    mon,
+    day,
+    temp,
+    hr,
+    minute,
+    sec,
+    julianday;
 
 export default function days2mdh(year, days) {
     // --------------- set up array of days in month  --------------
@@ -60,7 +70,7 @@ export default function days2mdh(year, days) {
 
     i = 1;
     inttemp = 0;
-    while ((dayofyr > inttemp + lmonth[i]) && (i < 12)) {
+    while (dayofyr > inttemp + lmonth[i] && i < 12) {
         inttemp = inttemp + lmonth[i];
         i += 1;
     }
@@ -73,11 +83,11 @@ export default function days2mdh(year, days) {
     // negative numbers than JavaScript's Math.floor() which rounds down.
     // But it should be fine here, for positve numbers.
 
-    temp   = (days - dayofyr) * 24.0;
-    hr     = Math.floor(temp);
-    temp   = (temp - hr) * 60.0;
+    temp = (days - dayofyr) * 24.0;
+    hr = Math.floor(temp);
+    temp = (temp - hr) * 60.0;
     minute = Math.floor(temp);
-    sec    = (temp - minute) * 60.0;
+    sec = (temp - minute) * 60.0;
 
     julianday = jday(year, mon, day, hr, minute, sec);
 

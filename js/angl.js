@@ -6,8 +6,8 @@
 //
 // [theta] = angl ( vec1,vec2 );
 // -----------------------------------------------------------------------------
-import mag from './mag';
-import { dot } from './math_utils';
+import mag from "./mag";
+import {dot} from "./math_utils";
 
 export default function angl(vec1, vec2) {
     const SMALL = 0.00000001;

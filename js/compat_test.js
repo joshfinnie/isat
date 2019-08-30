@@ -1,32 +1,32 @@
-module('compat');
+module("compat");
 
-test('trim " center "', function () {
+test('trim " center "', function() {
     equal(" center ".trim(), "center");
 });
-test('trim "left "', function () {
+test('trim "left "', function() {
     equal("left ".trim(), "left");
 });
-test('trim " right"', function () {
+test('trim " right"', function() {
     equal(" right".trim(), "right");
 });
 
-test('ltrim " center "', function () {
+test('ltrim " center "', function() {
     equal(" center ".ltrim(), "center ");
 });
-test('ltrim "left "', function () {
+test('ltrim "left "', function() {
     equal("left ".ltrim(), "left ");
 });
-test('ltrim " right"', function () {
+test('ltrim " right"', function() {
     equal(" right".ltrim(), "right");
 });
 
-test('rtrim " center "', function () {
+test('rtrim " center "', function() {
     equal(" center ".rtrim(), " center");
 });
-test('rtrim "left "', function () {
+test('rtrim "left "', function() {
     equal("left ".rtrim(), "left");
 });
-test('rtrim " right"', function () {
+test('rtrim " right"', function() {
     equal(" right ".rtrim(), " right");
 });
 

@@ -41,26 +41,30 @@
 
 function invjday(jd) {
     // ----------------- find year and days of the year ---------------
-    var temp   = jd - 2415019.5,
-        tu      = temp / 365.25,
-        year    = 1900 + Math.floor(tu),
+    var temp = jd - 2415019.5,
+        tu = temp / 365.25,
+        year = 1900 + Math.floor(tu),
         leapyrs = Math.floor((year - 1901) * 0.25),
         //     days   = temp - ((year-1900)*365.0 + leapyrs ) + 0.00000000001; // nudge by 8.64x10-7 sec to get even outputs
-        days    = temp - ((year - 1900) * 365.0 + leapyrs),
-        mon, day, hr, min, sec,
+        days = temp - ((year - 1900) * 365.0 + leapyrs),
+        mon,
+        day,
+        hr,
+        min,
+        sec,
         rets;
 
     // ------------ check for case of beginning of a year -------------
     if (days < 1.0) {
-        year    = year - 1;
+        year = year - 1;
         leapyrs = Math.floor((year - 1901) * 0.25);
-        days    = temp - ((year - 1900) * 365.0 + leapyrs);
+        days = temp - ((year - 1900) * 365.0 + leapyrs);
     }
     // ------------------- find remaining data  -----------------------
     rets = days2mdh(year, days);
     mon = rets.shift();
     day = rets.shift();
-    hr  = rets.shift();
+    hr = rets.shift();
     min = rets.shift();
     sec = rets.shift();
     //     sec= sec - 0.00000086400;

@@ -2,7 +2,7 @@
 //
 //                           function constmath
 //
-//  this function sets constants for mathematical operations. 
+//  this function sets constants for mathematical operations.
 //
 //  author        : david vallado                  719-573-2600    2 apr 2007
 //
@@ -27,7 +27,7 @@
 export const small = 0.00000001;
 
 export const infinite = 999999.9;
-export const UNDEFINED = 999999.1;       // lowercase is JavaScript reserved word
+export const UNDEFINED = 999999.1; // lowercase is JavaScript reserved word
 
 // -------------------------  mathematical  --------------------
 export const rad = 180.0 / Math.PI;
