@@ -1,3 +1,4 @@
+import { Satrec } from "./satrec.js";
 import { getgravc } from "./getgravc.js";
 import { initl } from "./initl.js";
 import { dscom } from "./dscom.js";
@@ -191,92 +192,9 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch, xargpo, xinclo, xmo,
         cc1sq,
         temp;
 
-    // /* ------------------------ initialization --------------------- */
-    // /* ----------- set all near earth variables to zero ------------ */
-    satrec.isimp = 0;
-    satrec.method = "n";
-    satrec.aycof = 0.0;
-    satrec.con41 = 0.0;
-    satrec.cc1 = 0.0;
-    satrec.cc4 = 0.0;
-    satrec.cc5 = 0.0;
-    satrec.d2 = 0.0;
-    satrec.d3 = 0.0;
-    satrec.d4 = 0.0;
-    satrec.delmo = 0.0;
-    satrec.eta = 0.0;
-    satrec.argpdot = 0.0;
-    satrec.omgcof = 0.0;
-    satrec.sinmao = 0.0;
-    satrec.t = 0.0;
-    satrec.t2cof = 0.0;
-    satrec.t3cof = 0.0;
-    satrec.t4cof = 0.0;
-    satrec.t5cof = 0.0;
-    satrec.x1mth2 = 0.0;
-    satrec.x7thm1 = 0.0;
-    satrec.mdot = 0.0;
-    satrec.nodedot = 0.0;
-    satrec.xlcof = 0.0;
-    satrec.xmcof = 0.0;
-    satrec.nodecf = 0.0;
-    // /* ----------- set all deep space variables to zero ------------ */
-    satrec.irez = 0;
-    satrec.d2201 = 0.0;
-    satrec.d2211 = 0.0;
-    satrec.d3210 = 0.0;
-    satrec.d3222 = 0.0;
-    satrec.d4410 = 0.0;
-    satrec.d4422 = 0.0;
-    satrec.d5220 = 0.0;
-    satrec.d5232 = 0.0;
-    satrec.d5421 = 0.0;
-    satrec.d5433 = 0.0;
-    satrec.dedt = 0.0;
-    satrec.del1 = 0.0;
-    satrec.del2 = 0.0;
-    satrec.del3 = 0.0;
-    satrec.didt = 0.0;
-    satrec.dmdt = 0.0;
-    satrec.dnodt = 0.0;
-    satrec.domdt = 0.0;
-    satrec.e3 = 0.0;
-    satrec.ee2 = 0.0;
-    satrec.peo = 0.0;
-    satrec.pgho = 0.0;
-    satrec.pho = 0.0;
-    satrec.pinco = 0.0;
-    satrec.plo = 0.0;
-    satrec.se2 = 0.0;
-    satrec.se3 = 0.0;
-    satrec.sgh2 = 0.0;
-    satrec.sgh3 = 0.0;
-    satrec.sgh4 = 0.0;
-    satrec.sh2 = 0.0;
-    satrec.sh3 = 0.0;
-    satrec.si2 = 0.0;
-    satrec.si3 = 0.0;
-    satrec.sl2 = 0.0;
-    satrec.sl3 = 0.0;
-    satrec.sl4 = 0.0;
-    satrec.gsto = 0.0;
-    satrec.xfact = 0.0;
-    satrec.xgh2 = 0.0;
-    satrec.xgh3 = 0.0;
-    satrec.xgh4 = 0.0;
-    satrec.xh2 = 0.0;
-    satrec.xh3 = 0.0;
-    satrec.xi2 = 0.0;
-    satrec.xi3 = 0.0;
-    satrec.xl2 = 0.0;
-    satrec.xl3 = 0.0;
-    satrec.xl4 = 0.0;
-    satrec.xlamo = 0.0;
-    satrec.zmol = 0.0;
-    satrec.zmos = 0.0;
-    satrec.atime = 0.0;
-    satrec.xli = 0.0;
-    satrec.xni = 0.0;
+    // Merge caller-supplied fields into a fresh Satrec (zeroes anything not pre-set).
+    // Plain objects are accepted for backwards compatibility.
+    satrec = Object.assign(new Satrec(), satrec);
 
     // sgp4fix - note the following variables are also passed directly via satrec.
     // it is possible to streamline the sgp4init call by deleting the "x"

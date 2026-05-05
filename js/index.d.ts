@@ -1,5 +1,6 @@
 /** Satellite record populated by twoline2rv / sgp4init and updated by sgp4. */
-export interface Satrec {
+export declare class Satrec {
+    constructor();
     /** Satellite catalog number */
     satnum: number;
     /** Two-digit epoch year */
@@ -188,7 +189,7 @@ export function twoline2rv(
  */
 export function sgp4init(
     whichconst: WhichConst,
-    satrec: Partial<Satrec>,
+    satrec: Partial<Satrec> | Record<string, unknown>,
     xbstar: number,
     xecco: number,
     epoch: number,

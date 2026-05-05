@@ -1,3 +1,4 @@
+export { Satrec } from "./satrec.js";
 export { twoline2rv } from "./twoline2rv.js";
 export { sgp4 } from "./sgp4.js";
 export { sgp4init } from "./sgp4init.js";

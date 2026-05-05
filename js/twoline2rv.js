@@ -1,3 +1,4 @@
+import { Satrec } from "./satrec.js";
 import { getgravc } from "./getgravc.js";
 import { days2mdh } from "./days2mdh.js";
 import { jday } from "./jday.js";
@@ -68,7 +69,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         _j3,
         _j4,
         _j3oj2,
-        satrec = {},
+        satrec = new Satrec(),
         _revnum = 0,
         _elnum = 0,
         year = 0,
@@ -93,8 +94,6 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         sgp4epoch;
 
     [tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2] = getgravc(whichconst);
-
-    satrec.error = 0;
 
     // JavaScript's strings are immutable strings, so convert to
     // mutable array, munge, then convert back to strings.
