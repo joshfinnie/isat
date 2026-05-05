@@ -63,22 +63,22 @@ function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode) {
 
     if (opsmode === undefined) { opsmode = 'i'; }
 
-    var x2o3   = 2.0 / 3.0,
-        // /* ------------- calculate auxillary epoch quantities ---------- */
-        eccsq  = ecco * ecco,
-        omeosq = 1.0 - eccsq,
-        rteosq = Math.sqrt(omeosq),
-        cosio  = Math.cos(inclo),
-        cosio2 = cosio * cosio,
-        // /* ------------------ un-kozai the mean motion ----------------- */
-        ak    = Math.pow(xke / no, x2o3),
-        d1    = 0.75 * j2 * (3.0 * cosio2 - 1.0) / (rteosq * omeosq),
-        del   = d1 / (ak * ak),
-        adel  = ak * (1.0 - del * del - del *
-                   (1.0 / 3.0 + 134.0 * del * del / 81.0)),
-        // defined elsewhere
-        ao, sinio, po, con42, con41, ainv, einv, posq, rp, method,
-        gsto, ts70, ids70, tfrac, c1, thgr70, fk5r, twopi, c1p2p;
+    const x2o3   = 2.0 / 3.0,
+          // /* ------------- calculate auxillary epoch quantities ---------- */
+          eccsq  = ecco * ecco,
+          omeosq = 1.0 - eccsq,
+          rteosq = Math.sqrt(omeosq),
+          cosio  = Math.cos(inclo),
+          cosio2 = cosio * cosio;
+    // /* ------------------ un-kozai the mean motion ----------------- */
+    let   ak    = Math.pow(xke / no, x2o3),
+          d1    = 0.75 * j2 * (3.0 * cosio2 - 1.0) / (rteosq * omeosq),
+          del   = d1 / (ak * ak),
+          adel  = ak * (1.0 - del * del - del *
+                     (1.0 / 3.0 + 134.0 * del * del / 81.0)),
+          // defined elsewhere
+          ao, sinio, po, con42, con41, ainv, einv, posq, rp, method,
+          gsto, ts70, ids70, tfrac, c1, thgr70, fk5r, twopi, c1p2p;
 
     del   = d1 / (adel * adel);
     no    = no / (1.0 + del);

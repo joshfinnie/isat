@@ -69,7 +69,7 @@ import { newtonnu } from "./newtonnu.js";
 
 function rv2coe(r, v, mu) {
     // -------------------------  implementation   -----------------
-    var magr, magv,
+    let magr, magv,
         // ------------------  find h n and e vectors   ----------------
         hbar,                       // hbar is a vector
         magh,

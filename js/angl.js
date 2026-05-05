@@ -9,12 +9,11 @@ import { dot, sign } from "./math_utils.js";
 // -----------------------------------------------------------------------------
 
 function angl(vec1, vec2) {
-    var SMALL     = 0.00000001,
-        UNDEFINED = 999999.1,
-        magv1     = mag(vec1),
-        magv2     = mag(vec2),
-        temp,
-        theta;
+    const SMALL     = 0.00000001,
+          UNDEFINED = 999999.1,
+          magv1     = mag(vec1),
+          magv2     = mag(vec2);
+    let temp, theta;
 
     if (magv1 * magv2 > SMALL * SMALL) {
         temp = dot(vec1, vec2) / (magv1 * magv2);

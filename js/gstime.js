@@ -29,9 +29,9 @@
 // -----------------------------------------------------------------------------
 
 function gstime(jdut1) {
-    var twopi      = 2.0 * Math.PI,
-        deg2rad    = Math.PI / 180.0,
-        tut1, temp;
+    const twopi   = 2.0 * Math.PI,
+          deg2rad = Math.PI / 180.0;
+    let tut1, temp;
 
     // ------------------------  implementation   ------------------
     tut1 = (jdut1 - 2451545.0) / 36525.0;

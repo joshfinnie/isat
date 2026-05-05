@@ -24,7 +24,7 @@
 // constmath;
 // ------------------------------------------------------------------------------
 
-var small       = 0.00000001,
+const small       = 0.00000001,
 
     infinite    = 999999.9,
     UNDEFINED   = 999999.1,       // lowercase is JavaScript reserved word

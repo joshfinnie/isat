@@ -29,7 +29,7 @@
 //  --------------------------------------------------------------------------- */
 
 function getgravc(whichconst) {
-    var mu, radiusearthkm, xke, tumin, j2, j3, j4, j3oj2;
+    let mu, radiusearthkm, xke, tumin, j2, j3, j4, j3oj2;
 
     switch (whichconst) {
     case 721:

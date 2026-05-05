@@ -77,17 +77,17 @@ function dpper(e3,     ee2,    peo,    pgho,   pho,    pinco,  plo,    se2,
 
     if (opsmode === undefined) { opsmode = 'i'; }
 
-    var twopi = 2.0 * Math.PI,
-    // /* ---------------------- constants ----------------------------- */
-    zns   = 1.19459e-5,
-    zes   = 0.01675,
-    znl   = 1.5835218e-4,
-    zel   = 0.05490,
-    zm    = zmos + zns * t,
-    zf, sinzf, f2, f3, ses, sis, sls, sghs, shs,
-    sel, sil, sll, sghl, shll, pe, pinc, pl, pgh, ph,
-    sinip, cosip,
-    sinop, cosop, alfdp, _betdb, dalf, dbet, betdp, xls, dls, xnoh;
+    const twopi = 2.0 * Math.PI,
+          // /* ---------------------- constants ----------------------------- */
+          zns   = 1.19459e-5,
+          zes   = 0.01675,
+          znl   = 1.5835218e-4,
+          zel   = 0.05490;
+    let   zm    = zmos + zns * t,
+          zf, sinzf, f2, f3, ses, sis, sls, sghs, shs,
+          sel, sil, sll, sghl, shll, pe, pinc, pl, pgh, ph,
+          sinip, cosip,
+          sinop, cosop, alfdp, _betdb, dalf, dbet, betdp, xls, dls, xnoh;
 
     // /* --------------- calculate time varying periodics ----------- */
     // // be sure that the initial call has time set to zero

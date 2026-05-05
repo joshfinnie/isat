@@ -59,19 +59,19 @@ import { sgp4init } from "./sgp4init.js";
 //  ----------------------------------------------------------------------------*/
 
 function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
-    var tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2,
-        deg2rad         = Math.PI / 180.0, // 0.01745329251994330  [deg/rad]
-        xpdotp          = 1440.0 / (2.0 * Math.PI), // 229.1831180523293  [rev/day]/[rad/min]
-        satrec          = {},
-        _revnum          = 0,
-        _elnum           = 0,
-        year            = 0,
-        j,
-        _carnumb, _classification, _intldesg, nexp, ibexp, _numb,
-        _cardnumb, startmfe, stopmfe, deltamin,
-        mon, day, hr, minute, sec,
-        jdstart, jdstop,
-        sgp4epoch;
+    const deg2rad = Math.PI / 180.0, // 0.01745329251994330  [deg/rad]
+          xpdotp  = 1440.0 / (2.0 * Math.PI); // 229.1831180523293  [rev/day]/[rad/min]
+    let   tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2,
+          satrec          = {},
+          _revnum          = 0,
+          _elnum           = 0,
+          year            = 0,
+          j,
+          _carnumb, _classification, _intldesg, nexp, ibexp, _numb,
+          _cardnumb, startmfe, stopmfe, deltamin,
+          mon, day, hr, minute, sec,
+          jdstart, jdstop,
+          sgp4epoch;
 
     [tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2] = getgravc(whichconst);
 
@@ -217,7 +217,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     // input start stop times manually
     if ((typerun !== 'v') && (typerun !== 'c')) {
         if (typeinput === 'n') { // 'now', from viz layer
-            var now = new Date();
+            const now = new Date();
             jdstart = jday(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(),
                            now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
             jdstop =  jday(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(),

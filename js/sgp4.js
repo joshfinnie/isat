@@ -103,28 +103,28 @@ import { dspace } from "./dspace.js";
 function sgp4(satrec, tsince) {
 
     // /* ------------------ set mathematical constants --------------- */
-    var twopi = 2.0 * Math.PI,
-        x2o3  = 2.0 / 3.0,
-        // sgp4fix divisor for divide by zero check on inclination
-        // the old check used 1.0 + Math.cos(pi-1.0e-9), but then compared it to
-        // 1.5 e-12, so the threshold was changed to 1.5e-12 for consistancy
-        temp4    =   1.5e-12,
+    const twopi = 2.0 * Math.PI,
+          x2o3  = 2.0 / 3.0,
+          // sgp4fix divisor for divide by zero check on inclination
+          // the old check used 1.0 + Math.cos(pi-1.0e-9), but then compared it to
+          // 1.5 e-12, so the threshold was changed to 1.5e-12 for consistancy
+          temp4 = 1.5e-12;
 
     // sgp4fix identify constants and allow alternate values
-    _tumin, _mu, radiusearthkm, xke, j2, _j3, _j4, j3oj2,
-    vkmpersec,
-    xmdf, argpdf, nodedf, argpm, mm, t2, nodem, tempa, tempe, templ,
-    delomg, delm, temp, t3, t4,
-    nm, em, inclm, tc, am,
-    emsq,
-    xlm, sinim, cosim, ep, xincp, argpp, nodep, mp, sinip, cosip,
-    axnl, aynl, xl, u, eo1, tem5, ktr, sineo1, coseo1,
-    ecose, esine, el2, pl,
-    r = [],
-    v = [],
-    rl, rdotl, rvdotl, betal, sinu, cosu, su, sin2u, cos2u, temp1, temp2,
-    cosisq, mrt, xnode, xinc, mvt, rvdot,
-    sinsu, cossu, snod, cnod, sini, cosi, xmx, xmy, ux, uy, uz, vx, vy, vz;
+    let _tumin, _mu, radiusearthkm, xke, j2, _j3, _j4, j3oj2,
+        vkmpersec,
+        xmdf, argpdf, nodedf, argpm, mm, t2, nodem, tempa, tempe, templ,
+        delomg, delm, temp, t3, t4,
+        nm, em, inclm, tc, am,
+        emsq,
+        xlm, sinim, cosim, ep, xincp, argpp, nodep, mp, sinip, cosip,
+        axnl, aynl, xl, u, eo1, tem5, ktr, sineo1, coseo1,
+        ecose, esine, el2, pl,
+        r = [],
+        v = [],
+        rl, rdotl, rvdotl, betal, sinu, cosu, su, sin2u, cos2u, temp1, temp2,
+        cosisq, mrt, xnode, xinc, mvt, rvdot,
+        sinsu, cossu, snod, cnod, sini, cosi, xmx, xmy, ux, uy, uz, vx, vy, vz;
 
     [_tumin, _mu, radiusearthkm, xke, j2, _j3, _j4, j3oj2] = getgravc(satrec.whichconst || 72);
 

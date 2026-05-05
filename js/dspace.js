@@ -83,31 +83,30 @@ function dspace(d2201,  d2211,  d3210,  d3222,  d4410,  d4422,  d5220,
                 em,     argpm,  inclm,  xli,    mm,     xni,    nodem,
                 nm) {
 
-    var twopi = 2.0 * Math.PI,
-        fasx2 = 0.13130908,
-        fasx4 = 2.8843198,
-        fasx6 = 0.37448087,
-        g22   = 5.7686396,
-        g32   = 0.95240898,
-        g44   = 1.8014998,
-        g52   = 1.0508330,
-        g54   = 4.4108898,
-        // eslint-disable-next-line no-loss-of-precision
-        rptim = 4.37526908801129966e-3,
-        stepp =    720.0,
-        stepn =   -720.0,
-        step2 = 259200.0,
-
-    // /* ----------- calculate deep space resonance effects ----------- */
-    dndt   = 0.0,
-    theta  = (gsto + tc * rptim) % twopi,
-    // defined elsewhere
-    ft,
-    delt,
-    iretn, _iret,
-    xndt, xldot, xnddt,
-    xomi, x2omi, x2li,
-    xl;
+    const twopi = 2.0 * Math.PI,
+          fasx2 = 0.13130908,
+          fasx4 = 2.8843198,
+          fasx6 = 0.37448087,
+          g22   = 5.7686396,
+          g32   = 0.95240898,
+          g44   = 1.8014998,
+          g52   = 1.0508330,
+          g54   = 4.4108898,
+          // eslint-disable-next-line no-loss-of-precision
+          rptim = 4.37526908801129966e-3,
+          stepp =    720.0,
+          stepn =   -720.0,
+          step2 = 259200.0,
+          // /* ----------- calculate deep space resonance effects ----------- */
+          theta = (gsto + tc * rptim) % twopi;
+    let   dndt  = 0.0,
+          // defined elsewhere
+          ft,
+          delt,
+          iretn, _iret,
+          xndt, xldot, xnddt,
+          xomi, x2omi, x2li,
+          xl;
 
     em     = em + dedt * t;
     inclm  = inclm + didt * t;

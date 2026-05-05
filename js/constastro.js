@@ -32,7 +32,7 @@ import { nm2m, ft2m } from "./constmath.js";
 
 // -----------------------  physical constants  ----------------
 // WGS-84/EGM-96 constants used here
-var re         = 6378.137,         // km
+const re         = 6378.137,         // km
     flat       = 1.0 / 298.257223563,
     omegaearth = 7.292115e-11,     // rad/s
     mu         = 398600.4418,      // km3/s2

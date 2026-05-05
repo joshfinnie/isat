@@ -51,10 +51,10 @@ function asinh(val) {
 
 
 function newtonnu(ecc, nu) {
-    var e0 = 999999.9,
-        m = 999999.9,
-        small = 0.00000001,
-        sine, cose;
+    let e0 = 999999.9,
+        m = 999999.9;
+    const small = 0.00000001;
+    let sine, cose;
 
     // --------------------------- circular ------------------------
     if (Math.abs(ecc) < small) {

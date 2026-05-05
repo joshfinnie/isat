@@ -34,9 +34,8 @@
 // [mon,day,hr,minute,sec] = days2mdh ( year,days);
 // -----------------------------------------------------------------------------
 
-var i, lmonth = [], dayofyr, inttemp, mon, day, temp, hr, minute, sec;
-
 function days2mdh(year, days) {
+    let i, lmonth = [], dayofyr, inttemp, mon, day, temp, hr, minute, sec;
     // --------------- set up array of days in month  --------------
     // This is crazy, why not just:
     // lmonth = [undefined, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

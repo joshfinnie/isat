@@ -92,7 +92,7 @@ import { sgp4 } from "./sgp4.js";
 
 function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
                   xargpo, xinclo, xmo, xno, xnodeo) {
-    var _tumin, _mu, radiusearthkm, xke, j2, _j3, j4, j3oj2,
+    let _tumin, _mu, radiusearthkm, xke, j2, _j3, j4, j3oj2,
         ss, qzms2t, x2o3, temp4,
         _ainv, ao, con42, cosio, cosio2, _einv, eccsq, omeosq, posq, rp, rteosq, sinio,
         sfour, qzms24, perige, pinvsq, tsi, etasq, eeta, psisq, coef, coef1, cc2, cc3,

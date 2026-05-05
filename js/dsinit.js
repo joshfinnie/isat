@@ -93,53 +93,53 @@ function dsinit(
     inclm,  mm,     nm,     nodem, ecco,   eccsq,  xke) {
 
     // /* --------------------- local variables ------------------------ */
-    var twopi = 2.0 * Math.PI,
-    aonv  = 0.0,
-    q22    = 1.7891679e-6,
-    q31    = 2.1460748e-6,
-    q33    = 2.2123015e-7,
-    root22 = 1.7891679e-6,
-    root44 = 7.3636953e-9,
-    root54 = 2.1765803e-9,
-    // eslint-disable-next-line no-loss-of-precision
-    rptim  = 4.37526908801129966e-3,
-    root32 = 3.7393792e-7,
-    root52 = 1.1428639e-7,
-    x2o3   = 2.0 / 3.0,
-    znl    = 1.5835218e-4,
-    zns    = 1.19459e-5,
+    const twopi  = 2.0 * Math.PI,
+          q22    = 1.7891679e-6,
+          q31    = 2.1460748e-6,
+          q33    = 2.2123015e-7,
+          root22 = 1.7891679e-6,
+          root44 = 7.3636953e-9,
+          root54 = 2.1765803e-9,
+          // eslint-disable-next-line no-loss-of-precision
+          rptim  = 4.37526908801129966e-3,
+          root32 = 3.7393792e-7,
+          root52 = 1.1428639e-7,
+          x2o3   = 2.0 / 3.0,
+          znl    = 1.5835218e-4,
+          zns    = 1.19459e-5;
     // sgp4fix identify constants and allow alternate values
-    irez = 0,
-    // TODO: FIGURE OUT HOW TO GET GLOBALS
-    //global tumin mu radiusearthkm xke j2 j3 j4 j3oj2
-    //tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
-    // /* -------------------- deep space initialization ------------ */
-    d2201 = 0,
-    d2211 = 0,
-    d3210 = 0,
-    d3222 = 0,
-    d4410 = 0,
-    d4422 = 0,
-    d5220 = 0,
-    d5232 = 0,
-    d5421 = 0,
-    d5433 = 0,
-    del1  = 0,
-    del2  = 0,
-    del3  = 0,
-    atime = 0,
-    xfact = 0,
-    xlamo = 0,
-    xli   = 0,
-    xni   = 0,
-    // variable defined later
-    ses, sis, sls, sghs, shs, sgs, sghl,
-    dedt, didt, dmdt, _sdhl, shll, domdt, dnodt, dndt, theta,
-    cosisq, emo, emsqo, eoc,
-    g201, g211, g310, g322, g410, g422, g520, g533, g521, g532,
-    sini2, f220, f221, f321, f322, f441, f442, f522, f523, f542, f543,
-    xno2, ainv2, temp1, temp,
-    g200, g300, f311, f330;
+    let   aonv = 0.0,
+          irez = 0,
+          // TODO: FIGURE OUT HOW TO GET GLOBALS
+          //global tumin mu radiusearthkm xke j2 j3 j4 j3oj2
+          //tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
+          // /* -------------------- deep space initialization ------------ */
+          d2201 = 0,
+          d2211 = 0,
+          d3210 = 0,
+          d3222 = 0,
+          d4410 = 0,
+          d4422 = 0,
+          d5220 = 0,
+          d5232 = 0,
+          d5421 = 0,
+          d5433 = 0,
+          del1  = 0,
+          del2  = 0,
+          del3  = 0,
+          atime = 0,
+          xfact = 0,
+          xlamo = 0,
+          xli   = 0,
+          xni   = 0,
+          // variable defined later
+          ses, sis, sls, sghs, shs, sgs, sghl,
+          dedt, didt, dmdt, _sdhl, shll, domdt, dnodt, dndt, theta,
+          cosisq, emo, emsqo, eoc,
+          g201, g211, g310, g322, g410, g422, g520, g533, g521, g532,
+          sini2, f220, f221, f321, f322, f441, f442, f522, f523, f542, f543,
+          xno2, ainv2, temp1, temp,
+          g200, g300, f311, f330;
 
     if ((nm < 0.0052359877) && (nm > 0.0034906585)) {
         irez = 1;
