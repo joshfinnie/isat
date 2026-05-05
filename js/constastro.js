@@ -1,5 +1,4 @@
-/*global nm2m: true, ft2m: true, // from constmath
-*/
+import { nm2m, ft2m } from "./constmath.js";
 
 // ------------------------------------------------------------------------------
 //
@@ -71,3 +70,15 @@ var re         = 6378.137,         // km
     masssun   = 1.9891e30,
     massearth = 5.9742e24,
     massmoon  = 7.3483e22;
+
+export {
+    re, flat, omegaearth, mu, mum,
+    eccearth, eccearthsqrd,
+    renm, reft,
+    tusec, tumin, tuday,
+    omegaearthradptu, omegaearthradpmin,
+    velkmps, velftps, velradpmin,
+    degpsec, radpday,
+    speedoflight, au, earth2moon, moonradius, sunradius,
+    masssun, massearth, massmoon,
+};

@@ -1,6 +1,9 @@
-/*global getgravc: true, initl: true, dscom: true, dpper: true, dsinit: true,
- sgp4: true
- */
+import { getgravc } from "./getgravc.js";
+import { initl } from "./initl.js";
+import { dscom } from "./dscom.js";
+import { dpper } from "./dpper.js";
+import { dsinit } from "./dsinit.js";
+import { sgp4 } from "./sgp4.js";
 // -----------------------------------------------------------------------------
 //
 //                              procedure sgp4init
@@ -99,7 +102,6 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
         s1, s2, s3, s4, s5, s6, s7, ss1, ss2, ss3, ss4, ss5, ss6, ss7,
         sz1, sz2, sz3, sz11, sz12, sz13, sz21, sz22, sz23, sz31, sz32, sz33,
         nm, z1, z2, z3, z11, z12, z13, z21, z22, z23, z31, z32, z33,
-        rets,
         argpm, nodem, mm,
         dndt,
     cc1sq, temp,
@@ -207,16 +209,7 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
     //     /* -------------------- wgs-72 earth constants ----------------- */
     //     // sgp4fix identify constants and allow alternate values
 
-    // [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc( whichconst );
-    rets = getgravc(whichconst);
-    tumin               = rets.shift();
-    mu                  = rets.shift();
-    radiusearthkm       = rets.shift();
-    xke                 = rets.shift();
-    j2                  = rets.shift();
-    j3                  = rets.shift();
-    j4                  = rets.shift();
-    j3oj2               = rets.shift();
+    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(whichconst);
 
     ss     = 78.0 / radiusearthkm + 1.0;
     qzms2t = Math.pow((120.0 - 78.0) / radiusearthkm, 4);
@@ -229,26 +222,10 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
     satrec.init = 'y';
     satrec.t    = 0.0;
 
-    // [ainv,  ao,     satrec.con41,   con42,  cosio,  cosio2, einv,   eccsq,
-    //        satrec.method,  omeosq, posq,   rp,     rteosq, sinio,
-    //        satrec.gsto,    satrec.no]
-    rets = initl(satrec.ecco, epoch, satrec.inclo, satrec.no, satrec.satnum);
-    ainv          = rets.shift();
-    ao            = rets.shift();
-    satrec.con41  = rets.shift();
-    con42         = rets.shift();
-    cosio         = rets.shift();
-    cosio2        = rets.shift();
-    einv          = rets.shift();
-    eccsq         = rets.shift();
-    satrec.method = rets.shift();
-    omeosq        = rets.shift();
-    posq          = rets.shift();
-    rp            = rets.shift();
-    rteosq        = rets.shift();
-    sinio         = rets.shift();
-    satrec.gsto   = rets.shift();
-    satrec.no     = rets.shift();
+    [ainv, ao, satrec.con41, con42, cosio, cosio2, einv, eccsq,
+     satrec.method, omeosq, posq, rp, rteosq, sinio,
+     satrec.gsto, satrec.no] = initl(satrec.ecco, epoch, satrec.inclo, satrec.no, satrec.satnum,
+                                     xke, j2, satrec.opsmode || 'i');
 
     satrec.error = 0;
 
@@ -344,168 +321,51 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
             tc    =  0.0;
             inclm = satrec.inclo;
 
-            // [sinim,cosim,sinomm,cosomm,snodm,cnodm,day,satrec.e3,satrec.ee2,
-            // em,emsq,gam,satrec.peo,satrec.pgho,satrec.pho,satrec.pinco,
-            // satrec.plo,rtemsq,satrec.se2,satrec.se3,satrec.sgh2,
-            // satrec.sgh3,satrec.sgh4,satrec.sh2,satrec.sh3,satrec.si2,
-            // satrec.si3,satrec.sl2,satrec.sl3,satrec.sl4,s1,s2,s3,s4,s5,
-            // s6,s7,ss1,ss2,ss3,ss4,ss5,ss6,ss7,sz1,sz2,sz3,sz11,sz12,
-            // sz13,sz21,sz22,sz23,sz31,sz32,sz33,satrec.xgh2,satrec.xgh3,
-            // satrec.xgh4,satrec.xh2,satrec.xh3,satrec.xi2,satrec.xi3,
-            // satrec.xl2,satrec.xl3,satrec.xl4,nm,z1,z2,z3,z11,z12,z13,
-            // z21,z22,z23,z31,z32,z33,satrec.zmol,satrec.zmos] =
-            rets = dscom(epoch, satrec.ecco, satrec.argpo, tc, satrec.inclo,
-                              satrec.nodeo, satrec.no);
-            sinim           = rets.shift();
-            cosim           = rets.shift();
-            sinomm          = rets.shift();
-            cosomm          = rets.shift();
-            snodm           = rets.shift();
-            cnodm           = rets.shift();
-            day             = rets.shift();
-            satrec.e3       = rets.shift();
-            satrec.ee2      = rets.shift();
-            em              = rets.shift();
-            emsq            = rets.shift();
-            gam             = rets.shift();
-            satrec.peo      = rets.shift();
-            satrec.pgho     = rets.shift();
-            satrec.pho      = rets.shift();
-            satrec.pinco    = rets.shift();
-            satrec.plo      = rets.shift();
-            rtemsq          = rets.shift();
-            satrec.se2      = rets.shift();
-            satrec.se3      = rets.shift();
-            satrec.sgh2     = rets.shift();
-            satrec.sgh3     = rets.shift();
-            satrec.sgh4     = rets.shift();
-            satrec.sh2      = rets.shift();
-            satrec.sh3      = rets.shift();
-            satrec.si2      = rets.shift();
-            satrec.si3      = rets.shift();
-            satrec.sl2      = rets.shift();
-            satrec.sl3      = rets.shift();
-            satrec.sl4      = rets.shift();
-            s1              = rets.shift();
-            s2              = rets.shift();
-            s3              = rets.shift();
-            s4              = rets.shift();
-            s5              = rets.shift();
-            s6              = rets.shift();
-            s7              = rets.shift();
-            ss1             = rets.shift();
-            ss2             = rets.shift();
-            ss3             = rets.shift();
-            ss4             = rets.shift();
-            ss5             = rets.shift();
-            ss6             = rets.shift();
-            ss7             = rets.shift();
-            sz1             = rets.shift();
-            sz2             = rets.shift();
-            sz3             = rets.shift();
-            sz11            = rets.shift();
-            sz12            = rets.shift();
-            sz13            = rets.shift();
-            sz21            = rets.shift();
-            sz22            = rets.shift();
-            sz23            = rets.shift();
-            sz31            = rets.shift();
-            sz32            = rets.shift();
-            sz33            = rets.shift();
-            satrec.xgh2     = rets.shift();
-            satrec.xgh3     = rets.shift();
-            satrec.xgh4     = rets.shift();
-            satrec.xh2      = rets.shift();
-            satrec.xh3      = rets.shift();
-            satrec.xi2      = rets.shift();
-            satrec.xi3      = rets.shift();
-            satrec.xl2      = rets.shift();
-            satrec.xl3      = rets.shift();
-            satrec.xl4      = rets.shift();
-            nm              = rets.shift();
-            z1              = rets.shift();
-            z2              = rets.shift();
-            z3              = rets.shift();
-            z11             = rets.shift();
-            z12             = rets.shift();
-            z13             = rets.shift();
-            z21             = rets.shift();
-            z22             = rets.shift();
-            z23             = rets.shift();
-            z31             = rets.shift();
-            z32             = rets.shift();
-            z33             = rets.shift();
-            satrec.zmol     = rets.shift();
-            satrec.zmos     = rets.shift();
+            [sinim, cosim, sinomm, cosomm, snodm, cnodm, day,
+             satrec.e3, satrec.ee2, em, emsq, gam,
+             satrec.peo, satrec.pgho, satrec.pho, satrec.pinco, satrec.plo,
+             rtemsq, satrec.se2, satrec.se3, satrec.sgh2, satrec.sgh3, satrec.sgh4,
+             satrec.sh2, satrec.sh3, satrec.si2, satrec.si3,
+             satrec.sl2, satrec.sl3, satrec.sl4,
+             s1, s2, s3, s4, s5, s6, s7,
+             ss1, ss2, ss3, ss4, ss5, ss6, ss7,
+             sz1, sz2, sz3, sz11, sz12, sz13, sz21, sz22, sz23, sz31, sz32, sz33,
+             satrec.xgh2, satrec.xgh3, satrec.xgh4, satrec.xh2, satrec.xh3,
+             satrec.xi2, satrec.xi3, satrec.xl2, satrec.xl3, satrec.xl4,
+             nm, z1, z2, z3, z11, z12, z13, z21, z22, z23, z31, z32, z33,
+             satrec.zmol, satrec.zmos] = dscom(epoch, satrec.ecco, satrec.argpo, tc,
+                                               satrec.inclo, satrec.nodeo, satrec.no);
 
 
 
-            //[satrec.ecco,satrec.inclo,satrec.nodeo,satrec.argpo,satrec.mo]
-            rets = dpper(satrec.e3, satrec.ee2, satrec.peo, satrec.pgho,
-                         satrec.pho, satrec.pinco, satrec.plo, satrec.se2, satrec.se3,
-                         satrec.sgh2, satrec.sgh3, satrec.sgh4, satrec.sh2, satrec.sh3,
-                         satrec.si2, satrec.si3, satrec.sl2, satrec.sl3, satrec.sl4,
-                         satrec.t, satrec.xgh2, satrec.xgh3, satrec.xgh4, satrec.xh2,
-                         satrec.xh3, satrec.xi2, satrec.xi3, satrec.xl2, satrec.xl3,
-                         satrec.xl4, satrec.zmol, satrec.zmos, inclm, satrec.init,
-                         satrec.ecco, satrec.inclo, satrec.nodeo, satrec.argpo, satrec.mo);
-
-            satrec.ecco  = rets.shift();
-            satrec.inclo = rets.shift();
-            satrec.nodeo = rets.shift();
-            satrec.argpo = rets.shift();
-            satrec.mo    = rets.shift();
+            [satrec.ecco, satrec.inclo, satrec.nodeo, satrec.argpo, satrec.mo] =
+                dpper(satrec.e3, satrec.ee2, satrec.peo, satrec.pgho,
+                      satrec.pho, satrec.pinco, satrec.plo, satrec.se2, satrec.se3,
+                      satrec.sgh2, satrec.sgh3, satrec.sgh4, satrec.sh2, satrec.sh3,
+                      satrec.si2, satrec.si3, satrec.sl2, satrec.sl3, satrec.sl4,
+                      satrec.t, satrec.xgh2, satrec.xgh3, satrec.xgh4, satrec.xh2,
+                      satrec.xh3, satrec.xi2, satrec.xi3, satrec.xl2, satrec.xl3,
+                      satrec.xl4, satrec.zmol, satrec.zmos, inclm, satrec.init,
+                      satrec.ecco, satrec.inclo, satrec.nodeo, satrec.argpo, satrec.mo,
+                      satrec.opsmode || 'i');
 
             argpm  = 0.0;
             nodem  = 0.0;
             mm     = 0.0;
 
-            // [em,argpm,inclm,mm,nm,nodem,satrec.irez,satrec.atime,
-            // satrec.d2201,satrec.d2211,satrec.d3210,satrec.d3222,
-            // satrec.d4410,satrec.d4422,satrec.d5220,satrec.d5232,
-            // satrec.d5421,satrec.d5433,satrec.dedt,satrec.didt,
-            // satrec.dmdt,dndt,satrec.dnodt,satrec.domdt,satrec.del1,
-            // satrec.del2,satrec.del3,
-            // //ses,sghl,sghs,sgs,shl,shs,sis,sls,theta,
-            // satrec.xfact,satrec.xlamo,satrec.xli,satrec.xni]
-
-            rets = dsinit(cosim, emsq, satrec.argpo, s1, s2, s3, s4, s5, sinim, ss1, ss2, ss3,
-                          ss4, ss5, sz1, sz3, sz11, sz13, sz21, sz23, sz31, sz33, satrec.t, tc,
-                          satrec.gsto, satrec.mo, satrec.mdot, satrec.no, satrec.nodeo,
-                          satrec.nodedot, xpidot, z1, z3, z11, z13, z21, z23, z31, z33, em,
-                          argpm, inclm, mm, nm, nodem, satrec.ecco, eccsq);
-            em                  = rets.shift();
-            argpm		= rets.shift();
-            inclm		= rets.shift();
-            mm                  = rets.shift();
-            nm                  = rets.shift();
-            nodem		= rets.shift();
-            satrec.irez         = rets.shift();
-            satrec.atime	= rets.shift();
-            satrec.d2201	= rets.shift();
-            satrec.d2211	= rets.shift();
-            satrec.d3210	= rets.shift();
-            satrec.d3222	= rets.shift();
-            satrec.d4410	= rets.shift();
-            satrec.d4422	= rets.shift();
-            satrec.d5220	= rets.shift();
-            satrec.d5232	= rets.shift();
-            satrec.d5421	= rets.shift();
-            satrec.d5433	= rets.shift();
-            satrec.dedt         = rets.shift();
-            satrec.didt         = rets.shift();
-            satrec.dmdt         = rets.shift();
-            dndt		= rets.shift();
-            satrec.dnodt	= rets.shift();
-            satrec.domdt	= rets.shift();
-            satrec.del1         = rets.shift();
-            satrec.del2         = rets.shift();
-            satrec.del3         = rets.shift();
-            //ses,sghl,sghs,sgs,shl,shs,sis,sls,theta,
-            satrec.xfact	= rets.shift();
-            satrec.xlamo	= rets.shift();
-            satrec.xli          = rets.shift();
-            satrec.xni          = rets.shift();
+            [em, argpm, inclm, mm, nm, nodem,
+             satrec.irez, satrec.atime,
+             satrec.d2201, satrec.d2211, satrec.d3210, satrec.d3222,
+             satrec.d4410, satrec.d4422, satrec.d5220, satrec.d5232,
+             satrec.d5421, satrec.d5433,
+             satrec.dedt, satrec.didt, satrec.dmdt, dndt, satrec.dnodt, satrec.domdt,
+             satrec.del1, satrec.del2, satrec.del3,
+             satrec.xfact, satrec.xlamo, satrec.xli, satrec.xni] =
+                dsinit(cosim, emsq, satrec.argpo, s1, s2, s3, s4, s5, sinim, ss1, ss2, ss3,
+                       ss4, ss5, sz1, sz3, sz11, sz13, sz21, sz23, sz31, sz33, satrec.t, tc,
+                       satrec.gsto, satrec.mo, satrec.mdot, satrec.no, satrec.nodeo,
+                       satrec.nodedot, xpidot, z1, z3, z11, z13, z21, z23, z31, z33, em,
+                       argpm, inclm, mm, nm, nodem, satrec.ecco, eccsq, xke);
         }
 
         // /* ----------- set variables if not deep space ----------- */
@@ -528,12 +388,11 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
 
     // /* finally propogate to zero epoch to initialise all others. */
     if (satrec.error === 0) {
-        rets = sgp4(satrec, 0.0);
-        satrec  = rets.shift();
-        r       = rets.shift();
-        v       = rets.shift();
+        [satrec, r, v] = sgp4(satrec, 0.0);
     }
 
     satrec.init = 'n';
     return satrec; // MATLAB returns an unnecessary list "[satrec]", don't do it here
 }
+
+export { sgp4init };

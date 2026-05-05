@@ -1,5 +1,6 @@
-/*global mag: true, dot: true, sign: true
- */
+import { mag } from "./mag.js";
+import { dot, sign } from "./math_utils.js";
+
 // this function calculates the angle between two vectors.  the output is
 // set to 999999.1 to indicate an undefined value.  be sure to check for
 // this at the output phase.
@@ -27,3 +28,5 @@ function angl(vec1, vec2) {
     }
     return theta;
 }
+
+export { angl };

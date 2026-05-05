@@ -90,7 +90,7 @@ function dsinit(
     sz33,   t,      tc,     gsto,   mo,     mdot,   no,
     nodeo, nodedot,       xpidot, z1,     z3,     z11,
     z13,    z21,    z23,    z31,    z33,    em,     argpm,
-    inclm,  mm,     nm,     nodem, ecco,   eccsq) {
+    inclm,  mm,     nm,     nodem, ecco,   eccsq,  xke) {
 
     // /* --------------------- local variables ------------------------ */
     var twopi = 2.0 * Math.PI,
@@ -320,3 +320,5 @@ function dsinit(
             dndt,   dnodt,  domdt,  del1,   del2,   del3,   xfact,
             xlamo,  xli,    xni];
 }
+
+export { dsinit };

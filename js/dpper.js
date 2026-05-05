@@ -1,5 +1,3 @@
-/*global opsmode: true
-*/
 //                            procedure dpper
 //
 //   this procedure provides deep space long period periodic contributions
@@ -74,14 +72,10 @@ function dpper(e3,     ee2,    peo,    pgho,   pho,    pinco,  plo,    se2,
                se3,    sgh2,   sgh3,   sgh4,   sh2,    sh3,    si2,    si3,
                sl2,    sl3,    sl4,    t,      xgh2,   xgh3,   xgh4,   xh2,
                xh3,    xi2,    xi3,    xl2,    xl3,    xl4,    zmol,
-               zmos,   inclo,  init,   ep,     inclp,  nodep, argpp,  mp) {
+               zmos,   inclo,  init,   ep,     inclp,  nodep, argpp,  mp,
+               opsmode) {
 
-    if (typeof(opsmode) === 'undefined') {
-        throw Error("Global opsmode is undefined, must be 'a' or 'i'");
-    }
-    if ((opsmode !== 'a') && (opsmode !== 'i')) {
-        throw Error("Global must be 'a' or 'i' but opsmode=" + opsmode);
-    }
+    if (opsmode === undefined) { opsmode = 'i'; }
 
     var twopi = 2.0 * Math.PI,
     // /* ---------------------- constants ----------------------------- */
@@ -196,3 +190,5 @@ function dpper(e3,     ee2,    peo,    pgho,   pho,    pinco,  plo,    se2,
 
     return [  ep,     inclp,  nodep, argpp,  mp];
 }
+
+export { dpper };

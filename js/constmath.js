@@ -42,3 +42,5 @@ var small       = 0.00000001,
     mileph2kmph = 0.44704,
     nmph2kmph   = 0.5144444;
 
+export { small, infinite, UNDEFINED, rad, twopi, halfpi, ft2m, mile2m, nm2m, mile2ft, mileph2kmph, nmph2kmph };
+

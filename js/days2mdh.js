@@ -1,6 +1,3 @@
-/*global
-  jday : true
-*/
 // ------------------------------------------------------------------------------
 //
 //                           function days2mdh
@@ -37,7 +34,7 @@
 // [mon,day,hr,minute,sec] = days2mdh ( year,days);
 // -----------------------------------------------------------------------------
 
-var i, lmonth = [], dayofyr, i, inttemp, mon, day, temp, hr, minute, sec, julianday;
+var i, lmonth = [], dayofyr, inttemp, mon, day, temp, hr, minute, sec;
 
 function days2mdh(year, days) {
     // --------------- set up array of days in month  --------------
@@ -81,7 +78,7 @@ function days2mdh(year, days) {
     minute = Math.floor(temp);
     sec    = (temp - minute) * 60.0;
 
-    julianday = jday(year, mon, day, hr, minute, sec);
-
     return [mon, day, hr, minute, sec];
 }
+
+export { days2mdh };

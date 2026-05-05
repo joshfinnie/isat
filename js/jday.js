@@ -42,3 +42,5 @@ function jday(yr, mon, day, hr, min, sec) {
         //  - 0.5 * sign(100.0 * yr + mon - 190002.5) + 0.5;
 }
 
+export { jday };
+

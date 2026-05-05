@@ -1,5 +1,7 @@
 /*jslint vars: true */
-/*globals getgravc: true, dpper: true, dspace: true */
+import { getgravc } from "./getgravc.js";
+import { dpper } from "./dpper.js";
+import { dspace } from "./dspace.js";
 // -----------------------------------------------------------------------------
 //
 //                              procedure sgp4
@@ -125,16 +127,7 @@ function sgp4(satrec, tsince) {
     cosisq, mrt, xnode, xinc, mvt, rvdot,
     sinsu, cossu, snod, cnod, sini, cosi, xmx, xmy, ux, uy, uz, vx, vy, vz;
 
-    // TODO: how do we get `whichconst` from the caller? or (shudder) globals?
-    rets = getgravc(72); // TODO: sucks to have to call this all the time
-    tumin               = rets.shift();
-    mu                  = rets.shift();
-    radiusearthkm       = rets.shift();
-    xke                 = rets.shift();
-    j2                  = rets.shift();
-    j3                  = rets.shift();
-    j4                  = rets.shift();
-    j3oj2               = rets.shift();
+    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(satrec.whichconst || 72);
 
     vkmpersec     = radiusearthkm * xke / 60.0;
 
@@ -248,7 +241,8 @@ function sgp4(satrec, tsince) {
                      satrec.xh3, satrec.xi2, satrec.xi3,
                      satrec.xl2, satrec.xl3, satrec.xl4,
                      satrec.zmol, satrec.zmos, satrec.inclo,
-                     satrec.init, ep, xincp, nodep, argpp, mp);
+                     satrec.init, ep, xincp, nodep, argpp, mp,
+                     satrec.opsmode || 'i');
         ep      = rets.shift();
         xincp   = rets.shift();
         nodep   = rets.shift();
@@ -386,3 +380,5 @@ function sgp4(satrec, tsince) {
 
     return [satrec, r, v];
 }
+
+export { sgp4 };

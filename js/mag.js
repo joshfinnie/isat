@@ -35,3 +35,5 @@ function mag(vec) {
     return mymag;
 }
 
+export { mag };
+

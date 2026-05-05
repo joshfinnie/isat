@@ -253,3 +253,5 @@ function dscom(epoch, ep, argpp, tc, inclp, nodep, np) {
             xgh4, xh2, xh3, xi2, xi3, xl2, xl3, xl4, nm, z1, z2, z3, z11, z12, z13, z21, z22,
             z23, z31, z32, z33, zmol, zmos];
 }
+
+export { dscom };

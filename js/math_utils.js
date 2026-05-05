@@ -36,5 +36,7 @@ function dot(a, b) {
     return n;
 }
 
+export { sign, cross, dot };
+
 
 

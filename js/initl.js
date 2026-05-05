@@ -1,4 +1,4 @@
-/*global gstime: true, opsmode:true, xke:true, j2:true */
+import { gstime } from "./gstime.js";
 /*jslint vars: true */ //why isn't this working
 // -----------------------------------------------------------------------------
 //
@@ -57,24 +57,11 @@
 //     vallado, crawford, hujsak, kelso  2006
 //  ----------------------------------------------------------------------------*/
 
-function initl(ecco, epoch, inclo, no, satn) {
+function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode) {
     // /* -------------------- wgs-72 earth constants ----------------- */
     // sgp4fix identify constants and allow alternate values
 
-    // MATLAB:
-    //global tumin mu radiusearthkm xke j2 j3 j4 j3oj2
-    // not used: tumin, mu, radiusearth, j3, j4, j3oj2
-    //global opsmode
-
-    if (typeof opsmode === 'undefined') {
-        throw Error("opsmode undefined");
-    }
-    if (typeof xke     === 'undefined') {
-        throw Error("xke undefined");
-    }
-    if (typeof j2      === 'undefined') {
-        throw Error("j2 undefined");
-    }
+    if (opsmode === undefined) { opsmode = 'i'; }
 
     var x2o3   = 2.0 / 3.0,
         // /* ------------- calculate auxillary epoch quantities ---------- */
@@ -134,3 +121,5 @@ function initl(ecco, epoch, inclo, no, satn) {
             eccsq, method, omeosq, posq, rp, rteosq, sinio,
             gsto, no];
 }
+
+export { initl };

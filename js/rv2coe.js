@@ -1,7 +1,9 @@
-/*global mag: true, small: true, infinite: true, twopi: true, angl: true,
-  halfpi: true, newtonnu: true, cross: true, dot: true, sign: true,
-  UNDEFINED: true,
-*/
+import { small, infinite, UNDEFINED, twopi, halfpi } from "./constmath.js";
+import { mag } from "./mag.js";
+import { cross, dot, sign } from "./math_utils.js";
+import { angl } from "./angl.js";
+import { newtonnu } from "./newtonnu.js";
+
 // ------------------------------------------------------------------------------
 //
 //                           function rv2coe
@@ -116,7 +118,6 @@ function rv2coe(r, v, mu) {
         // ------ elliptical, parabolic, hyperbolic inclined -------
         typeorbit = 'ei';
         if (ecc < small) {
-            alert("ecc<small");
             // ----------------  circular equatorial ---------------
             if ((incl < small) || (Math.abs(incl - Math.PI) < small)) {
                 typeorbit = 'ce';
@@ -129,7 +130,6 @@ function rv2coe(r, v, mu) {
         else {
             // - elliptical, parabolic, hyperbolic equatorial --
             if ((incl < small) || (Math.abs(incl - Math.PI) < small)) {
-                alert("eliptical/para/hyper: type=ee");
                 typeorbit = 'ee';
             }
         }
@@ -146,7 +146,6 @@ function rv2coe(r, v, mu) {
             }
         }
         else {
-            alert("omega=UNDEFINED");
             omega = UNDEFINED;
         }
 
@@ -158,7 +157,6 @@ function rv2coe(r, v, mu) {
             }
         }
         else {
-            alert("argp=UNDEFINED");
             argp = UNDEFINED;
         }
 
@@ -170,7 +168,6 @@ function rv2coe(r, v, mu) {
             }
         }
         else {
-            alert("nu=UNDEFINED");
             nu = UNDEFINED;
         }
 
@@ -250,3 +247,5 @@ function rv2coe(r, v, mu) {
 
     return [p, a, ecc, incl, omega, argp, nu, m, arglat, truelon, lonper];
 }
+
+export { rv2coe };

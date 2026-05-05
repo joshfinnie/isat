@@ -1,4 +1,5 @@
-/*globals days2mdh: true */
+import { days2mdh } from "./days2mdh.js";
+
 // ------------------------------------------------------------------------------
 //
 //                           function invjday
@@ -66,3 +67,5 @@ function invjday(jd) {
     //     sec= sec - 0.00000086400;
     return [year, mon, day, hr, min, sec];
 }
+
+export { invjday };

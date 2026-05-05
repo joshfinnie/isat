@@ -101,3 +101,5 @@ function newtonnu(ecc, nu) {
     return [e0, m];
 }
 
+export { newtonnu };
+

@@ -1,12 +1,7 @@
-/*global
-  getgravc: true,
-  debug: true,
-  days2mdh: true,
-  jday: true,
-  input: true, // reads from HTML by id="prompt string"
-  sgp4init: true,
-  tumin: true, mu: true, radiusearthkm:true, xke: true, j2: true, j3: true, j4: true, j3oj2: true,
- */
+import { getgravc } from "./getgravc.js";
+import { days2mdh } from "./days2mdh.js";
+import { jday } from "./jday.js";
+import { sgp4init } from "./sgp4init.js";
 
 
 //  -----------------------------------------------------------------------------
@@ -63,18 +58,8 @@
 //          longstr2, typerun,typeinput)
 //  ----------------------------------------------------------------------------*/
 
-var xke, j2;                 // HACK: GLOBALS to pass to initl()
-
 function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
-    var rets = getgravc(whichconst),
-        tumin           = rets.shift(),
-        mu              = rets.shift(),
-        radiusearthkm   = rets.shift(),
-        LOCAL_xke       = rets.shift(),
-        LOCAL_j2        = rets.shift(),
-        j3              = rets.shift(),
-        j4              = rets.shift(),
-        j3oj2           = rets.shift(),
+    var tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
         deg2rad         = Math.PI / 180.0, // 0.01745329251994330  [deg/rad]
         xpdotp          = 1440.0 / (2.0 * Math.PI), // 229.1831180523293  [rev/day]/[rad/min]
         satrec          = {},
@@ -90,35 +75,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         startdayofyr, stopdayofyr,
         sgp4epoch;
 
-    // Set globals to pass to initl() [vomit]
-    xke = LOCAL_xke;
-    j2 = LOCAL_j2;
-
-    // global tumin radiusearthkm xke j2 j3 j4 j3oj2
-    // Get these via getgravc() OR from caller's globals.
-    // [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(whichconst);
-
-    if (typeof tumin === 'undefined') {
-        throw Error("Global 'tumin' is undefined");
-    }
-    if (typeof radiusearthkm === 'undefined') {
-        throw Error("Global 'radiusearthkm' is undefined");
-    }
-    if (typeof xke === 'undefined') {
-        throw Error("Global 'xke' is undefined");
-    }
-    if (typeof j2 === 'undefined') {
-        throw Error("Global 'j2' is undefined");
-    }
-    if (typeof j3 === 'undefined') {
-        throw Error("Global 'j3' is undefined");
-    }
-    if (typeof j4 === 'undefined') {
-        throw Error("Global 'j4' is undefined");
-    }
-    if (typeof j3oj2 === 'undefined') {
-        throw Error("Global 'j3oj2' is undefined");
-    }
+    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(whichconst);
 
     satrec.error = 0;
 
@@ -256,13 +213,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         year = satrec.epochyr + 1900;
     }
 
-    //[mon,day,hr,minute,sec] = days2mdh(year, satrec.epochdays);
-    rets = days2mdh(year, satrec.epochdays);
-    mon         = rets.shift();
-    day         = rets.shift();
-    hr          = rets.shift();
-    minute      = rets.shift();
-    sec         = rets.shift();
+    [mon, day, hr, minute, sec] = days2mdh(year, satrec.epochdays);
     satrec.jdsatepoch = jday(year, mon, day, hr, minute, sec);
 
     // input start stop times manually
@@ -296,21 +247,9 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
             stopyear     = input('input stop year');
             stopdayofyr  = input('input stop dayofyr');
 
-            //[mon, day, hr, minute, sec] = days2mdh ( startyear, startdayofyr);
-            rets = days2mdh(startyear, startdayofyr);
-            mon         = rets.shift();
-            day         = rets.shift();
-            hr          = rets.shift();
-            minute      = rets.shift();
-            sec         = rets.shift();
+            [mon, day, hr, minute, sec] = days2mdh(startyear, startdayofyr);
             jdstart = jday(startyear, mon, day, hr, minute, sec);
-            //[mon, day, hr, minute, sec] = days2mdh ( stopyear, stopdayofyr);
-            rets = days2mdh(stopyear, stopdayofyr);
-            mon         = rets.shift();
-            day         = rets.shift();
-            hr          = rets.shift();
-            minute      = rets.shift();
-            sec         = rets.shift();
+            [mon, day, hr, minute, sec] = days2mdh(stopyear, stopdayofyr);
             jdstop = jday(stopyear, mon, day, hr, minute, sec);
 
             startmfe = (jdstart - satrec.jdsatepoch) * 1440.0;
@@ -355,3 +294,5 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
 
     return [satrec, startmfe, stopmfe, deltamin];
 }
+
+export { twoline2rv };

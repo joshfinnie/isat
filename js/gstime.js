@@ -48,3 +48,5 @@ function gstime(jdut1) {
     }
     return temp;
 }
+
+export { gstime };

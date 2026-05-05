@@ -1,8 +1,3 @@
-/*global
-  alert: true,
-  debug: true,
-  window: true
-*/
 // -----------------------------------------------------------------------------
 //
 //                           function getgravc
@@ -71,8 +66,9 @@ function getgravc(whichconst) {
         j3oj2  =  j3 / j2;
         break;
     default:
-        alert('getgravc: unknown gravity option: ' + whichconst);
         throw Error('getgravc: unknown gravity option: ' + whichconst);
     }
     return [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2];
 }
+
+export { getgravc };
