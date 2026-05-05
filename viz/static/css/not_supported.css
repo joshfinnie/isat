@@ -1,6 +1,14 @@
-table {border-collapse:collapse;}
-table td, table th {border:1px solid #888; padding: 3px;}
-table td {text-align: right;}
+table {
+    border-collapse: collapse;
+}
+table td,
+table th {
+    border: 1px solid #888;
+    padding: 3px;
+}
+table td {
+    text-align: right;
+}
 
 #browser_list dt {
     float: left;
@@ -48,8 +56,8 @@ form {
 }
 
 #controls select {
-    background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
     width: 350px;
     border-radius: 4px 4px 4px 4px;
     color: #555555;

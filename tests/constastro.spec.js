@@ -57,7 +57,7 @@ describe("constastro", () => {
         expect(velftps).toBe((velkmps * 1000.0) / ft2m);
         expect(velradpmin).toBe((velkmps * 60.0) / re);
 
-        expect(degpsec).toBe((180.0 / Math.PI) / tusec);
+        expect(degpsec).toBe(180.0 / Math.PI / tusec);
         expect(radpday).toBe(2.0 * Math.PI * 1.002737909350795);
 
         expect(speedoflight).toBe(2.99792458e8);

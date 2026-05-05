@@ -1,0 +1,7 @@
+# Vendor and legacy
+jasmine/
+viz/cesium/
+Gruntfile.js
+
+# Claude configuration
+.claude/

@@ -3,7 +3,6 @@ import { days2mdh } from "./days2mdh.js";
 import { jday } from "./jday.js";
 import { sgp4init } from "./sgp4init.js";
 
-
 //  -----------------------------------------------------------------------------
 //
 //                            procedure twoline2rv
@@ -60,18 +59,38 @@ import { sgp4init } from "./sgp4init.js";
 
 function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     const deg2rad = Math.PI / 180.0, // 0.01745329251994330  [deg/rad]
-          xpdotp  = 1440.0 / (2.0 * Math.PI); // 229.1831180523293  [rev/day]/[rad/min]
-    let   tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2,
-          satrec          = {},
-          _revnum          = 0,
-          _elnum           = 0,
-          year            = 0,
-          j,
-          _carnumb, _classification, _intldesg, nexp, ibexp, _numb,
-          _cardnumb, startmfe, stopmfe, deltamin,
-          mon, day, hr, minute, sec,
-          jdstart, jdstop,
-          sgp4epoch;
+        xpdotp = 1440.0 / (2.0 * Math.PI); // 229.1831180523293  [rev/day]/[rad/min]
+    let tumin,
+        _mu,
+        _radiusearthkm,
+        _xke,
+        _j2,
+        _j3,
+        _j4,
+        _j3oj2,
+        satrec = {},
+        _revnum = 0,
+        _elnum = 0,
+        year = 0,
+        j,
+        _carnumb,
+        _classification,
+        _intldesg,
+        nexp,
+        ibexp,
+        _numb,
+        _cardnumb,
+        startmfe,
+        stopmfe,
+        deltamin,
+        mon,
+        day,
+        hr,
+        minute,
+        sec,
+        jdstart,
+        jdstop,
+        sgp4epoch;
 
     [tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2] = getgravc(whichconst);
 
@@ -80,122 +99,120 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     // JavaScript's strings are immutable strings, so convert to
     // mutable array, munge, then convert back to strings.
 
-    longstr1 = longstr1.split('');
-    longstr2 = longstr2.split('');
+    longstr1 = longstr1.split("");
+    longstr2 = longstr2.split("");
 
     // set the implied decimal points since doing a formated read
     // fixes for bad input data values (missing, ...)
-    for (j = 10; j <= 15; j += 1) { //"8002B " -> "8002B_"
-        if (longstr1[j] === ' ') {
-            longstr1[j] = '_';
+    for (j = 10; j <= 15; j += 1) {
+        //"8002B " -> "8002B_"
+        if (longstr1[j] === " ") {
+            longstr1[j] = "_";
         }
     }
-    if (longstr1[44] !== ' ') {
+    if (longstr1[44] !== " ") {
         longstr1[43] = longstr1[44];
     }
-    longstr1[44] = '.';
-    if (longstr1[7] === ' ') {
-        longstr1[7] = 'U';
+    longstr1[44] = ".";
+    if (longstr1[7] === " ") {
+        longstr1[7] = "U";
     }
-    if (longstr1[9] === ' ') {
-        longstr1[9] = '.';
+    if (longstr1[9] === " ") {
+        longstr1[9] = ".";
     }
     for (j = 45; j <= 49; j += 1) {
-        if (longstr1[j] === ' ') {
-            longstr1[j] = '0';
+        if (longstr1[j] === " ") {
+            longstr1[j] = "0";
         }
     }
-    if (longstr1[51] === ' ') {
-        longstr1[51] = '0';
+    if (longstr1[51] === " ") {
+        longstr1[51] = "0";
     }
-    if (longstr1[53] !== ' ') {
+    if (longstr1[53] !== " ") {
         longstr1[52] = longstr1[53];
     }
-    longstr1[53] = '.';
-    if (longstr1[62] === ' ') {
-        longstr1[62] = '0';
-
+    longstr1[53] = ".";
+    if (longstr1[62] === " ") {
+        longstr1[62] = "0";
     }
-    if ((longstr1.length < 68) || (longstr1[67] === ' ')) {
-        longstr1[67] = '0';
+    if (longstr1.length < 68 || longstr1[67] === " ") {
+        longstr1[67] = "0";
     }
 
-    longstr2[25] = '.';
+    longstr2[25] = ".";
     for (j = 26; j <= 32; j += 1) {
-        if (longstr2[j] === ' ') {
-            longstr2[j] = '0';
+        if (longstr2[j] === " ") {
+            longstr2[j] = "0";
         }
     }
 
-    longstr1 = longstr1.join('');
-    longstr2 = longstr2.join('');
+    longstr1 = longstr1.join("");
+    longstr2 = longstr2.join("");
 
     //00000000001111111111222222222233333333334444444444555555555566666666667777777777888888888899999999990000000000
     //01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
     //1 00005U 58002B   00179.78495062  .00000023  00000-0  28098-4 0  4753
     //2 00005  34.2682 348.7242 1859667 331.7664  19.3264 10.82419157413667     0.00      4320.0        360.00
 
-
     // parse first line
-    _carnumb             = parseFloat(longstr1[0]); // caution: 'cardnum' in second line
-    satrec.satnum       = parseFloat(longstr1.slice(2, 7));
-    _classification      =            longstr1[7]; // "U"
-    _intldesg            =            longstr1.slice(9, 17);
-    satrec.epochyr      = parseFloat(longstr1.slice(18, 20)); // ??
-    satrec.epochdays    = parseFloat(longstr1.slice(20, 32));
-    satrec.ndot         = parseFloat(longstr1.slice(33, 43));
-    satrec.nddot        = parseFloat(longstr1.slice(43, 50));
-    nexp                = parseFloat(longstr1.slice(50, 52));
-    satrec.bstar        = parseFloat(longstr1.slice(52, 59));
-    ibexp               = parseFloat(longstr1.slice(59, 61));
-    _numb                = parseFloat(longstr1.slice(62, 63));
-    _elnum               = parseFloat(longstr1.slice(64, 68));
+    _carnumb = parseFloat(longstr1[0]); // caution: 'cardnum' in second line
+    satrec.satnum = parseFloat(longstr1.slice(2, 7));
+    _classification = longstr1[7]; // "U"
+    _intldesg = longstr1.slice(9, 17);
+    satrec.epochyr = parseFloat(longstr1.slice(18, 20)); // ??
+    satrec.epochdays = parseFloat(longstr1.slice(20, 32));
+    satrec.ndot = parseFloat(longstr1.slice(33, 43));
+    satrec.nddot = parseFloat(longstr1.slice(43, 50));
+    nexp = parseFloat(longstr1.slice(50, 52));
+    satrec.bstar = parseFloat(longstr1.slice(52, 59));
+    ibexp = parseFloat(longstr1.slice(59, 61));
+    _numb = parseFloat(longstr1.slice(62, 63));
+    _elnum = parseFloat(longstr1.slice(64, 68));
 
     // parse second line
-    if (typerun === 'v') {
-        _cardnumb        = parseFloat(longstr2.slice(0, 1));
-        satrec.satnum   = parseFloat(longstr2.slice(2, 7));
-        satrec.inclo    = parseFloat(longstr2.slice(7, 16));
-        satrec.nodeo    = parseFloat(longstr2.slice(16, 25));
-        satrec.ecco     = parseFloat(longstr2.slice(25, 33));
-        satrec.argpo    = parseFloat(longstr2.slice(33, 42));
-        satrec.mo       = parseFloat(longstr2.slice(42, 51));
-        satrec.no       = parseFloat(longstr2.slice(51, 63));
-        _revnum          = parseFloat(longstr2.slice(63, 68));
-        startmfe        = parseFloat(longstr2.slice(69, 81)); // only for 'v'
-        stopmfe         = parseFloat(longstr2.slice(82, 96)); // only for 'v'
-        deltamin        = parseFloat(longstr2.slice(96, 105)); // only for 'v'
+    if (typerun === "v") {
+        _cardnumb = parseFloat(longstr2.slice(0, 1));
+        satrec.satnum = parseFloat(longstr2.slice(2, 7));
+        satrec.inclo = parseFloat(longstr2.slice(7, 16));
+        satrec.nodeo = parseFloat(longstr2.slice(16, 25));
+        satrec.ecco = parseFloat(longstr2.slice(25, 33));
+        satrec.argpo = parseFloat(longstr2.slice(33, 42));
+        satrec.mo = parseFloat(longstr2.slice(42, 51));
+        satrec.no = parseFloat(longstr2.slice(51, 63));
+        _revnum = parseFloat(longstr2.slice(63, 68));
+        startmfe = parseFloat(longstr2.slice(69, 81)); // only for 'v'
+        stopmfe = parseFloat(longstr2.slice(82, 96)); // only for 'v'
+        deltamin = parseFloat(longstr2.slice(96, 105)); // only for 'v'
     } else {
-        _cardnumb        = parseFloat(longstr2.slice(0, 1));
-        satrec.satnum   = parseFloat(longstr2.slice(2, 7));
-        satrec.inclo    = parseFloat(longstr2.slice(7, 16));
-        satrec.nodeo    = parseFloat(longstr2.slice(16, 25));
-        satrec.ecco     = parseFloat(longstr2.slice(25, 33));
-        satrec.argpo    = parseFloat(longstr2.slice(33, 42));
-        satrec.mo       = parseFloat(longstr2.slice(42, 51));
-        satrec.no       = parseFloat(longstr2.slice(51, 63));
-        _revnum          = parseFloat(longstr2.slice(63, 68));
+        _cardnumb = parseFloat(longstr2.slice(0, 1));
+        satrec.satnum = parseFloat(longstr2.slice(2, 7));
+        satrec.inclo = parseFloat(longstr2.slice(7, 16));
+        satrec.nodeo = parseFloat(longstr2.slice(16, 25));
+        satrec.ecco = parseFloat(longstr2.slice(25, 33));
+        satrec.argpo = parseFloat(longstr2.slice(33, 42));
+        satrec.mo = parseFloat(longstr2.slice(42, 51));
+        satrec.no = parseFloat(longstr2.slice(51, 63));
+        _revnum = parseFloat(longstr2.slice(63, 68));
     }
 
     // ---- find no, ndot, nddot ----
-    satrec.no    = satrec.no / xpdotp; ////* rad/min
+    satrec.no = satrec.no / xpdotp; ////* rad/min
     satrec.nddot = satrec.nddot * Math.pow(10.0, nexp);
     satrec.bstar = satrec.bstar * Math.pow(10.0, ibexp);
 
     // ---- convert to sgp4 units ----
-    satrec.a     = Math.pow(satrec.no * tumin, -2 / 3);     // [er]
-    satrec.ndot  = satrec.ndot  / (xpdotp * 1440.0);        // [rad/min^2]
+    satrec.a = Math.pow(satrec.no * tumin, -2 / 3); // [er]
+    satrec.ndot = satrec.ndot / (xpdotp * 1440.0); // [rad/min^2]
     satrec.nddot = satrec.nddot / (xpdotp * 1440.0 * 1440); // [rad/min^3]
 
     // ---- find standard orbital elements ----
     satrec.inclo = satrec.inclo * deg2rad;
     satrec.nodeo = satrec.nodeo * deg2rad;
     satrec.argpo = satrec.argpo * deg2rad;
-    satrec.mo    = satrec.mo    * deg2rad;
+    satrec.mo = satrec.mo * deg2rad;
 
     satrec.alta = satrec.a * (1.0 + satrec.ecco) - 1.0;
     satrec.altp = satrec.a * (1.0 - satrec.ecco) - 1.0;
-
 
     // ----------------------------------------------------------------
     // find sgp4epoch time of element set
@@ -215,36 +232,59 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     satrec.jdsatepoch = jday(year, mon, day, hr, minute, sec);
 
     // input start stop times manually
-    if ((typerun !== 'v') && (typerun !== 'c')) {
-        if (typeinput === 'n') { // 'now', from viz layer
+    if (typerun !== "v" && typerun !== "c") {
+        if (typeinput === "n") {
+            // 'now', from viz layer
             const now = new Date();
-            jdstart = jday(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(),
-                           now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
-            jdstop =  jday(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(),
-                           now.getUTCHours(), now.getUTCMinutes(), (now.getUTCSeconds() + 1) % 60); // more than jdstart
+            jdstart = jday(
+                now.getUTCFullYear(),
+                now.getUTCMonth(),
+                now.getUTCDay(),
+                now.getUTCHours(),
+                now.getUTCMinutes(),
+                now.getUTCSeconds()
+            );
+            jdstop = jday(
+                now.getUTCFullYear(),
+                now.getUTCMonth(),
+                now.getUTCDay(),
+                now.getUTCHours(),
+                now.getUTCMinutes(),
+                (now.getUTCSeconds() + 1) % 60
+            ); // more than jdstart
             startmfe = (jdstart - satrec.jdsatepoch) * 1440.0;
-            stopmfe  = (jdstop  - satrec.jdsatepoch) * 1440.0;
+            stopmfe = (jdstop - satrec.jdsatepoch) * 1440.0;
             deltamin = 60; // minutes, we shouldn't need this
             // Why is startmfe negative??
             // satrec.jdsatepoch=2456195.79713419
             // jdstart          =2456156.1898611113
             // Perhaps based on typerun==c use delta of ... 1?
             startmfe = 0.0;
-            stopmfe  = 1.0;
+            stopmfe = 1.0;
         }
     }
     //     // perform complete catalog evaluation
-    if (typerun === 'c') {
+    if (typerun === "c") {
         startmfe = -1440.0;
-        stopmfe  = 1440.0;
+        stopmfe = 1440.0;
         deltamin = 20.0;
     }
 
     // ------------- initialize the orbit at sgp4epoch --------------
     sgp4epoch = satrec.jdsatepoch - 2433281.5; // days since 0 Jan 1950
 
-    satrec = sgp4init(whichconst, satrec, satrec.bstar, satrec.ecco, sgp4epoch,
-                      satrec.argpo, satrec.inclo, satrec.mo, satrec.no, satrec.nodeo);
+    satrec = sgp4init(
+        whichconst,
+        satrec,
+        satrec.bstar,
+        satrec.ecco,
+        sgp4epoch,
+        satrec.argpo,
+        satrec.inclo,
+        satrec.mo,
+        satrec.no,
+        satrec.nodeo
+    );
 
     return [satrec, startmfe, stopmfe, deltamin];
 }
