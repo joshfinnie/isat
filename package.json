@@ -8,8 +8,12 @@
     },
     "type": "module",
     "main": "./js/index.js",
+    "types": "./js/index.d.ts",
     "exports": {
-        ".": "./js/index.js",
+        ".": {
+            "types": "./js/index.d.ts",
+            "default": "./js/index.js"
+        },
         "./sgp4": "./js/sgp4.js",
         "./twoline2rv": "./js/twoline2rv.js",
         "./getgravc": "./js/getgravc.js"

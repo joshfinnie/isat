@@ -30,7 +30,8 @@ var PLAY = true;
 // Tile Providers
 
 var TILE_PROVIDERS = {
-    bing: new Cesium.BingMapsImageryProvider({ // fails to detect 404 due to no net :-(
+    bing: new Cesium.BingMapsImageryProvider({
+        // fails to detect 404 due to no net :-(
         url: "http://dev.virtualearth.net",
         mapStyle: Cesium.BingMapsStyle.AERIAL_WITH_LABELS,
     }),
