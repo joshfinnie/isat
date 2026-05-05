@@ -221,7 +221,7 @@ function dscom(epoch, ep, argpp, tc, inclp, nodep, np) {
     cc = c1ss;
     xnoi = 1.0 / nm;
 
-    for (lsflg = 1; lsflg <= 2; lsflg += 1) {
+    for (lsflg = 1; lsflg <= 2; lsflg++) {
         // =1:2
         a1 = zcosg * zcosh + zsing * zcosi * zsinh;
         a3 = -zsing * zcosh + zcosg * zcosi * zsinh;

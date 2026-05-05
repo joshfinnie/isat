@@ -104,7 +104,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
 
     // set the implied decimal points since doing a formated read
     // fixes for bad input data values (missing, ...)
-    for (j = 10; j <= 15; j += 1) {
+    for (j = 10; j <= 15; j++) {
         //"8002B " -> "8002B_"
         if (longstr1[j] === " ") {
             longstr1[j] = "_";
@@ -120,7 +120,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     if (longstr1[9] === " ") {
         longstr1[9] = ".";
     }
-    for (j = 45; j <= 49; j += 1) {
+    for (j = 45; j <= 49; j++) {
         if (longstr1[j] === " ") {
             longstr1[j] = "0";
         }
@@ -140,7 +140,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     }
 
     longstr2[25] = ".";
-    for (j = 26; j <= 32; j += 1) {
+    for (j = 26; j <= 32; j++) {
         if (longstr2[j] === " ") {
             longstr2[j] = "0";
         }

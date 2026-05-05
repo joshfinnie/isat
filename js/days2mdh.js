@@ -48,7 +48,7 @@ function days2mdh(year, days) {
     // --------------- set up array of days in month  --------------
     // This is crazy, why not just:
     // lmonth = [undefined, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    for (i = 1; i <= 12; i += 1) {
+    for (i = 1; i <= 12; i++) {
         lmonth[i] = 31;
         if (i === 2) {
             lmonth[i] = 28;
@@ -69,7 +69,7 @@ function days2mdh(year, days) {
     inttemp = 0;
     while (dayofyr > inttemp + lmonth[i] && i < 12) {
         inttemp = inttemp + lmonth[i];
-        i += 1;
+        i++;
     }
 
     mon = i;

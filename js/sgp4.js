@@ -405,7 +405,7 @@ function sgp4(satrec, tsince) {
             }
         }
         eo1 = eo1 + tem5;
-        ktr = ktr + 1;
+        ktr++;
     }
 
     // /* ------------- short period preliminary quantities ----------- */

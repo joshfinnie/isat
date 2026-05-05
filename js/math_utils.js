@@ -30,7 +30,7 @@ function dot(a, b) {
     let n = 0,
         i;
     const lim = Math.min(a.length, b.length);
-    for (i = 0; i < lim; i += 1) {
+    for (i = 0; i < lim; i++) {
         n += a[i] * b[i];
     }
     return n;
