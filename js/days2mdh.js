@@ -35,28 +35,9 @@
 // -----------------------------------------------------------------------------
 
 function days2mdh(year, days) {
-    let i,
-        lmonth = [],
-        dayofyr,
-        inttemp,
-        mon,
-        day,
-        temp,
-        hr,
-        minute,
-        sec;
-    // --------------- set up array of days in month  --------------
-    // This is crazy, why not just:
-    // lmonth = [undefined, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    for (i = 1; i <= 12; i++) {
-        lmonth[i] = 31;
-        if (i === 2) {
-            lmonth[i] = 28;
-        }
-        if (i === 4 || i === 6 || i === 9 || i === 11) {
-            lmonth[i] = 30;
-        }
-    }
+    // index 1-based: lmonth[1]=Jan, lmonth[2]=Feb, ...
+    const lmonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let i, dayofyr, inttemp, mon, day, temp, hr, minute, sec;
 
     dayofyr = Math.floor(days);
 

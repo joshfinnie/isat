@@ -1,5 +1,5 @@
 import { mag } from "./mag.js";
-import { dot, sign } from "./math_utils.js";
+import { dot } from "./math_utils.js";
 
 // this function calculates the angle between two vectors.  the output is
 // set to 999999.1 to indicate an undefined value.  be sure to check for
@@ -18,7 +18,7 @@ function angl(vec1, vec2) {
     if (magv1 * magv2 > SMALL * SMALL) {
         temp = dot(vec1, vec2) / (magv1 * magv2);
         if (Math.abs(temp) > 1.0) {
-            temp = sign(temp) * 1.0;
+            temp = Math.sign(temp);
         }
         theta = Math.acos(temp);
     } else {

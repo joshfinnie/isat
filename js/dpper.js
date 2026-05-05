@@ -108,11 +108,8 @@ function dpper(
     nodep,
     argpp,
     mp,
-    opsmode
+    opsmode = "i"
 ) {
-    if (opsmode === undefined) {
-        opsmode = "i";
-    }
 
     const twopi = 2.0 * Math.PI,
         // /* ---------------------- constants ----------------------------- */

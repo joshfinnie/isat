@@ -56,13 +56,9 @@ import { gstime } from "./gstime.js";
 //     vallado, crawford, hujsak, kelso  2006
 //  ----------------------------------------------------------------------------*/
 
-function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode) {
+function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode = "i") {
     // /* -------------------- wgs-72 earth constants ----------------- */
     // sgp4fix identify constants and allow alternate values
-
-    if (opsmode === undefined) {
-        opsmode = "i";
-    }
 
     const x2o3 = 2.0 / 3.0,
         // /* ------------- calculate auxillary epoch quantities ---------- */

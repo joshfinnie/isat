@@ -1,15 +1,5 @@
 // Math Utilities to replicate functions used by MATLAB/Octave.
 
-function sign(val) {
-    if (val < 0) {
-        return -1;
-    }
-    if (val > 0) {
-        return 1;
-    }
-    return 0;
-}
-
 function cross(v1, v2) {
     // Return 3d cross product vector from two 3d vectors.
     // http://knol.google.com/k/dot-product-cross-product-in-3d
@@ -36,4 +26,4 @@ function dot(a, b) {
     return n;
 }
 
-export { sign, cross, dot };
+export { cross, dot };

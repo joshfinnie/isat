@@ -1,21 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { sign, cross, dot } from "../js/math_utils.js";
+import { cross, dot } from "../js/math_utils.js";
 
 describe("math_utils", () => {
-    describe("sign", () => {
-        it("returns -1 for negative values", () => {
-            expect(sign(-123.45)).toBe(-1);
-            expect(sign(-1)).toBe(-1);
-        });
-        it("returns 0 for zero", () => {
-            expect(sign(0)).toBe(0);
-        });
-        it("returns +1 for positive values", () => {
-            expect(sign(+1)).toBe(+1);
-            expect(sign(+123.45)).toBe(+1);
-        });
-    });
-
     describe("cross", () => {
         it("computes 3D cross products", () => {
             expect(cross([1, 2, 3], [4, 5, 6])).toEqual([-3, 6, -3]);

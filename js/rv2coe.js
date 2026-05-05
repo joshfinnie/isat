@@ -1,6 +1,6 @@
 import { small, infinite, UNDEFINED, twopi, halfpi } from "./constmath.js";
 import { mag } from "./mag.js";
-import { cross, dot, sign } from "./math_utils.js";
+import { cross, dot } from "./math_utils.js";
 import { angl } from "./angl.js";
 import { newtonnu } from "./newtonnu.js";
 
@@ -150,7 +150,7 @@ function rv2coe(r, v, mu) {
         if (magn > small) {
             temp = nbar[0] / magn;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             omega = Math.acos(temp);
             if (nbar[1] < 0.0) {
@@ -196,7 +196,7 @@ function rv2coe(r, v, mu) {
         if (ecc > small && typeorbit === "ee") {
             temp = ebar[0] / ecc;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             lonper = Math.acos(temp);
             if (ebar[1] < 0.0) {
@@ -214,7 +214,7 @@ function rv2coe(r, v, mu) {
         if (magr > small && typeorbit === "ce") {
             temp = r[0] / magr;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             truelon = Math.acos(temp);
             if (r[1] < 0.0) {
