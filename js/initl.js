@@ -1,5 +1,4 @@
 import { gstime } from "./gstime.js";
-/*jslint vars: true */ //why isn't this working
 // -----------------------------------------------------------------------------
 //
 //                            procedure initl

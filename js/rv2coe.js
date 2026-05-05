@@ -110,7 +110,7 @@ function rv2coe(r, v, mu) {
         magn = mag(nbar);
         c1 = magv * magv - mu / magr;
         rdotv = dot(r, v);
-        for (i in [0, 1, 2]) {
+        for (i = 0; i < 3; i++) {
             ebar[i] = (c1 * r[i] - rdotv * v[i]) / mu;
         }
         ecc = mag(ebar);

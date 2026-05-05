@@ -1,4 +1,3 @@
-/*jslint vars: true */
 import { getgravc } from "./getgravc.js";
 import { dpper } from "./dpper.js";
 import { dspace } from "./dspace.js";
