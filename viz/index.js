@@ -1,7 +1,9 @@
-/*global document, window, setInterval, Cesium, Image, navigator, twoline2rv, sgp4, tle, gstime*/
-(function () {
-    'use strict';
-    var canvas            = document.getElementById('glCanvas');
+import { twoline2rv } from '../js/twoline2rv.js';
+import { sgp4 } from '../js/sgp4.js';
+import { gstime } from '../js/gstime.js';
+import { tle } from './tle.js';
+
+var canvas            = document.getElementById('glCanvas');
     var ellipsoid         = Cesium.Ellipsoid.WGS84;
     var scene             = new Cesium.Scene(canvas);
     var satBillboards     = new Cesium.BillboardCollection();
@@ -55,7 +57,7 @@
 
     function getSatrecsFromTLEFile(fileName) {
         var tles = tle.parseFile(fileName);
-        var satnum, max, rets, satrec, startmfe, stopmfe, deltamin;
+        var satnum, max;
 
         // Reset the globals
         satrecs = [];
@@ -72,15 +74,11 @@
                 tle2: tles[satnum][2]
             };
 
-            rets = twoline2rv(WHICHCONST,
-                              tles[satnum][1],
-                              tles[satnum][2],
-                              TYPERUN,
-                              TYPEINPUT);
-            satrec   = rets.shift();
-            startmfe = rets.shift();
-            stopmfe  = rets.shift();
-            deltamin = rets.shift();
+            const [satrec] = twoline2rv(WHICHCONST,
+                                        tles[satnum][1],
+                                        tles[satnum][2],
+                                        TYPERUN,
+                                        TYPEINPUT);
             satrecs.push(satrec); // Don't need to sgp4(satrec, 0.0) to initialize state vector
         }
         // Returns nothing, sets globals: satrecs, satData
@@ -97,16 +95,13 @@
         var satrecsOut = [];
         var positions = [];
         var velocities = [];
-        var satnum, max, satrecTmp, jdSat, minutesSinceEpoch, rets, satrec, r, v;
+        var satnum, max, satrecTmp, jdSat, minutesSinceEpoch;
 
         for (satnum = 0, max = satrecs.length; satnum < max; satnum += 1) {
             satrecTmp = satrecs[satnum];
             jdSat = new Cesium.JulianDate.fromTotalDays(satrecTmp.jdsatepoch);
             minutesSinceEpoch = jdSat.getMinutesDifference(julianDate);
-            rets = sgp4(satrecs[satnum], minutesSinceEpoch);
-            satrec = rets.shift();
-            r = rets.shift();      // [1802,    3835,    5287] Km, not meters
-            v = rets.shift();
+            const [satrec, r, v] = sgp4(satrecs[satnum], minutesSinceEpoch);
             satrecsOut.push(satrec);
             positions.push(r);
             velocities.push(v);
@@ -671,13 +666,13 @@
         var satIdx = selectedSatelliteIdx;
         var positions = [];
         var rs = [];
-        var satrec = satrecs[satIdx];
+        let satrec = satrecs[satIdx];
         var jdSat = new Cesium.JulianDate.fromTotalDays(satrec.jdsatepoch);
         var now = new Cesium.JulianDate(); // TODO: we'll want to base on tick and time-speedup
         var minutesPerOrbit = 2 * Math.PI / satrec.no;
         var pointsPerOrbit = 144; // arbitrary: should be adaptive based on size (radius) of orbit
         var minutesPerPoint = minutesPerOrbit / pointsPerOrbit;
-        var minutes, julianDate, minutesSinceEpoch, rets, r, position;
+        var minutes, julianDate, minutesSinceEpoch;
 
         orbitTraces.modelMatrix = Cesium.Matrix4.fromRotationTranslation(Cesium.Transforms.computeTemeToPseudoFixedMatrix(now),
                                                                          Cesium.Cartesian3.ZERO);
@@ -685,10 +680,9 @@
         for (minutes = 0; minutes <= minutesPerOrbit; minutes += minutesPerPoint) {
             julianDate = now.addMinutes(minutes);
             minutesSinceEpoch = jdSat.getMinutesDifference(julianDate);
-            rets = sgp4(satrec, minutesSinceEpoch);
-            satrec = rets.shift();
-            r = rets.shift();      // [1802,    3835,    5287] Km, not meters
-            position = new Cesium.Cartesian3(r[0], r[1], r[2]);  // becomes .x, .y, .z
+            let r;
+            [satrec, r] = sgp4(satrec, minutesSinceEpoch);
+            const position = new Cesium.Cartesian3(r[0], r[1], r[2]);  // becomes .x, .y, .z
             position = position.multiplyByScalar(1000); // Km to meters
             positions.push(position);
             rs.push(r);
@@ -823,5 +817,3 @@
         scene.render();
         Cesium.requestAnimationFrame(tick);
     }());
-
-}());

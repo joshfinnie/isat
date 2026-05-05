@@ -1,6 +1,6 @@
 // Get, parse, and return TLE structures
 
-var tle = {
+const tle = {
     // I need to get a grip on proper OO patterns :-(
     content : null,
     lines : null,
@@ -25,10 +25,9 @@ var tle = {
     parseFile : function (fileName) {
         // Read file: if line starts with '1' or '2' assume TLE line 1, 2, otherwise store as comment/name
         var lines = this.readFileLines(fileName);
-        var line;
         var tle = [];
         var tles = [];
-        for (linenum = 0; linenum < lines.length; linenum++) {
+        for (let linenum = 0; linenum < lines.length; linenum++) {
             if (lines[linenum].substring(0, 2) === '1 ') {
                 tle[1] = lines[linenum];
             }
@@ -46,4 +45,6 @@ var tle = {
         return tles;
     }
 };
+
+export { tle };
 
