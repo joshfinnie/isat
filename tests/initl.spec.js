@@ -11,7 +11,7 @@ describe("initl", () => {
 
 // Must set globals same as testmat.m's run
 
-    const [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(72);
+    const [_tumin, _mu, _radiusearthkm, xke, j2, _j3, _j4, _j3oj2] = getgravc(72);
     const opsmode = "i";
 
 

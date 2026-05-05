@@ -92,6 +92,7 @@ function dspace(d2201,  d2211,  d3210,  d3222,  d4410,  d4422,  d5220,
         g44   = 1.8014998,
         g52   = 1.0508330,
         g54   = 4.4108898,
+        // eslint-disable-next-line no-loss-of-precision
         rptim = 4.37526908801129966e-3,
         stepp =    720.0,
         stepn =   -720.0,
@@ -103,7 +104,7 @@ function dspace(d2201,  d2211,  d3210,  d3222,  d4410,  d4422,  d5220,
     // defined elsewhere
     ft,
     delt,
-    iretn, iret,
+    iretn, _iret,
     xndt, xldot, xnddt,
     xomi, x2omi, x2li,
     xl;
@@ -149,7 +150,7 @@ function dspace(d2201,  d2211,  d3210,  d3222,  d4410,  d4422,  d5220,
         }
 
         iretn = 381; //// added for do loop
-        iret  =   0; //// added for loop
+        _iret  =   0; //// added for loop
         while (iretn === 381) {
             // /* ------------------- dot terms calculated ------------- */
             // /* ----------- near - synchronous resonance terms ------- */
@@ -187,7 +188,7 @@ function dspace(d2201,  d2211,  d3210,  d3222,  d4410,  d4422,  d5220,
            // /* ----------------------- integrator ------------------- */
            // sgp4fix move end checks to end of routine
             if (Math.abs(t - atime) >= stepp) {
-                iret  = 0;
+                _iret  = 0;
                 iretn = 381;
             }
             else {

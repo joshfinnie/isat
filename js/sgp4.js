@@ -111,13 +111,12 @@ function sgp4(satrec, tsince) {
         temp4    =   1.5e-12,
 
     // sgp4fix identify constants and allow alternate values
-    // TODO: global tumin mu radiusearthkm xke j2 j3 j4 j3oj2
-    rets, tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
+    _tumin, _mu, radiusearthkm, xke, j2, _j3, _j4, j3oj2,
     vkmpersec,
     xmdf, argpdf, nodedf, argpm, mm, t2, nodem, tempa, tempe, templ,
-    delomg, delm, temp, t3, t4, temp3,
-    nm, em, inclm, tc, dndt, am,
-    xm, emsq, sl,
+    delomg, delm, temp, t3, t4,
+    nm, em, inclm, tc, am,
+    emsq,
     xlm, sinim, cosim, ep, xincp, argpp, nodep, mp, sinip, cosip,
     axnl, aynl, xl, u, eo1, tem5, ktr, sineo1, coseo1,
     ecose, esine, el2, pl,
@@ -127,7 +126,7 @@ function sgp4(satrec, tsince) {
     cosisq, mrt, xnode, xinc, mvt, rvdot,
     sinsu, cossu, snod, cnod, sini, cosi, xmx, xmy, ux, uy, uz, vx, vy, vz;
 
-    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(satrec.whichconst || 72);
+    [_tumin, _mu, radiusearthkm, xke, j2, _j3, _j4, j3oj2] = getgravc(satrec.whichconst || 72);
 
     vkmpersec     = radiusearthkm * xke / 60.0;
 
@@ -169,26 +168,17 @@ function sgp4(satrec, tsince) {
     inclm = satrec.inclo;
     if (satrec.method === 'd') {
         tc = satrec.t;
-        rets = dspace(satrec.d2201, satrec.d2211, satrec.d3210,
-                      satrec.d3222, satrec.d4410, satrec.d4422,
-                      satrec.d5220, satrec.d5232, satrec.d5421,
-                      satrec.d5433, satrec.dedt, satrec.del1,
-                      satrec.del2, satrec.del3, satrec.didt,
-                      satrec.dmdt, satrec.dnodt, satrec.domdt,
-                      satrec.irez, satrec.argpo, satrec.argpdot, satrec.t,
-                      tc, satrec.gsto, satrec.xfact, satrec.xlamo, satrec.no,
-                      satrec.atime, em, argpm, inclm, satrec.xli, mm,
-                      satrec.xni, nodem, nm);
-        satrec.atime    = rets.shift();
-        em              = rets.shift();
-        argpm           = rets.shift();
-        inclm           = rets.shift();
-        satrec.xli      = rets.shift();
-        mm              = rets.shift();
-        satrec.xni      = rets.shift();
-        nodem           = rets.shift();
-        dndt            = rets.shift();
-        nm              = rets.shift();
+        [satrec.atime, em, argpm, inclm, satrec.xli, mm, satrec.xni, nodem, , nm] =
+            dspace(satrec.d2201, satrec.d2211, satrec.d3210,
+                   satrec.d3222, satrec.d4410, satrec.d4422,
+                   satrec.d5220, satrec.d5232, satrec.d5421,
+                   satrec.d5433, satrec.dedt, satrec.del1,
+                   satrec.del2, satrec.del3, satrec.didt,
+                   satrec.dmdt, satrec.dnodt, satrec.domdt,
+                   satrec.irez, satrec.argpo, satrec.argpdot, satrec.t,
+                   tc, satrec.gsto, satrec.xfact, satrec.xlamo, satrec.no,
+                   satrec.atime, em, argpm, inclm, satrec.xli, mm,
+                   satrec.xni, nodem, nm);
     }                           // if method = d
 
     if (nm <= 0.0) {
@@ -230,24 +220,20 @@ function sgp4(satrec, tsince) {
     sinip  = sinim;
     cosip  = cosim;
     if (satrec.method === 'd') {
-        rets = dpper(satrec.e3, satrec.ee2, satrec.peo,
-                     satrec.pgho, satrec.pho, satrec.pinco,
-                     satrec.plo, satrec.se2, satrec.se3,
-                     satrec.sgh2, satrec.sgh3, satrec.sgh4,
-                     satrec.sh2, satrec.sh3, satrec.si2,
-                     satrec.si3, satrec.sl2, satrec.sl3,
-                     satrec.sl4, satrec.t, satrec.xgh2,
-                     satrec.xgh3, satrec.xgh4, satrec.xh2,
-                     satrec.xh3, satrec.xi2, satrec.xi3,
-                     satrec.xl2, satrec.xl3, satrec.xl4,
-                     satrec.zmol, satrec.zmos, satrec.inclo,
-                     satrec.init, ep, xincp, nodep, argpp, mp,
-                     satrec.opsmode || 'i');
-        ep      = rets.shift();
-        xincp   = rets.shift();
-        nodep   = rets.shift();
-        argpp   = rets.shift();
-        mp      = rets.shift();
+        [ep, xincp, nodep, argpp, mp] =
+            dpper(satrec.e3, satrec.ee2, satrec.peo,
+                  satrec.pgho, satrec.pho, satrec.pinco,
+                  satrec.plo, satrec.se2, satrec.se3,
+                  satrec.sgh2, satrec.sgh3, satrec.sgh4,
+                  satrec.sh2, satrec.sh3, satrec.si2,
+                  satrec.si3, satrec.sl2, satrec.sl3,
+                  satrec.sl4, satrec.t, satrec.xgh2,
+                  satrec.xgh3, satrec.xgh4, satrec.xh2,
+                  satrec.xh3, satrec.xi2, satrec.xi3,
+                  satrec.xl2, satrec.xl3, satrec.xl4,
+                  satrec.zmol, satrec.zmos, satrec.inclo,
+                  satrec.init, ep, xincp, nodep, argpp, mp,
+                  satrec.opsmode || 'i');
 
         if (xincp < 0.0) {
             xincp  = -xincp;

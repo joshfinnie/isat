@@ -101,6 +101,7 @@ function dsinit(
     root22 = 1.7891679e-6,
     root44 = 7.3636953e-9,
     root54 = 2.1765803e-9,
+    // eslint-disable-next-line no-loss-of-precision
     rptim  = 4.37526908801129966e-3,
     root32 = 3.7393792e-7,
     root52 = 1.1428639e-7,
@@ -133,7 +134,7 @@ function dsinit(
     xni   = 0,
     // variable defined later
     ses, sis, sls, sghs, shs, sgs, sghl,
-    dedt, didt, dmdt, sdhl, shll, domdt, dnodt, dndt, theta,
+    dedt, didt, dmdt, _sdhl, shll, domdt, dnodt, dndt, theta,
     cosisq, emo, emsqo, eoc,
     g201, g211, g310, g322, g410, g422, g520, g533, g521, g532,
     sini2, f220, f221, f321, f322, f441, f442, f522, f523, f542, f543,

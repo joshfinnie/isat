@@ -234,8 +234,8 @@ var canvas            = document.getElementById('glCanvas');
         value = value.trim().toLowerCase();
         value = value.split('(')[0].trim(); // remove anything in trailing parens
         value = value.replace('/', '-');    // topex/poseidon -> topex-poseidon
-        value = value.replace(/[^\w\s\-]/, ''); // remove nonword, nonspace, nondash
-        value = value.replace(/[\-\s]+/, '-'); // multiple spaces/dashes to a single dash
+        value = value.replace(/[^\w\s-]/, ''); // remove nonword, nonspace, nondash
+        value = value.replace(/[-\s]+/, '-'); // multiple spaces/dashes to a single dash
         return value;
     }
 
@@ -453,6 +453,7 @@ var canvas            = document.getElementById('glCanvas');
             f = 3.35281066474748E-3,
             twopi = 6.28318530717958623,
             pio2 = 1.57079632679489656,
+            // eslint-disable-next-line no-loss-of-precision
             pi = 3.14159265358979323,
             xkmper = 6378.137,
             rad2degree = 57.295;
@@ -486,7 +487,7 @@ var canvas            = document.getElementById('glCanvas');
 
     function displayStats() {
         var satnum = selectedSatelliteIdx; // fixed number to test...
-        var pos0, vel0, vel0Carte, latLonAlt, sats;
+        var vel0, vel0Carte, sats;
 
         var now = new Cesium.JulianDate(); // TODO> we'll want to base on tick and time-speedup
         if (satrecs.length > 0) {
@@ -494,11 +495,11 @@ var canvas            = document.getElementById('glCanvas');
             satrecs = sats.satrecs;                       // propagate [GLOBAL]
         }
         document.getElementById('satellite_display').style.display = 'block'; // show modal
-        pos0 = sats.positions[satnum];                 // position of first satellite
+        void sats.positions[satnum];                   // position of first satellite (unused)
         vel0 = sats.velocities[satnum];
         vel0Carte = new Cesium.Cartesian3(vel0[0], vel0[1], vel0[2]);
         var time = now.getJulianDayNumber() + now.getJulianTimeFraction();
-        latLonAlt = calcLatLonAlt(time, satPositions[satnum], satrecs[satnum]);  // (time, position, satellite)
+        void calcLatLonAlt(time, satPositions[satnum], satrecs[satnum]);  // (time, position, satellite)
         document.getElementById('satellite_name').innerHTML = satData[satnum].name;
         document.getElementById('satellite_id').innerHTML = satData[satnum].noradId;
         var kmpers = vel0Carte.magnitude();
@@ -601,7 +602,7 @@ var canvas            = document.getElementById('glCanvas');
 
         for (bbnum = 0, max = satBillboards.getLength(); bbnum < max; bbnum += 1) {
             billboard = satBillboards.get(bbnum);
-            if (billboard.hasOwnProperty('isSelected')) {
+            if (Object.hasOwn(billboard, 'isSelected')) {
                 delete billboard.isSelected;
                 billboard.setColor({red: 1, blue: 1, green: 1, alpha: 1});
                 billboard.setScale(1.0);
@@ -682,7 +683,7 @@ var canvas            = document.getElementById('glCanvas');
             minutesSinceEpoch = jdSat.getMinutesDifference(julianDate);
             let r;
             [satrec, r] = sgp4(satrec, minutesSinceEpoch);
-            const position = new Cesium.Cartesian3(r[0], r[1], r[2]);  // becomes .x, .y, .z
+            let position = new Cesium.Cartesian3(r[0], r[1], r[2]);  // becomes .x, .y, .z
             position = position.multiplyByScalar(1000); // Km to meters
             positions.push(position);
             rs.push(r);

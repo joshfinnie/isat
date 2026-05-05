@@ -4,17 +4,9 @@ import { sgp4 } from "../js/sgp4.js";
 import { getgravc } from "../js/getgravc.js";
 
 describe("sgp4", () => {
-    const rets = getgravc(72),
-    tumin               = rets.shift(),
-    mu                  = rets.shift(),
-    radiusearthkm       = rets.shift(),
-    xke                 = rets.shift(),
-    j2                  = rets.shift(),
-    j3                  = rets.shift(),
-    j4                  = rets.shift(),
-    j3oj2               = rets.shift(),
-    opsmode             = "i",
-    TOL                 = 0.000001;
+    const [_tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2] = getgravc(72);
+    const _opsmode = "i";
+    const _TOL = 0.000001;
     it('satnum=5 init=y tsince= 0.000000000000e+00', () => {
         const TOL = 0.000001;
         const satin = {

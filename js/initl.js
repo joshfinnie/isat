@@ -105,8 +105,11 @@ function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode) {
         ids70  = Math.floor(ts70 + 1.0e-8);
         tfrac  = ts70 - ids70;
         // find greenwich location at epoch
+        // eslint-disable-next-line no-loss-of-precision
         c1     = 1.72027916940703639e-2;
+        // eslint-disable-next-line no-loss-of-precision
         thgr70 = 1.7321343856509374;
+        // eslint-disable-next-line no-loss-of-precision
         fk5r   = 5.07551419432269442e-15;
         twopi  = 6.283185307179586;
         c1p2p  = c1 + twopi;

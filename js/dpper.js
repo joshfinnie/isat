@@ -87,7 +87,7 @@ function dpper(e3,     ee2,    peo,    pgho,   pho,    pinco,  plo,    se2,
     zf, sinzf, f2, f3, ses, sis, sls, sghs, shs,
     sel, sil, sll, sghl, shll, pe, pinc, pl, pgh, ph,
     sinip, cosip,
-    sinop, cosop, alfdp, betdb, dalf, dbet, betdp, xls, dls, xnoh;
+    sinop, cosop, alfdp, _betdb, dalf, dbet, betdp, xls, dls, xnoh;
 
     // /* --------------- calculate time varying periodics ----------- */
     // // be sure that the initial call has time set to zero

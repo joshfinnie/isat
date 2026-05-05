@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, test, expect } from "vitest";
 import { isequalRel } from "./helpers.js";
 import { getgravc } from "../js/getgravc.js";
 import { dsinit } from "../js/dsinit.js";
@@ -8,7 +8,7 @@ describe("dsinit", () => {
 // Need to get globals, using same input constant 72 as with run that
 // generated asserts
 
-    const [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(72);
+    const [_tumin, _mu, _radiusearthkm, xke, _j2, _j3, _j4, _j3oj2] = getgravc(72);
 
 
 // 5

@@ -59,23 +59,21 @@ import { sgp4init } from "./sgp4init.js";
 //  ----------------------------------------------------------------------------*/
 
 function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
-    var tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
+    var tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2,
         deg2rad         = Math.PI / 180.0, // 0.01745329251994330  [deg/rad]
         xpdotp          = 1440.0 / (2.0 * Math.PI), // 229.1831180523293  [rev/day]/[rad/min]
         satrec          = {},
-        revnum          = 0,
-        elnum           = 0,
+        _revnum          = 0,
+        _elnum           = 0,
         year            = 0,
         j,
-        carnumb, classification, intldesg, nexp, ibexp, numb,
-        cardnumb, startmfe, stopmfe, deltamin,
+        _carnumb, _classification, _intldesg, nexp, ibexp, _numb,
+        _cardnumb, startmfe, stopmfe, deltamin,
         mon, day, hr, minute, sec,
-        startyear, startmon, startday, starthr, startmin, startsec, jdstart,
-        stopyear, stopmon, stopday, stophr, stopmin, stopsec, jdstop,
-        startdayofyr, stopdayofyr,
+        jdstart, jdstop,
         sgp4epoch;
 
-    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(whichconst);
+    [tumin, _mu, _radiusearthkm, _xke, _j2, _j3, _j4, _j3oj2] = getgravc(whichconst);
 
     satrec.error = 0;
 
@@ -139,10 +137,10 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
 
 
     // parse first line
-    carnumb             = parseFloat(longstr1[0]); // caution: 'cardnum' in second line
+    _carnumb             = parseFloat(longstr1[0]); // caution: 'cardnum' in second line
     satrec.satnum       = parseFloat(longstr1.slice(2, 7));
-    classification      =            longstr1[7]; // "U"
-    intldesg            =            longstr1.slice(9, 17);
+    _classification      =            longstr1[7]; // "U"
+    _intldesg            =            longstr1.slice(9, 17);
     satrec.epochyr      = parseFloat(longstr1.slice(18, 20)); // ??
     satrec.epochdays    = parseFloat(longstr1.slice(20, 32));
     satrec.ndot         = parseFloat(longstr1.slice(33, 43));
@@ -150,12 +148,12 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
     nexp                = parseFloat(longstr1.slice(50, 52));
     satrec.bstar        = parseFloat(longstr1.slice(52, 59));
     ibexp               = parseFloat(longstr1.slice(59, 61));
-    numb                = parseFloat(longstr1.slice(62, 63));
-    elnum               = parseFloat(longstr1.slice(64, 68));
+    _numb                = parseFloat(longstr1.slice(62, 63));
+    _elnum               = parseFloat(longstr1.slice(64, 68));
 
     // parse second line
     if (typerun === 'v') {
-        cardnumb        = parseFloat(longstr2.slice(0, 1));
+        _cardnumb        = parseFloat(longstr2.slice(0, 1));
         satrec.satnum   = parseFloat(longstr2.slice(2, 7));
         satrec.inclo    = parseFloat(longstr2.slice(7, 16));
         satrec.nodeo    = parseFloat(longstr2.slice(16, 25));
@@ -163,12 +161,12 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         satrec.argpo    = parseFloat(longstr2.slice(33, 42));
         satrec.mo       = parseFloat(longstr2.slice(42, 51));
         satrec.no       = parseFloat(longstr2.slice(51, 63));
-        revnum          = parseFloat(longstr2.slice(63, 68));
+        _revnum          = parseFloat(longstr2.slice(63, 68));
         startmfe        = parseFloat(longstr2.slice(69, 81)); // only for 'v'
         stopmfe         = parseFloat(longstr2.slice(82, 96)); // only for 'v'
         deltamin        = parseFloat(longstr2.slice(96, 105)); // only for 'v'
     } else {
-        cardnumb        = parseFloat(longstr2.slice(0, 1));
+        _cardnumb        = parseFloat(longstr2.slice(0, 1));
         satrec.satnum   = parseFloat(longstr2.slice(2, 7));
         satrec.inclo    = parseFloat(longstr2.slice(7, 16));
         satrec.nodeo    = parseFloat(longstr2.slice(16, 25));
@@ -176,7 +174,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
         satrec.argpo    = parseFloat(longstr2.slice(33, 42));
         satrec.mo       = parseFloat(longstr2.slice(42, 51));
         satrec.no       = parseFloat(longstr2.slice(51, 63));
-        revnum          = parseFloat(longstr2.slice(63, 68));
+        _revnum          = parseFloat(longstr2.slice(63, 68));
     }
 
     // ---- find no, ndot, nddot ----
@@ -218,51 +216,7 @@ function twoline2rv(whichconst, longstr1, longstr2, typerun, typeinput) {
 
     // input start stop times manually
     if ((typerun !== 'v') && (typerun !== 'c')) {
-        // ------------- enter start/stop ymd hms values --------------------
-        if (typeinput === 'e') {
-            startyear = input('input start year');
-            startmon  = input('input start mon');
-            startday  = input('input start day');
-            starthr   = input('input start hr');
-            startmin  = input('input start min');
-            startsec  = input('input start sec');
-            jdstart = jday(startyear, startmon, startday, starthr, startmin, startsec);
-
-            stopyear = input('input stop year');
-            stopmon  = input('input stop mon');
-            stopday  = input('input stop day');
-            stophr   = input('input stop hr');
-            stopmin  = input('input stop min');
-            stopsec  = input('input stop sec');
-            jdstop = jday(stopyear, stopmon, stopday, stophr, stopmin, stopsec);
-
-            startmfe = (jdstart - satrec.jdsatepoch) * 1440.0;
-            stopmfe  = (jdstop - satrec.jdsatepoch) * 1440.0;
-            deltamin = input('input time step in minutes ');
-        }
-        // -------- enter start/stop year and days of year values -----------
-        if (typeinput === 'd') {
-            startyear    = input('input start year');
-            startdayofyr = input('input start dayofyr');
-            stopyear     = input('input stop year');
-            stopdayofyr  = input('input stop dayofyr');
-
-            [mon, day, hr, minute, sec] = days2mdh(startyear, startdayofyr);
-            jdstart = jday(startyear, mon, day, hr, minute, sec);
-            [mon, day, hr, minute, sec] = days2mdh(stopyear, stopdayofyr);
-            jdstop = jday(stopyear, mon, day, hr, minute, sec);
-
-            startmfe = (jdstart - satrec.jdsatepoch) * 1440.0;
-            stopmfe  = (jdstop - satrec.jdsatepoch) * 1440.0;
-            deltamin = input('input time step in minutes ');
-        }
-        // ------------------ enter start/stop mfe values -------------------
-        if (typeinput === 'm') {
-            startmfe = input('input start mfe: ');
-            stopmfe  = input('input stop mfe: ');
-            deltamin = input('input time step in minutes: ');
-        }
-        if (typeinput === 'n') { // HACK: 'now', from cesiumtry
+        if (typeinput === 'n') { // 'now', from viz layer
             var now = new Date();
             jdstart = jday(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(),
                            now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());

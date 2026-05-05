@@ -92,20 +92,19 @@ import { sgp4 } from "./sgp4.js";
 
 function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
                   xargpo, xinclo, xmo, xno, xnodeo) {
-    var gravc, tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2,
-        ss, qzms2t, x2o3, temp4, foo,
-        ainv, ao, con42, cosio, cosio2, einv, eccsq, omeosq, posq, rp, rteosq, sinio,
+    var _tumin, _mu, radiusearthkm, xke, j2, _j3, j4, j3oj2,
+        ss, qzms2t, x2o3, temp4,
+        _ainv, ao, con42, cosio, cosio2, _einv, eccsq, omeosq, posq, rp, rteosq, sinio,
         sfour, qzms24, perige, pinvsq, tsi, etasq, eeta, psisq, coef, coef1, cc2, cc3,
         cosio4, temp1, temp2, temp3, xhdot1, xpidot,
         tc, inclm,
-        dscomvars, sinim, cosim, sinomm, cosomm, snodm, cnodm, day, em, emsq, gam, rtemsq,
-        s1, s2, s3, s4, s5, s6, s7, ss1, ss2, ss3, ss4, ss5, ss6, ss7,
-        sz1, sz2, sz3, sz11, sz12, sz13, sz21, sz22, sz23, sz31, sz32, sz33,
-        nm, z1, z2, z3, z11, z12, z13, z21, z22, z23, z31, z32, z33,
+        sinim, cosim, _sinomm, _cosomm, _snodm, _cnodm, _day, em, emsq, _gam, _rtemsq,
+        s1, s2, s3, s4, s5, _s6, _s7, ss1, ss2, ss3, ss4, ss5, _ss6, _ss7,
+        sz1, _sz2, sz3, sz11, _sz12, sz13, sz21, _sz22, sz23, sz31, _sz32, sz33,
+        nm, z1, _z2, z3, z11, _z12, z13, z21, _z22, z23, z31, _z32, z33,
         argpm, nodem, mm,
-        dndt,
-    cc1sq, temp,
-    r, v;
+        _dndt,
+        cc1sq, temp;
 
     // /* ------------------------ initialization --------------------- */
     // /* ----------- set all near earth variables to zero ------------ */
@@ -209,7 +208,7 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
     //     /* -------------------- wgs-72 earth constants ----------------- */
     //     // sgp4fix identify constants and allow alternate values
 
-    [tumin, mu, radiusearthkm, xke, j2, j3, j4, j3oj2] = getgravc(whichconst);
+    [_tumin, _mu, radiusearthkm, xke, j2, _j3, j4, j3oj2] = getgravc(whichconst);
 
     ss     = 78.0 / radiusearthkm + 1.0;
     qzms2t = Math.pow((120.0 - 78.0) / radiusearthkm, 4);
@@ -222,7 +221,7 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
     satrec.init = 'y';
     satrec.t    = 0.0;
 
-    [ainv, ao, satrec.con41, con42, cosio, cosio2, einv, eccsq,
+    [_ainv, ao, satrec.con41, con42, cosio, cosio2, _einv, eccsq,
      satrec.method, omeosq, posq, rp, rteosq, sinio,
      satrec.gsto, satrec.no] = initl(satrec.ecco, epoch, satrec.inclo, satrec.no, satrec.satnum,
                                      xke, j2, satrec.opsmode || 'i');
@@ -321,18 +320,18 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
             tc    =  0.0;
             inclm = satrec.inclo;
 
-            [sinim, cosim, sinomm, cosomm, snodm, cnodm, day,
-             satrec.e3, satrec.ee2, em, emsq, gam,
+            [sinim, cosim, _sinomm, _cosomm, _snodm, _cnodm, _day,
+             satrec.e3, satrec.ee2, em, emsq, _gam,
              satrec.peo, satrec.pgho, satrec.pho, satrec.pinco, satrec.plo,
-             rtemsq, satrec.se2, satrec.se3, satrec.sgh2, satrec.sgh3, satrec.sgh4,
+             _rtemsq, satrec.se2, satrec.se3, satrec.sgh2, satrec.sgh3, satrec.sgh4,
              satrec.sh2, satrec.sh3, satrec.si2, satrec.si3,
              satrec.sl2, satrec.sl3, satrec.sl4,
-             s1, s2, s3, s4, s5, s6, s7,
-             ss1, ss2, ss3, ss4, ss5, ss6, ss7,
-             sz1, sz2, sz3, sz11, sz12, sz13, sz21, sz22, sz23, sz31, sz32, sz33,
+             s1, s2, s3, s4, s5, _s6, _s7,
+             ss1, ss2, ss3, ss4, ss5, _ss6, _ss7,
+             sz1, _sz2, sz3, sz11, _sz12, sz13, sz21, _sz22, sz23, sz31, _sz32, sz33,
              satrec.xgh2, satrec.xgh3, satrec.xgh4, satrec.xh2, satrec.xh3,
              satrec.xi2, satrec.xi3, satrec.xl2, satrec.xl3, satrec.xl4,
-             nm, z1, z2, z3, z11, z12, z13, z21, z22, z23, z31, z32, z33,
+             nm, z1, _z2, z3, z11, _z12, z13, z21, _z22, z23, z31, _z32, z33,
              satrec.zmol, satrec.zmos] = dscom(epoch, satrec.ecco, satrec.argpo, tc,
                                                satrec.inclo, satrec.nodeo, satrec.no);
 
@@ -358,7 +357,7 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
              satrec.d2201, satrec.d2211, satrec.d3210, satrec.d3222,
              satrec.d4410, satrec.d4422, satrec.d5220, satrec.d5232,
              satrec.d5421, satrec.d5433,
-             satrec.dedt, satrec.didt, satrec.dmdt, dndt, satrec.dnodt, satrec.domdt,
+             satrec.dedt, satrec.didt, satrec.dmdt, _dndt, satrec.dnodt, satrec.domdt,
              satrec.del1, satrec.del2, satrec.del3,
              satrec.xfact, satrec.xlamo, satrec.xli, satrec.xni] =
                 dsinit(cosim, emsq, satrec.argpo, s1, s2, s3, s4, s5, sinim, ss1, ss2, ss3,
@@ -388,7 +387,7 @@ function sgp4init(whichconst, satrec, xbstar, xecco, epoch,
 
     // /* finally propogate to zero epoch to initialise all others. */
     if (satrec.error === 0) {
-        [satrec, r, v] = sgp4(satrec, 0.0);
+        [satrec] = sgp4(satrec, 0.0);
     }
 
     satrec.init = 'n';

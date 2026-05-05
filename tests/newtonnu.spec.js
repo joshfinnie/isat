@@ -7,9 +7,7 @@ describe("newtonnu", () => {
 
 it('eccentricity = 0.0', () => {
         const TOLERANCE = 1e-14;
-        const TOLERANCE_BIG = 1e-13;
         const ecc = 0.0;
-        let rets;
         let e0, m;
 
         [e0, m] = newtonnu(ecc, -6.28);
@@ -37,7 +35,6 @@ it('eccentricity = 0.333', () => {
         const TOLERANCE = 1e-14;
         const TOLERANCE_BIG = 1e-13;
         const ecc = 0.333;
-        let rets;
         let e0, m;
 
         [e0, m] = newtonnu(ecc, -6.28);
@@ -65,7 +62,6 @@ it('eccentricity = 0.666', () => {
         const TOLERANCE = 1e-14;
         const TOLERANCE_BIG = 1e-13;
         const ecc = 0.666;
-        let rets;
         let e0, m;
 
         [e0, m] = newtonnu(ecc, -6.28);

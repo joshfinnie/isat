@@ -23,6 +23,7 @@ describe("gstime", () => {
         expect(isequalRel(gstime(2453519.29417927982), 3.007604046768, TOL)).toBe(true); // 9998
         expect(isequalRel(gstime(2444468.79629787989), 1.265125075736, TOL)).toBe(true); // 11801
         expect(isequalRel(gstime(2453911.52844893001), 4.943902851905, TOL)).toBe(true); // 14128
+        // eslint-disable-next-line no-loss-of-precision
         expect(isequalRel(gstime(2453887.17415770982), 2.298863660699, TOL)).toBe(true); // 16925
         expect(isequalRel(gstime(2453734.29166666977), 0.407188563806, TOL)).toBe(true); // 20413
         expect(isequalRel(gstime(2453911.52341243997), 4.912171010008, TOL)).toBe(true); // 21897
