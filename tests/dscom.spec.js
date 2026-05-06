@@ -1,0 +1,3559 @@
+import { describe, test, expect } from "vitest";
+import { isequalRel } from "./helpers.js";
+import { dscom } from "../js/dscom.js";
+
+describe("dscom", () => {
+    // 5
+
+    test(" 1.975491070959e+04,  1.450506000000e-01,  3.623303527140e+00,  0.000000000000e+00,  2.000636014976e-01,  4.766670465451e+00,  5.245868658927e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            1.975491070959e4,
+            1.450506e-1,
+            3.62330352714,
+            0.0,
+            2.000636014976e-1,
+            4.766670465451,
+            5.245868658927e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 1.987316640953e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.80053940192e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -4.632960351199e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -8.862035792312e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.985271218932e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 5.425483244489e-2, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.801641070959e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -3.259811599808e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 9.631690304302e-5, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 1.450506e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 2.103967656036e-2, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 7.975304385858e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.894242383526e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -1.598763953845e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -1.532829312733e-3, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 1.009321688332e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.031125833038e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -1.698290639332e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.436571665398e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -2.604666666759e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -2.75201937038e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 1.412253967491e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -9.737328456846e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 9.584139594897e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.041147860756e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -1.968466918871e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -4.620853989286e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 9.143969877776e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 9.047265431838e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 1.015004737244e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -2.44649534416e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 8.280077172131e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -1.225562568207e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.87693210799e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 5.693012719481e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 5.632804773904e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 1.75908249414e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 6.522571736933e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 6.253574287016e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.313903514872e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 8.551999562135, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 4.721576706992, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 2.38911507621, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 4.782906351416e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -6.53293014808e-2, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -2.576626675289e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.496707623737, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -7.103439559619e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 7.986387467636, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 8.959317150558, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -1.166475754387, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 2.069563786522e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 6.246874813546e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -8.940507699742e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -5.956657020046e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -2.660535481999e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -2.550806983774e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 6.513825317331e-5, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -1.862212872508e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -5.873201141188e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.127428175609e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 5.245868658927e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 6.668001023728, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 1.018273735259e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 9.879517039032, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 1.630805643792, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 2.760103424268, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 9.259764788332e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 8.286842069497e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -6.445407097754e-1, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -2.05015105615, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 1.24894436282, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 1.14375100527e1, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 4.701299585848, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 3.145380241287, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 4.795490950675e-1, TOL), "zmos=" + zmos).toBe(true);
+    });
+
+    // 4632
+    // 6251
+
+    test(" 2.063033215444e+04,  6.877146000000e-01,  4.621022739372e+00,  0.000000000000e+00,  1.119778813470e+00,  4.870720014138e+00,  8.748547019630e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063033215444e4,
+            6.877146e-1,
+            4.621022739372,
+            0.0,
+            1.11977881347,
+            4.870720014138,
+            8.74854701963e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 9.000040530708e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 4.35881525711e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.958290077604e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -9.12391763609e-2, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.874918050266e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 1.57670336479e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889183215444e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -4.408046133189e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -1.093428053938e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 6.877146e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 4.729513710532e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145518530246e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 7.259811491677e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 2.501941522642e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 1.00724198853e-3, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.261915509701e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 2.455746281541e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -7.471990261373e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 9.458037270825e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -3.97022369062e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -1.110569917439e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 2.735745904365e-5, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 4.083492666433e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -2.119115873088e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.888302541444e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -4.106209626082e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.776251664788e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.482975046298e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.980536524969e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 3.199828401516e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 1.331432334813e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 5.367536651307e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.556515817813e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.351084818406e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.413686516514e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.478272060157e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 2.645498128236e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -4.893264311548e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -1.969950628727e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 2.823898158515, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -5.981059840555, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 5.927750640042, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 5.580094190508e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 2.361824441093, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 4.998289169492e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 9.668540331305e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 2.011419834108, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -7.476532737815, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -1.96738756969, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -2.545958391712, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 2.987165889194, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 4.54920244383e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -2.464815107882e-5, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.933566193975e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -6.438340814882e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 3.079429279349e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 1.142408298542e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 1.200089628145e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -7.862643771994e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -4.559423560477e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.520522489668e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.74854701963e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 2.900052189777, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 7.170052485742, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 7.057852947556, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 1.364174869534, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -1.512622038932, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -2.248209584395e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -5.118745162783, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -8.524777194958, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -1.041382803617, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 1.083975928476, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 5.714308128181, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 7.743675261388e-1, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.703291771992, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.972158040326, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 8195
+
+    test(" 2.063056157475e+04,  7.069051000000e-01,  4.712788660783e+00,  0.000000000000e+00,  1.127426846252e+00,  6.097806906008e+00,  8.762667060363e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063056157475e4,
+            7.069051e-1,
+            4.712788660783,
+            0.0,
+            1.127426846252,
+            6.097806906008,
+            8.762667060363e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 9.033113351973e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 4.289855844945e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.999999201278e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 3.996803880657e-4, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -1.843184645783e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 9.828665746761e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889206157475e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 1.249431839564e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 6.476652597055e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.069051e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 4.99714820406e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145563137997e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 7.073084048659e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -3.006446485103e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 2.366248156382e-3, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -2.805617954096e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -3.7559059517e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -7.268074853619e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 2.94890219518e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 3.166374712604e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 6.569128551896e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -6.992498193738e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 4.534351771255e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 6.836119210765e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.911149634817e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -4.105604224204e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.869698011745e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.474139856001e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.871905129561e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 5.202004853494e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -7.887575425406e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -1.521617490792e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.556138896122e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.409264279726e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.408185749187e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.410638425744e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 4.864426121357e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 5.880835524362e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -4.628559426039e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.251742101403e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -6.652148833638, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 2.488450010326, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -6.448698696437e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.363305928531, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 8.062989067707e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -7.726437183168, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 6.119922625331, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -1.155188982526, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 5.782028627321, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -5.819242579338, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -2.0082436748, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -1.815715485263e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 8.134154625503e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.826216649032e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 4.816111792216e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -6.696421947166e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -1.383644676752e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -7.113039969238e-7, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 4.111399428162e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -1.491371542789e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.532550149097e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.762667060363e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.736414847372, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -3.755292645342, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.535838635358e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 9.953838810723e-2, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 1.787794128318, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 1.087290794062e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 6.157731267206e-2, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 6.222852245315e-1, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -8.590805802032, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -2.838481585876, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -2.344731371903, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 7.665591155216, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.755605827278, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.97610452322, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 9880
+
+    test(" 2.023779417928e+04,  2.709710000000e-02,  5.716345999363e+00,  0.000000000000e+00,  1.657329751109e-01,  5.465934884933e+00,  5.069384722250e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.023779417928e4,
+            2.70971e-2,
+            5.716345999363,
+            0.0,
+            1.657329751109e-1,
+            5.465934884933,
+            5.06938472225e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 1.649753069066e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.862976975087e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -5.369683678799e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 8.436023778395e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -7.292672480414e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 6.842289682074e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.849929417928e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 4.759541749927e-5, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -5.215931631248e-5, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 2.70971e-2, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 7.3425282841e-4, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.069194702478e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.996328061701e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -4.545493382307e-4, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -1.40830728242e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 3.34176277591e-4, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.63125070816e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -1.77554683431e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -7.925299564105e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -7.614980505856e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -7.593552438778e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 7.406357152159e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -6.650365679906e-5, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 1.569236751846e-2, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.14576861433e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.844603186866e-5, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -4.732890446927e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 9.462305117515e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 9.45883061746e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -2.695688550324e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 6.783446012149e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -6.189899865592e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.393640304675e-4, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.946685725612e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 5.89120744159e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 5.889044226567e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -1.75306938244e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 9.494938260834e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 2.941768818959e-2, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.630534276736e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 5.644314638249e-2, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 2.986878196174, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 1.457191263623, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 1.288490383073, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 2.004645812038e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 9.81311764279e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -1.344781952011, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -3.108145795094e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 1.086186823499e1, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 2.837270911326e-1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -2.988008293373, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -1.706031133674e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -1.810449604366e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -9.347216416174e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -2.227234299372e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 5.491720843604e-6, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -6.826729645968e-6, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 2.099107684283e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 1.640123445179e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 1.647042035558e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.182504888112e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 5.06938472225e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.347308349031e1, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -8.666616774718, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 4.769908021423, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 2.121080157488, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 7.212008943076e-2, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -9.649460768102e-2, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 3.902915047865e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -2.352932446195, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 4.483080689261e-1, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 8.376216737664, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -9.018192642782, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -1.193938800509, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.585773955921e-1, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.502914127169, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 9998
+
+    test(" 1.118729629788e+04,  7.318036000000e-01,  8.285461931653e-01,  0.000000000000e+00,  8.166674822762e-01,  4.021856443150e+00,  9.971131604593e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            1.118729629788e4,
+            7.318036e-1,
+            8.285461931653e-1,
+            0.0,
+            8.166674822762e-1,
+            4.02185644315,
+            9.971131604593e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 7.288682597402e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 6.846539709542e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 7.369494526341e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 6.759478561711e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -7.709069259013e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -6.369478091629e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 2.944879629788e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -7.49951331553e-5, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 3.984687909508e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.318036e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 5.35536508973e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 6.309444856012e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 6.815155838475e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -2.35922531126e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -7.047176327541e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.822566953373e-4, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -2.213029457235e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -6.154293814758e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.139407335123e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 2.509518062136e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -5.208303751558e-5, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 3.287353432187e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 2.78168400938e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 3.3383632782e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.590677065105e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.598896383932e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.529408803158e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 4.810694202241e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.278563067952e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -3.295141721071e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -5.53598587514e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 1.041918482151e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.240663865223e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.197401071657e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 2.995126148595e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.041225145857e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -2.842063666668e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 5.264567675405e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 1.572564371863e-2, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 7.241600464427, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -4.643684224593, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 1.668607687869, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 5.923151674967, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 1.185105399906e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -1.556942593186, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -5.548981285667, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.592624873582, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 1.612144872051e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 3.273877043602, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -4.46439472165e-1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -2.146959216736, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 1.51025602248e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 3.555337411429e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.239876023751e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 1.128589566218e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -4.733943399734e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -6.414087511194e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -5.695169719647e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -7.034864700241e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -5.240671428885e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.363840070226e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 9.971131604593e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 2.557388153538, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 7.311693909959, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 8.004285429241, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -1.949045345611, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 9.086631598833e-1, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 6.119118527262, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 6.841370517902e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 1.598836560401, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -6.022288391897, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -1.633514023053, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 2.303228565651, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 3.788583001984, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 3.567468389971, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 3.896090412269, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 11801
+
+    test(" 2.063002844893e+04,  1.156200000000e-03,  4.617827041512e-01,  0.000000000000e+00,  1.996377411601e-01,  6.145897708218e-01,  4.313874514604e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063002844893e4,
+            1.1562e-3,
+            4.617827041512e-1,
+            0.0,
+            1.996377411601e-1,
+            6.145897708218e-1,
+            4.313874514604e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 1.983142799855e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.801384832532e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 4.455447971855e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 8.952596459692e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 5.766234094473e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 8.170100633881e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889152844893e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -2.023952527045e-6, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 3.000360099525e-6, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 1.1562e-3, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 1.33679844e-6, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145459478719e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999993316006e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -3.298847558934e-6, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 2.290506347297e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.939779689075e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -2.730323108731e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -2.087272183414e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -2.47378206738e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -1.070558033105e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -1.04341984531e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 2.771277863689e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 1.883089760893e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 2.55866163592e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.870307806874e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -1.928451076707e-6, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -5.559746452923e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.111948547358e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.111947804133e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -2.173422574442e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -7.779196827354e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 5.24761180486e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -1.200648805206e-5, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -3.461484201792e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 6.922963776275e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 6.92295914897e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -5.358747472118e-3, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 1.373777054802e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -9.538619192246e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.078528759969e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -1.360031499331e1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 8.9373351052, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -4.630982613971e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 1.507185623973, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -8.634002275673e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 1.168263836916, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -3.573296775556e-1, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -3.781220061153e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 5.061183248572, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -1.400975830807e1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 3.08924967943, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 1.723156593166e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 2.484248746878e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.098826820044e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -1.51043991948e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 1.680607206591e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 1.739604100604e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 1.380206186465e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -1.687937988178e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -2.328138479321e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.56393242941e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 4.313874514604e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 4.216765164053, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 7.590000419482, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.468549811421e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -1.569394720994e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -1.564463519456, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -1.398188689264, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -1.680069232651e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -1.358371224542, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 1.343399415874, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -1.774410090226, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 7.748369962881, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 9.396297462977, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.634038675524, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.966933705124, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 14128
+
+    test(" 2.060567415771e+04,  5.596327000000e-01,  4.278836976885e+00,  0.000000000000e+00,  1.083685404539e+00,  5.149138427074e+00,  2.131732105901e-02", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.060567415771e4,
+            5.596327e-1,
+            4.278836976885,
+            0.0,
+            1.083685404539,
+            5.149138427074,
+            2.131732105901e-2
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 8.836888491856e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 4.680747993911e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.07479292158e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -4.200968153942e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.061314198773e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 4.229962764744e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.886717415771e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -1.668567580056e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -8.275330366745e-5, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 5.596327e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 3.131887589093e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.140724108268e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 8.287407562626e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 1.125966825154e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 5.6850806024e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -8.864271738038e-5, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 1.625809438486e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -3.500523155064e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 2.744561082561e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -9.759618675546e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -4.991454790905e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -4.573037379522e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 1.462141038683e-4, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -1.456991037415e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 1.117866087106e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -1.565426252795e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -1.357597034132e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 2.250191985532e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.864825807826e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 8.624271127389e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 2.643155610802e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 5.329435280254e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -9.746304600404e-4, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -8.45236509585e-5, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 1.400963888348e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 1.161035872326e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 1.60339942452e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -5.776378182905e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -2.916531360083e-2, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 2.070490436592, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -5.218339497697e-1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 7.270449727238, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 7.572811749063e-3, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 2.952697105663, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 2.712754928035, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 4.211910638255e-3, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 1.623546221346, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -5.76909447454, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -2.992321735369, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -3.817397872589e-1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 4.009225233322, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 2.432700701456e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -1.126161998557e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.842820863294e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -1.621327565099e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 5.347365712173e-5, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -1.237488399592e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 1.015094158511e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -2.580143538619e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 5.639729900996e-5, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 5.884911644441e-5, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 2.131732105901e-2, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 5.540026309401, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 5.733163114988, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 4.286859926875, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 3.326689201301, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 4.557642542225e-1, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -4.118802452673e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -3.822206433384, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -5.971313741622, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -1.852783409566, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 2.175359468061, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 6.522595009269, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -8.44123622077e-1, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 2.363784803869, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.547991747703, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 16925
+
+    test(" 2.045279166667e+04,  7.864447000000e-01,  3.426128445555e+00,  0.000000000000e+00,  2.155725972308e-01,  3.271188586538e+00,  1.077283640185e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.045279166667e4,
+            7.864447e-1,
+            3.426128445555,
+            0.0,
+            2.155725972308e-1,
+            3.271188586538,
+            1.077283640185e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 2.139068072733e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.768540719074e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -2.80711938368e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -9.597920648024e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -1.29233474557e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -9.916141936529e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.871429166667e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -4.548826202443e-3, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 2.057187923104e-3, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.864447e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 6.184952661581e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.110998125934e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 6.176606947523e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 2.969569919355e-2, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 1.468368332662e-2, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.634808994984e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 4.324216378214e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -5.162579880111e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 1.425174198066e-2, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 4.931955088329e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 5.144176519066e-2, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -8.646214930954e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 3.951910009817e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -1.241558054094e-1, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.467220444289e-3, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.244378761083e-3, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.604476295552e-4, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 4.452686665858e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 2.750249539548e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -1.4017741458e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -3.170388038198e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 7.010319289793e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.019942082109e-2, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.244137904207e-3, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 2.772231554066e-3, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 1.712298467698e-3, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -1.156263617362e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -7.350631351406e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -3.634679295182e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.342983301258, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -7.127669411348, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 2.373573855782e1, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 1.488445240897, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.146136453874e1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 1.681085250112, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -1.539375336156, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 3.175326693145, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -4.405223915392e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -1.641109798937, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -4.7737267358, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 1.098582545735e1, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 6.919617584769e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 2.084732624778e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -2.717796594982e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 7.186248636015e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -2.561986795698e-3, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -5.475272881099e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -9.211923499783e-3, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -2.030877598251e-2, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -4.76734155212e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.298847374429e-3, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 1.077283640185e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 9.726328330151, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 2.280508096183e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.5079659824e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -4.80668748938, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 7.595101801411e-1, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 7.971761783749, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 7.614242560927e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 9.968505889305e-1, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -2.792471768775, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 2.853856110337, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 1.257998135308e1, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 6.643935146438, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 5.201540682068, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 6.201295960309, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 20413
+
+    test(" 2.063002341244e+04,  7.421690000000e-01,  4.416489349660e+00,  0.000000000000e+00,  1.085156717098e+00,  3.455919470557e+00,  8.782535528761e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063002341244e4,
+            7.42169e-1,
+            4.41648934966,
+            0.0,
+            1.085156717098,
+            3.455919470557,
+            8.782535528761e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 8.84376576781e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 4.667741107229e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.565401966673e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -2.916005009591e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -3.091763410854e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -9.510047266513e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889152341244e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -5.809658803806e-5, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 1.029719050358e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.42169e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 5.50814824561e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.14545849944e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 6.702127837031e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -5.827763896555e-4, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 7.782941825865e-4, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.403967386252e-5, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.23224304936e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -6.871312109088e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 1.040864137284e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 1.047903595216e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 1.704326979978e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 5.269146587838e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 6.958156453603e-4, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -1.138733166786e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.956953768062e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -4.075107416397e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -4.074643162103e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.46175587254e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.660538607241e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -1.448694740914e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -1.263425653782e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 7.128227811161e-2, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.537151660045e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.536862616486e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.400475512134e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.279042158902e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -1.671806012792e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 1.148485521842e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -1.533795150765e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 2.823148385069e-1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -1.023115212677, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 1.956688264698, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 7.560455550249e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -3.359123527034, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -2.82470790637e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -1.88315544592, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 2.051479119366, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 1.82198011548e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 1.221664044049e-1, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -3.080169844091e-2, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -2.581256708122, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -1.645505874222e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 1.06742686648e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.617344251676e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -7.385557332388e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -1.37934692438e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -1.440041796867e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -2.339553088854e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -1.733725252342e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 1.029442407285e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.556663348362e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.782535528761e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.395145995474, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 1.587150078475, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 4.527362363151e-1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -1.416027632726, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 1.76707718882, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 1.45484104924, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 7.775545601669e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -9.062827146532e-1, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -9.150438705484e-1, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -2.067807705441, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -2.247628082609, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -6.097888439984e-1, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.632890219145, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.966847067538, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 21897
+    // 22312
+    // *** error: t:= 494.202867 *** code =   1
+
+    test(" 2.063055909107e+04,  7.541712000000e-01,  4.421379762224e+00,  0.000000000000e+00,  1.108345161540e+00,  6.186235757890e+00,  8.582332516240e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063055909107e4,
+            7.541712e-1,
+            4.421379762224,
+            0.0,
+            1.10834516154,
+            6.18623575789,
+            8.58233251624e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 8.949616166056e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 4.461431438481e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.579547993872e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -2.869191564378e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.679774570435e-2, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 9.95304072345e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889205909107e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -1.880237977527e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 6.551908742706e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.541712e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 5.687741989094e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145562655079e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 6.566778518349e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -1.668215845123e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 3.610858069376e-3, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -4.299448087716e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.722984622184e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -6.889598529018e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 3.935976325614e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 3.05974318466e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 1.789568818084e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 2.366876188168e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 9.202998763432e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 2.742276317175e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 3.044773891692e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -4.152029536535e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -4.255636236536e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.589164123999e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.670280290501e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -6.781121236965e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -7.890007386814e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 2.264239645916e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.585043179178e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.649548450829e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.479799570045e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.285107306474e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -9.300055233772e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 3.226669207231e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -6.984134923665e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.01143349191e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -1.322346097553e1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 6.174055799605, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 1.436091100595, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -3.377120387296, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 9.894345792869e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -7.445807450018, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 7.427636064521, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -1.671723221244, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 4.048778658683, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -9.407540896517, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 2.787486533023e-1, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 2.558144451794e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 7.760342525429e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.626970983073e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -4.44280459088e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -7.585547023917e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -1.445258766608e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -2.241607759555e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -6.443953743437e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -1.634546261908e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.602895511062e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.58233251624e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.813115954744, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 5.76468466525, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.643557313837e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -1.421821877921e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 1.698052519386, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 2.491510678518, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 8.950346641696e-2, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -5.219906429897e-1, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -8.822850177431, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -2.661737982326, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 3.484944267628, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 7.910128348311, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.75503948087, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.976061799015, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 22674
+
+    test(" 2.062945752052e+04,  7.258491000000e-01,  5.167015834603e+00,  0.000000000000e+00,  1.230387309486e-01,  3.138517383448e+00,  9.853789469239e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.062945752052e4,
+            7.258491e-1,
+            5.167015834603,
+            0.0,
+            1.230387309486e-1,
+            3.138517383448,
+            9.853789469239e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 1.227285282698e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.924402794872e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -8.984249491476e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 4.391271009049e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 3.075265294731e-3, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -9.999952713605e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889095752052e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 5.88377187831e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 1.201802618946e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 7.258491e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 5.268569159708e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145348469226e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 6.878539699887e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -3.42460098058e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -1.945460736508e-3, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 2.807746435654e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -4.28792990199e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -6.28550031631e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.27747773131e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 3.309216641173e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 7.513453732828e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -1.615208443659e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -6.591258953724e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 8.653034599493e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.61359641742e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.645715464322e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.538528327605e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 4.867981516121e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.348460411695e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 1.335551822618e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -1.648239736078e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -8.069433744748e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.269813307285e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.203078864713e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.030793086581e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.084743056819e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 1.012064733473e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 7.543794393988e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 4.285508262429e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.743998961512e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 1.08738187752e1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 3.164791090678, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -3.199300228592, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.70521669768, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 4.664978268716e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -7.168375325603, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.899300955068e-1, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 3.420608511894e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 8.465783464086, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 6.73403474464, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -1.818289405144, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -7.58087389708e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 8.944532635768e-5, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.308948578837e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 4.59217407868e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -3.581021323765e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -3.094906804917e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 8.206020674696e-5, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 1.595875573261e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -2.025915791658e-5, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.375905769766e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 9.853789469239e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 9.381951731311, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -1.63915533366e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 9.59003754521, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -8.992776337465e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 4.373155332364, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -2.058802147183, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -1.165590178778, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 6.488819155206, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -6.225633496546, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 2.282389782041, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -1.131993956178e1, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 3.618008474818, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.503851507578, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.957112607744, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 23177
+
+    test(" 1.637649999999e+04,  9.728298000000e-01,  5.312084111370e-01,  0.000000000000e+00,  5.017647066558e-01,  4.139920985731e-02,  3.189177226396e-04", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            1.637649999999e4,
+            9.728298e-1,
+            5.31208411137e-1,
+            0.0,
+            5.017647066558e-1,
+            4.139920985731e-2,
+            3.189177226396e-4
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 4.809734670776e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 8.767351504117e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 5.065755975198e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 8.621955485836e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 4.138738522378e-2, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 9.991431750977e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.463799999999e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 6.618130467595e-3, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -7.503198877723e-3, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 9.728298e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 9.46397819768e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 7.318417018398e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 2.315214465918e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 4.629809809051e-2, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 4.271626851497e-2, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -4.391480163694e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 4.776472532865e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -6.536713592881e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 5.087055669958e-2, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 2.194123446194e-2, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 8.750068533754e-2, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 3.511647715856e-2, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 3.692252174204e-1, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -4.025541103842e-1, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 9.259903790801e-3, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -5.081511320759e-3, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.248271505978e-3, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.504089035974e-3, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 3.482288694116e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -2.328528826856e-3, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 7.382841839859e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -6.511970602682e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -3.163736207572e-2, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.022365695321e-2, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 9.364420626367e-3, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.168064209911e-3, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -2.895833784881e-3, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -7.316997223047e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -6.75092133357e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 3.995477449554, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -1.971425847643e1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 2.548928504566e1, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 8.310226113488e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -2.163324999528, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -3.71803363131e-2, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -5.208379182207e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 1.257699258281, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 2.162664475876e-2, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -1.002513894286, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -1.012765245517e1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 1.001300979507e1, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -6.878292929739e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -7.775516402908e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -3.441197687525e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -1.179576494215e-2, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 1.16903746388e-2, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -1.95658987138e-2, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 2.039566495961e-2, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 5.82532842332e-2, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 6.572632496892e-2, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 4.874798177836e-3, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 3.189177226396e-4, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 2.567833618728e1, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -1.936497203288e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 3.829122677668, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 1.717602413072, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 3.011740040478, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -1.421861902345, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -1.018792332212, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -1.815698737072, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 7.806838841821e-1, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 1.012719038286e1, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -9.876109555996, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -1.037186103277, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 5.60786819621, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 5.196058843771, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 23333
+
+    test(" 2.062576535463e+04,  5.782022000000e-01,  4.789944431026e+00,  0.000000000000e+00,  1.209984410530e-01,  4.972443038932e-03,  1.952919673236e-02", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.062576535463e4,
+            5.782022e-1,
+            4.789944431026,
+            0.0,
+            1.20998441053e-1,
+            4.972443038932e-3,
+            1.952919673236e-2
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 1.207034083544e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.926886154337e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.969940831688e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 7.747772664665e-2, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 4.972422548191e-3, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 9.999876374306e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.888726535463e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 1.917688589693e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 2.600403830731e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 5.782022e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 3.343177840848e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.144630576305e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 8.15893507705e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -2.021959812118e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 4.664465684109e-4, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -7.734435306744e-4, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -3.41597765541e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -3.761802411036e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -2.320545150812e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -6.75628629511e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -1.848221304876e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 1.18572201118e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 1.207731977398e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 5.449750974362e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 1.229961546518e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -1.738090138239e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -1.505235132354e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 2.456223144115e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 2.004016516758e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 1.141559521691e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -7.480635709048e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -5.516654595475e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -1.082130562202e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -9.371556193695e-5, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 1.529238371106e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 1.247695658719e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 6.79427489384e-3, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 9.342494717103e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -2.155223152841e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 2.003045339565e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -3.948802228017, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 2.211939691926, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 4.180135541233e-1, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 9.860802553364e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -2.14603903785e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 3.703990857776, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -1.238078875509, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 9.931402744621e-2, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 1.086424461544e1, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -3.099487945117, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -2.824901577941, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -3.210545596328e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 4.292321013506e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.98036912186e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -7.343991154683e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 1.243873320172e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 4.375268409065e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 1.33908186429e-5, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 5.069978526244e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -6.661160092554e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 6.475028727329e-5, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 1.952919673236e-2, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 3.735227503813, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -1.032067981769e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.729498918205e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 3.506359240961e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -1.453350481603, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -9.417227746221e-2, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 3.278561983564e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -2.439483040499, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 4.459680168698, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -1.664599028406, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -8.010277284346, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 9.044696472935, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 6.61937508863e-1, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.893600055028, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 23599
+
+    test(" 2.063104061740e+04,  2.664000000000e-03,  5.429679160382e+00,  0.000000000000e+00,  6.725800805485e-02,  1.396474586435e+00,  4.397108759492e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.06310406174e4,
+            2.664e-3,
+            5.429679160382,
+            0.0,
+            6.725800805485e-2,
+            1.396474586435,
+            4.397108759492e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 6.720731102433e-2, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.977390326858e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -7.535897804281e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 6.573449952911e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 9.848444029137e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 1.73440197329e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.88925406174e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -7.726902954388e-6, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -5.176143424006e-7, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 2.664e-3, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 7.096896e-6, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145656281517e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999964515457e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 3.935674677679e-5, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 3.101303936462e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.095943198289e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 1.543789357065e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -2.047755658748e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 1.170723269672e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -1.086189670839e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -1.002689875952e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -1.074034874057e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 1.012379841762e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -1.636988036209e-2, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.778128024756e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -4.359221435156e-6, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -5.454519985382e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.090900126053e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.090896255044e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -1.083047439793e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 5.937004463986e-2, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 8.862709854645e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.714040335773e-5, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -3.395970466932e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 6.791916832972e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 6.791892732165e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -7.564404853169e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -7.250582509412e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -5.713444814331e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 3.767328239899, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -7.452828609794, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 1.581833001499e1, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -1.872126641261, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 1.476293574569, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -2.907894586864e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 8.194386720961e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 1.723694715652, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -7.797944210889e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -1.428938019349, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -8.068024934334, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 9.936004110508, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 2.915576106025e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -4.189146928255e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.078023679235e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -3.065019513911e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -3.781667774154e-5, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -2.998211222471e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 2.707830507804e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -2.963865666279e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 7.064676449674e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.515405161303e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 4.397108759492e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.114414424666e1, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 1.358449593824e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 7.90614093135, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -5.626930686788e-3, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 2.748373120372e-1, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -2.487816486377, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, 2.349040036708e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -2.809614340149, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -1.117504942767e-1, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 5.153323530243, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 1.336321438699e1, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 3.233275263102, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.864840548802, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.984345003862, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 24208
+
+    test(" 1.976268057285e+04,  1.765000000000e-04,  2.710391608592e-01,  0.000000000000e+00,  6.981317007977e-06,  4.255350081140e+00,  4.374997775854e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            1.976268057285e4,
+            1.765e-4,
+            2.710391608592e-1,
+            0.0,
+            6.981317007977e-6,
+            4.25535008114,
+            4.374997775854e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 6.981317007921e-6, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.999999999756e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 2.677328054857e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 9.634931991803e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -8.973631423355e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -4.412928628221e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.802418057285e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -1.443253711966e-7, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -4.967861523155e-7, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 1.765e-4, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 3.115225e-8, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 7.976815133207e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999999844239e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -2.393510838524e-6, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 2.297499314735e-6, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -1.26471565845e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.273189516222e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -2.058112167495e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.099705176855e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 1.167960133285e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 1.176752281702e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 9.654718969481e-4, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 1.215221622343e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 1.153344263874e-2, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.80226186307e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -2.902754621049e-7, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -5.482067443771e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.096413471676e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.096413454598e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, -6.378753298339e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 8.557150313586e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 2.486007087027e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -1.807247749069e-6, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -3.413121445456e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 6.826242784585e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 6.826242678259e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, -2.876970046754e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 6.621977644616e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -6.356348530297e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.333992996164e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -8.901101679884, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 4.892059732956, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 1.689817110256, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.723865236716, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 2.754638380722e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -1.338739623226, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -1.610996260211, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 3.722456902921e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 8.253714037282, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -9.263629481548, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -1.071983687153, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 6.708089970693e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -2.691818508104e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.083475775834e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -2.68854816114e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -1.12093166889e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -7.859155231505e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 2.67701604071e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -4.478395208697e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 2.528608623316e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.528110216744e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 4.374997775854e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.45374273858e1, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 2.04229304199, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 3.006154336733, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 2.231085072369, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 7.16805777393e-1, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -2.105266627735e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -1.762284682913e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -2.452129774685, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -1.198590634013, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 9.539627269283, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 3.059106007209, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -2.735935826075, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 4.917119876491, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 6.132061041587e-1, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 25954
+
+    test(" 2.056074503247e+04,  3.319000000000e-04,  1.504114277393e+00,  0.000000000000e+00,  2.862339973271e-04,  4.651962191022e+00,  4.375109379983e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.056074503247e4,
+            3.319e-4,
+            1.504114277393,
+            0.0,
+            2.862339973271e-4,
+            4.651962191022,
+            4.375109379983e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 2.862339934185e-4, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.99999959035e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 9.977775758269e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 6.663264347934e-2, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.981748570252e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -6.039002237745e-2, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.882224503247e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -4.297357109584e-7, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -8.575863014313e-7, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 3.319e-4, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 1.1015761e-7, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.131988232929e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999999449212e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 4.977710503291e-6, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -3.758122880832e-6, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 1.1702388132e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 1.596617407202e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -2.058059586065e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.469489949578e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 7.031457064751e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 6.596584265507e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 1.342180142943e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -1.219566699304e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -1.716537238492e-2, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.802139525359e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -5.458354928034e-7, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -5.481927818934e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.096385503399e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.096385443012e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 3.134894679716e-2, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 7.855721300082e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 3.93649475551e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -3.398358092612e-6, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -3.413034515383e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 6.826068654794e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 6.826068278822e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 2.000630099778e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -7.323699221269e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 5.529321481752e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 3.956575789077, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 8.933155824965, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 1.652997143817e1, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 2.076153554075, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -9.663811244475e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 1.09897225735e-1, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -5.818957556802e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.152761630383, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 4.481930162117e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, -1.129325285006, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 8.571836417392, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 1.056567498445e1, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 1.468610866371e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -2.762771903365e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.083448094784e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 2.44397722928e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 1.980068154638e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 1.700595365594e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -2.181240526799e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -1.672610170679e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 2.984308463316e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.528045813088e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 4.375109379983e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 1.692870278037e1, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 7.627837861288, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 3.318943922456, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 2.623614504262e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -1.551092445727, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 2.251844529048, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -9.937247788382e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 2.229122044291, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 8.122714145074e-1, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 1.111024835979e1, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 6.697511699614, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, -1.489207064283, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 4.685095846573, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 1.775121968701, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 26900
+
+    test(" 2.062885818871e+04,  5.602877000000e-01,  2.159817024075e+00,  0.000000000000e+00,  1.195051373450e+00,  4.121251198722e+00,  8.973959238486e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.062885818871e4,
+            5.602877e-1,
+            2.159817024075,
+            0.0,
+            1.19505137345,
+            4.121251198722,
+            8.973959238486e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 9.302345077967e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 3.669656121548e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 8.31485126426e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -5.555470137912e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -8.303071240211e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -5.573060916586e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889035818871e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -2.267021997425e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, -2.551224465045e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 5.602877e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 3.139223067713e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145231937067e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 8.282980702795e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, 2.254910627255e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -2.280386619192e-4, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -3.389917058225e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, 1.654422300963e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -8.3109264815e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -9.721139826925e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -2.919237403379e-3, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 6.537866741737e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 3.149325116495e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 9.242202107515e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, -3.312631236734e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.656187161612e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.720978016674e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -3.226647047178e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.3452510453e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 4.427461125982e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 4.525325835392e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, 3.428163850489e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 3.046271688877e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.316671583676e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -2.00890236149e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.327939898804e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 2.756526196186e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 4.714471153965e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, -4.866703254669e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 4.921687293228e-2, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 4.938361689104, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -1.388577075992e1, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 9.915361480964, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 3.805314774695, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.627223618994, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -4.033107780993, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 3.078769405047, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.419515257007, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -4.186982926525, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 1.829903197356, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -6.148893239098, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 4.830822077162, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 5.870668970928e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 3.411079917117e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -4.375217084695e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -2.939157970135e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 4.419605173894e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 3.177266725877e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -4.193605290405e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -1.435489158349e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -9.317921317489e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.398327307491e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.973959238486e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 3.661706391172, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 1.342770569786e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.237778093895e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, -3.293349160083, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -4.923480441805, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 3.205045658268, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -3.721535433952, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -4.554508018945, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 3.127067944841, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 1.881696181512, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 6.629836834113, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 5.733881237525, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.3671875939, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.946802915738, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 26975
+    // 28057
+
+    test(" 2.062957071136e+04,  4.850600000000e-03,  4.647183479530e+00,  0.000000000000e+00,  9.552152089580e-01,  5.669000452744e+00,  8.751201528747e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.062957071136e4,
+            4.8506e-3,
+            4.64718347953,
+            0.0,
+            9.55215208958e-1,
+            5.669000452744,
+            8.751201528747e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 8.164380281199e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 5.774330664585e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, -9.978748744491e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -6.515930434859e-2, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -5.762925414229e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 8.172434806716e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889107071136e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, -3.876849228949e-6, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 5.421891510864e-6, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 4.8506e-3, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 2.352832036e-5, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145370477691e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999882357706e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -2.399586065802e-6, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 3.979795711446e-5, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, -7.340466124056e-3, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -9.267102539452e-4, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -1.028902184234e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 1.019818515817e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -1.260734846663e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -3.379233009896e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -1.160185387548e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, 6.096109975713e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 1.773703432654e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 2.400824215399e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -3.988100801283e-6, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -2.740688187581e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 5.481311890993e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 5.481247407583e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 1.233438061238e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -6.79758584477e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, 4.860520611341e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -2.482981559624e-5, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -1.706345593936e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 3.412651040191e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 3.412610892981e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 1.105337187989e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 4.832065821233e-2, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -8.014146734236e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 8.767976650646, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, -8.931633946627, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 6.169258803781, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -1.152824021952, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 9.90195955e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 2.246796171257, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -1.154475187594, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 2.988311744821, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -1.523900599171, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 3.250295769937, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, -1.07549122274e1, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, 1.892522670385, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, 6.595724207569e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 1.091630835372e-3, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -5.416568688173e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -1.288582105817e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -9.703376083569e-5, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -8.270003713552e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 1.575914794162e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, -4.514061623044e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -1.081448579815e-3, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 1.263893640252e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 8.751201528747e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 3.15799800719, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, 4.11768360642, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.30228679628e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 2.120494801971, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 1.50874582359, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -7.545400183037e-1, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -3.322838238711e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -2.350836756359, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -2.102528269689, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, -1.9378868293, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, 6.016626980242, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 8.019981829044, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.529662090192, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.95905971397, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 28129
+    // 28350
+    // *** error: t:= 1560.000000 *** code =   1
+
+    test(" 2.063181079184e+04,  6.249053000000e-01,  2.971510317983e+00,  0.000000000000e+00,  4.977679026688e-01,  2.006838915138e+00,  1.655279727416e-02", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063181079184e4,
+            6.249053e-1,
+            2.971510317983,
+            0.0,
+            4.977679026688e-1,
+            2.006838915138,
+            1.655279727416e-2
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 4.77465496226e-1, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 8.786504992963e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 1.692634972133e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, -9.855708338375e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, 9.064301919275e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, -4.223556642953e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889331079184e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 2.080207273239e-4, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 2.279612848318e-4, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 6.249053e-1, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 3.905066339681e-1, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145806031771e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 7.807005610552e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -2.010666927152e-3, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, 1.234888459603e-4, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 4.404694052449e-4, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -3.174852765982e-3, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -4.246782106577e-5, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, 4.897361699131e-4, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, -1.594883558919e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, -1.422358125944e-3, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, -1.642085155919e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -1.791873501287e-3, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 5.840111590196e-3, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 1.481689063817e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -2.120658619569e-4, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -1.855950189595e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 2.897882708615e-5, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 2.262378656488e-5, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 2.722596005818e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -5.374775617541e-1, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -4.90462551125e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -1.320316739475e-3, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -1.15550993467e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 1.804214508603e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 1.40855127913e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 2.34645319094e-1, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 7.614335511458e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, -4.676485659395e-2, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.77622295797e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 4.965799500954, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 1.577591992681, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, -5.936254038933, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, 6.15467718307, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, 1.169202637163, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, -7.594596902903e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, 2.119134397807, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, -1.449580783613, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 9.294909311397, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 1.563554738018, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -1.975013243152, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -3.876052640328e-4, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, 2.628367881541e-4, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -2.235682588341e-5, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, -7.296812344377e-5, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, -4.081833544751e-5, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, -6.94862806138e-5, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, 3.512666727653e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 8.272799129225e-4, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, -3.372511878045e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 7.800226991119e-5, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 1.655279727416e-2, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 5.938562976121, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -1.427386813247e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 1.175748702715e1, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 2.138574136804, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, 1.871986678397, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, -7.324682871238, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -5.405862432734e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, -1.965788841016, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, -1.640247637107, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 3.189234780521e-1, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -8.56632162174, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 6.127782826163, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 2.040461217495, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.997593526865, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 28623
+
+    test(" 2.063046683397e+04,  3.350000000000e-05,  2.407123197766e-01,  0.000000000000e+00,  3.316125578789e-05,  5.008105351538e+00,  4.374949216286e-03", function () {
+        const {
+            sinim,
+            cosim,
+            sinomm,
+            cosomm,
+            snodm,
+            cnodm,
+            day,
+            e3,
+            ee2,
+            em,
+            emsq,
+            gam,
+            peo,
+            pgho,
+            pho,
+            pinco,
+            plo,
+            rtemsq,
+            se2,
+            se3,
+            sgh2,
+            sgh3,
+            sgh4,
+            sh2,
+            sh3,
+            si2,
+            si3,
+            sl2,
+            sl3,
+            sl4,
+            s1,
+            s2,
+            s3,
+            s4,
+            s5,
+            s6,
+            s7,
+            ss1,
+            ss2,
+            ss3,
+            ss4,
+            ss5,
+            ss6,
+            ss7,
+            sz1,
+            sz2,
+            sz3,
+            sz11,
+            sz12,
+            sz13,
+            sz21,
+            sz22,
+            sz23,
+            sz31,
+            sz32,
+            sz33,
+            xgh2,
+            xgh3,
+            xgh4,
+            xh2,
+            xh3,
+            xi2,
+            xi3,
+            xl2,
+            xl3,
+            xl4,
+            nm,
+            z1,
+            z2,
+            z3,
+            z11,
+            z12,
+            z13,
+            z21,
+            z22,
+            z23,
+            z31,
+            z32,
+            z33,
+            zmol,
+            zmos,
+        } = dscom(
+            2.063046683397e4,
+            3.35e-5,
+            2.407123197766e-1,
+            0.0,
+            3.316125578789e-5,
+            5.008105351538,
+            4.374949216286e-3
+        );
+        const TOL = 0.0000001;
+        expect(isequalRel(sinim, 3.316125578181e-5, TOL), "sinim=" + sinim).toBe(true);
+        expect(isequalRel(cosim, 9.999999994502e-1, TOL), "cosim=" + cosim).toBe(true);
+        expect(isequalRel(sinomm, 2.383944693127e-1, TOL), "sinomm=" + sinomm).toBe(true);
+        expect(isequalRel(cosomm, 9.711684081564e-1, TOL), "cosomm=" + cosomm).toBe(true);
+        expect(isequalRel(snodm, -9.565936191876e-1, TOL), "snodm=" + snodm).toBe(true);
+        expect(isequalRel(cnodm, 2.91425200917e-1, TOL), "cnodm=" + cnodm).toBe(true);
+        expect(isequalRel(day, 3.889196683397e4, TOL), "day=" + day).toBe(true);
+        expect(isequalRel(e3, 9.730286584479e-8, TOL), "e3=" + e3).toBe(true);
+        expect(isequalRel(ee2, 4.116645807083e-9, TOL), "ee2=" + ee2).toBe(true);
+        expect(isequalRel(em, 3.35e-5, TOL), "em=" + em).toBe(true);
+        expect(isequalRel(emsq, 1.12225e-9, TOL), "emsq=" + emsq).toBe(true);
+        expect(isequalRel(gam, 8.145544716903e1, TOL), "gam=" + gam).toBe(true);
+        expect(isequalRel(peo, 0.0, TOL), "peo=" + peo).toBe(true);
+        expect(isequalRel(pgho, 0.0, TOL), "pgho=" + pgho).toBe(true);
+        expect(isequalRel(pho, 0.0, TOL), "pho=" + pho).toBe(true);
+        expect(isequalRel(pinco, 0.0, TOL), "pinco=" + pinco).toBe(true);
+        expect(isequalRel(plo, 0.0, TOL), "plo=" + plo).toBe(true);
+        expect(isequalRel(rtemsq, 9.999999994389e-1, TOL), "rtemsq=" + rtemsq).toBe(true);
+        expect(isequalRel(se2, -4.897269431303e-7, TOL), "se2=" + se2).toBe(true);
+        expect(isequalRel(se3, -3.982514162897e-7, TOL), "se3=" + se3).toBe(true);
+        expect(isequalRel(sgh2, 1.21897980672e-2, TOL), "sgh2=" + sgh2).toBe(true);
+        expect(isequalRel(sgh3, -1.372729148759e-2, TOL), "sgh3=" + sgh3).toBe(true);
+        expect(isequalRel(sgh4, -2.058135042329e-4, TOL), "sgh4=" + sgh4).toBe(true);
+        expect(isequalRel(sh2, -1.607052704128e-3, TOL), "sh2=" + sh2).toBe(true);
+        expect(isequalRel(sh3, 1.922166128879e-4, TOL), "sh3=" + sh3).toBe(true);
+        expect(isequalRel(si2, 1.068903225853e-4, TOL), "si2=" + si2).toBe(true);
+        expect(isequalRel(si3, 1.50306966373e-3, TOL), "si3=" + si3).toBe(true);
+        expect(isequalRel(sl2, -1.268456207451e-2, TOL), "sl2=" + sl2).toBe(true);
+        expect(isequalRel(sl3, 1.252883219957e-2, TOL), "sl3=" + sl3).toBe(true);
+        expect(isequalRel(sl4, 4.802315103772e-4, TOL), "sl4=" + sl4).toBe(true);
+        expect(isequalRel(s1, -5.509538844302e-8, TOL), "s1=" + s1).toBe(true);
+        expect(isequalRel(s2, -5.482128209438e-5, TOL), "s2=" + s2).toBe(true);
+        expect(isequalRel(s3, 1.096425641272e-4, TOL), "s3=" + s3).toBe(true);
+        expect(isequalRel(s4, 1.096425640657e-4, TOL), "s4=" + s4).toBe(true);
+        expect(isequalRel(s5, 1.006889932162e-1, TOL), "s5=" + s5).toBe(true);
+        expect(isequalRel(s6, -3.735925930843e-2, TOL), "s6=" + s6).toBe(true);
+        expect(isequalRel(s7, -8.830400201772e-1, TOL), "s7=" + s7).toBe(true);
+        expect(isequalRel(ss1, -3.430225070548e-7, TOL), "ss1=" + ss1).toBe(true);
+        expect(isequalRel(ss2, -3.413159278008e-4, TOL), "ss2=" + ss2).toBe(true);
+        expect(isequalRel(ss3, 6.826318552185e-4, TOL), "ss3=" + ss3).toBe(true);
+        expect(isequalRel(ss4, 6.826318548355e-4, TOL), "ss4=" + ss4).toBe(true);
+        expect(isequalRel(ss5, 6.952479533275e-2, TOL), "ss5=" + ss5).toBe(true);
+        expect(isequalRel(ss6, 7.138408312257e-1, TOL), "ss6=" + ss6).toBe(true);
+        expect(isequalRel(ss7, 5.805033315585e-1, TOL), "ss7=" + ss7).toBe(true);
+        expect(isequalRel(sz1, 1.397388821705e1, TOL), "sz1=" + sz1).toBe(true);
+        expect(isequalRel(sz2, 9.290924513366, TOL), "sz2=" + sz2).toBe(true);
+        expect(isequalRel(sz3, 4.797029487281, TOL), "sz3=" + sz3).toBe(true);
+        expect(isequalRel(sz11, 2.148442577894, TOL), "sz11=" + sz11).toBe(true);
+        expect(isequalRel(sz12, -1.565856057085e-1, TOL), "sz12=" + sz12).toBe(true);
+        expect(isequalRel(sz13, -5.343190451679e-2, TOL), "sz13=" + sz13).toBe(true);
+        expect(isequalRel(sz21, 1.782467849547e-1, TOL), "sz21=" + sz21).toBe(true);
+        expect(isequalRel(sz22, -2.354201156804, TOL), "sz22=" + sz22).toBe(true);
+        expect(isequalRel(sz23, 4.59828447619e-1, TOL), "sz23=" + sz23).toBe(true);
+        expect(isequalRel(sz31, 8.887642026753, TOL), "sz31=" + sz31).toBe(true);
+        expect(isequalRel(sz32, 8.928530056762, TOL), "sz32=" + sz32).toBe(true);
+        expect(isequalRel(sz33, -1.167039270606, TOL), "sz33=" + sz33).toBe(true);
+        expect(isequalRel(xgh2, -2.791926643954e-3, TOL), "xgh2=" + xgh2).toBe(true);
+        expect(isequalRel(xgh3, -6.071229788246e-5, TOL), "xgh3=" + xgh3).toBe(true);
+        expect(isequalRel(xgh4, -1.083487818097e-4, TOL), "xgh4=" + xgh4).toBe(true);
+        expect(isequalRel(xh2, 2.358741028641e-4, TOL), "xh2=" + xh2).toBe(true);
+        expect(isequalRel(xh3, 2.037703492136e-4, TOL), "xh3=" + xh3).toBe(true);
+        expect(isequalRel(xi2, 1.978957741048e-4, TOL), "xi2=" + xi2).toBe(true);
+        expect(isequalRel(xi3, -1.979448507755e-4, TOL), "xi3=" + xi3).toBe(true);
+        expect(isequalRel(xl2, 2.660801647839e-3, TOL), "xl2=" + xl2).toBe(true);
+        expect(isequalRel(xl3, 3.319557433091e-4, TOL), "xl3=" + xl3).toBe(true);
+        expect(isequalRel(xl4, 2.528138244862e-4, TOL), "xl4=" + xl4).toBe(true);
+        expect(isequalRel(nm, 4.374949216286e-3, TOL), "nm=" + nm).toBe(true);
+        expect(isequalRel(z1, 9.646010296956, TOL), "z1=" + z1).toBe(true);
+        expect(isequalRel(z2, -1.213398131018e1, TOL), "z2=" + z2).toBe(true);
+        expect(isequalRel(z3, 8.132201558755, TOL), "z3=" + z3).toBe(true);
+        expect(isequalRel(z11, 3.027985928786e-1, TOL), "z11=" + z11).toBe(true);
+        expect(isequalRel(z12, -1.804917420247, TOL), "z12=" + z12).toBe(true);
+        expect(isequalRel(z13, 2.108163619135, TOL), "z13=" + z13).toBe(true);
+        expect(isequalRel(z21, -5.607883259758e-1, TOL), "z21=" + z21).toBe(true);
+        expect(isequalRel(z22, 2.151300497297, TOL), "z22=" + z22).toBe(true);
+        expect(isequalRel(z23, 1.297708424089, TOL), "z23=" + z23).toBe(true);
+        expect(isequalRel(z31, 3.714486889036, TOL), "z31=" + z31).toBe(true);
+        expect(isequalRel(z32, -1.273194706702e1, TOL), "z32=" + z32).toBe(true);
+        expect(isequalRel(z33, 3.437622249834, TOL), "z33=" + z33).toBe(true);
+        expect(isequalRel(zmol, 1.734002358913, TOL), "zmol=" + zmol).toBe(true);
+        expect(isequalRel(zmos, 2.9744747945, TOL), "zmos=" + zmos).toBe(true);
+    });
+    // 28626
+    // 28872
+    // 29141
+    // *** error: t:= 440.000000 *** code =   6
+    // 29238
+    // 88888
+});

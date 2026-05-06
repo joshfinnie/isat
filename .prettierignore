@@ -1,0 +1,13 @@
+# Vendor and legacy
+jasmine/
+viz/cesium/
+viz/public/cesium/
+viz/static/
+viz/tle/
+Gruntfile.js
+doc/
+pnpm-lock.yaml
+
+# Claude configuration
+.claude/
+memory/

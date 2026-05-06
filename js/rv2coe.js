@@ -1,7 +1,9 @@
-/*global mag: true, small: true, infinite: true, twopi: true, angl: true,
-  halfpi: true, newtonnu: true, cross: true, dot: true, sign: true,
-  UNDEFINED: true,
-*/
+import { small, infinite, UNDEFINED, twopi, halfpi } from "./constmath.js";
+import { mag } from "./mag.js";
+import { cross, dot } from "./math_utils.js";
+import { angl } from "./angl.js";
+import { newtonnu } from "./newtonnu.js";
+
 // ------------------------------------------------------------------------------
 //
 //                           function rv2coe
@@ -67,46 +69,60 @@
 
 function rv2coe(r, v, mu) {
     // -------------------------  implementation   -----------------
-    var magr, magv,
+    let magr,
+        magv,
         // ------------------  find h n and e vectors   ----------------
-        hbar,                       // hbar is a vector
+        hbar, // hbar is a vector
         magh,
         nbar = [],
-        magn, c1, rdotv,
+        magn,
+        c1,
+        rdotv,
         ebar = [],
-        i, ecc, sme, a, p, hk, incl,
+        i,
+        ecc,
+        sme,
+        a,
+        p,
+        hk,
+        incl,
         typeorbit,
-        temp, omega, argp,
-        nu, arglat, m, lonper,
-        truelon, em;
+        temp,
+        omega,
+        argp,
+        nu,
+        arglat,
+        m,
+        lonper,
+        truelon,
+        em;
 
     magr = mag(r);
     magv = mag(v);
     // ------------------  find h n and e vectors   ----------------
-    hbar = cross(r, v);         // hbar is a vector
+    hbar = cross(r, v); // hbar is a vector
     magh = mag(hbar);
 
     if (magh > small) {
-        nbar[0] = - hbar[1];
-        nbar[1] =   hbar[0];
-        nbar[2] =   0.0;
+        nbar[0] = -hbar[1];
+        nbar[1] = hbar[0];
+        nbar[2] = 0.0;
         magn = mag(nbar);
         c1 = magv * magv - mu / magr;
         rdotv = dot(r, v);
-        for (i in [0, 1, 2]) {
+        for (i = 0; i < 3; i++) {
             ebar[i] = (c1 * r[i] - rdotv * v[i]) / mu;
         }
         ecc = mag(ebar);
 
         // ------------  find a e and semi-latus rectum   ----------
-        sme = (magv * magv * 0.5) - (mu / magr);
+        sme = magv * magv * 0.5 - mu / magr;
         if (Math.abs(sme) > small) {
-            a = -mu  / (2.0 * sme);
-        }
-        else {
+            a = -mu / (2.0 * sme);
+        } else {
             a = infinite;
         }
-        p = magh * magh / mu;
+        p = (magh * magh) / mu;
 
         // -----------------  find inclination   -------------------
         hk = hbar[2] / magh;
@@ -114,23 +130,19 @@ function rv2coe(r, v, mu) {
 
         // --------  determine type of orbit for later use  --------
         // ------ elliptical, parabolic, hyperbolic inclined -------
-        typeorbit = 'ei';
+        typeorbit = "ei";
         if (ecc < small) {
-            alert("ecc<small");
             // ----------------  circular equatorial ---------------
-            if ((incl < small) || (Math.abs(incl - Math.PI) < small)) {
-                typeorbit = 'ce';
-            }
-            else {
+            if (incl < small || Math.abs(incl - Math.PI) < small) {
+                typeorbit = "ce";
+            } else {
                 // --------------  circular inclined ---------------
-                typeorbit = 'ci';
+                typeorbit = "ci";
             }
-        }
-        else {
+        } else {
             // - elliptical, parabolic, hyperbolic equatorial --
-            if ((incl < small) || (Math.abs(incl - Math.PI) < small)) {
-                alert("eliptical/para/hyper: type=ee");
-                typeorbit = 'ee';
+            if (incl < small || Math.abs(incl - Math.PI) < small) {
+                typeorbit = "ee";
             }
         }
 
@@ -138,60 +150,53 @@ function rv2coe(r, v, mu) {
         if (magn > small) {
             temp = nbar[0] / magn;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             omega = Math.acos(temp);
             if (nbar[1] < 0.0) {
                 omega = twopi - omega;
             }
-        }
-        else {
-            alert("omega=UNDEFINED");
+        } else {
             omega = UNDEFINED;
         }
 
         // ---------------- find argument of perigee ---------------
-        if (typeorbit === 'ei') {
+        if (typeorbit === "ei") {
             argp = angl(nbar, ebar);
             if (ebar[2] < 0.0) {
                 argp = twopi - argp;
             }
-        }
-        else {
-            alert("argp=UNDEFINED");
+        } else {
             argp = UNDEFINED;
         }
 
         // ------------  find true anomaly at epoch    -------------
-        if (typeorbit[0] === 'e') {
-            nu =  angl(ebar, r);
+        if (typeorbit[0] === "e") {
+            nu = angl(ebar, r);
             if (rdotv < 0.0) {
                 nu = twopi - nu;
             }
-        }
-        else {
-            alert("nu=UNDEFINED");
+        } else {
             nu = UNDEFINED;
         }
 
         // ----  find argument of latitude - circular inclined -----
-        if (typeorbit === 'ci') {
+        if (typeorbit === "ci") {
             arglat = angl(nbar, r);
             if (r[2] < 0.0) {
                 arglat = twopi - arglat;
             }
             m = arglat;
-        }
-        else {
+        } else {
             //alert("arglat=UNDEFINED");
             arglat = UNDEFINED;
         }
 
         // -- find longitude of perigee - elliptical equatorial ----
-        if ((ecc > small) && (typeorbit === 'ee')) {
+        if (ecc > small && typeorbit === "ee") {
             temp = ebar[0] / ecc;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             lonper = Math.acos(temp);
             if (ebar[1] < 0.0) {
@@ -200,17 +205,16 @@ function rv2coe(r, v, mu) {
             if (incl > halfpi) {
                 lonper = twopi - lonper;
             }
-        }
-        else {
+        } else {
             //alert("lonper=UNDEFINED");
             lonper = UNDEFINED;
         }
 
         // -------- find true longitude - circular equatorial ------
-        if  ((magr > small) && (typeorbit === 'ce')) {
+        if (magr > small && typeorbit === "ce") {
             temp = r[0] / magr;
             if (Math.abs(temp) > 1.0) {
-                temp = sign(temp);
+                temp = Math.sign(temp);
             }
             truelon = Math.acos(temp);
             if (r[1] < 0.0) {
@@ -220,33 +224,33 @@ function rv2coe(r, v, mu) {
                 truelon = twopi - truelon;
             }
             m = truelon;
-        }
-        else {
+        } else {
             //alert("truelon=UNDEFINED");
             truelon = UNDEFINED;
         }
 
         // ------------ find mean anomaly for all orbits -----------
-        if (typeorbit[0] === 'e') {
+        if (typeorbit[0] === "e") {
             //[e, m] = newtonnu(ecc,nu ); // e is undefined, but unused
             em = newtonnu(ecc, nu);
             m = em[1];
         }
-
-    }
-    else {                      // magh <= small
-        p       = UNDEFINED;
-        a       = UNDEFINED;
-        ecc     = UNDEFINED;
-        incl    = UNDEFINED;
-        omega   = UNDEFINED;
-        argp    = UNDEFINED;
-        nu      = UNDEFINED;
-        m       = UNDEFINED;
-        arglat  = UNDEFINED;
+    } else {
+        // magh <= small
+        p = UNDEFINED;
+        a = UNDEFINED;
+        ecc = UNDEFINED;
+        incl = UNDEFINED;
+        omega = UNDEFINED;
+        argp = UNDEFINED;
+        nu = UNDEFINED;
+        m = UNDEFINED;
+        arglat = UNDEFINED;
         truelon = UNDEFINED;
-        lonper  = UNDEFINED;
+        lonper = UNDEFINED;
     }
 
     return [p, a, ecc, incl, omega, argp, nu, m, arglat, truelon, lonper];
 }
+
+export { rv2coe };

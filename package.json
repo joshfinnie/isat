@@ -1,20 +1,53 @@
 {
-  "name": "isat",
-  "version": "1.0.0",
-  "description": "Interactive Satellite Tracker",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/koansys/isat.git"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-cli": "~0.1.13",
-    "grunt-saucelabs": "~5.1.3",
-    "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-watch": "~0.6.1"
-  },
-  "scripts": {
-    "test": "grunt test"
-  }
+    "name": "isat",
+    "version": "1.0.0",
+    "description": "Interactive Satellite Tracker",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joshfinnie/isat.git"
+    },
+    "type": "module",
+    "main": "./js/index.js",
+    "types": "./js/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./js/index.d.ts",
+            "default": "./js/index.js"
+        },
+        "./sgp4": "./js/sgp4.js",
+        "./twoline2rv": "./js/twoline2rv.js",
+        "./getgravc": "./js/getgravc.js"
+    },
+    "scripts": {
+        "dev": "vite serve viz --port 9999",
+        "fetch-tles": "python3 scripts/fetch_tles.py",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "prepare": "husky && mkdir -p viz/public/cesium && cp -r node_modules/cesium/Build/CesiumUnminified/* viz/public/cesium/"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "eslint": "^9.0.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.0.2",
+        "prettier": "^3.0.0",
+        "vite": "^6.0.0",
+        "vitest": "^3.0.0"
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "*.{json,md,html,css}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "cesium": "^1.141.0"
+    }
 }

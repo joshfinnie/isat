@@ -36,59 +36,40 @@
 // [e0,m] = newtonnu ( ecc,nu );
 // ------------------------------------------------------------------------------
 
-// Math.* doesn't have sinh, asinh so define them
-// We could add sinh and asinh like:
-//  Math.constructor.prototype.sinh = function ....
-//  Math.constructor.prototype.asinh = function ...
-
-function sinh(val) {
-    return (Math.pow(Math.E, val) - Math.pow(Math.E, -val)) / 2;
-}
-
-function asinh(val) {
-    return Math.log(val + Math.sqrt(val * val + 1));
-}
-
-
 function newtonnu(ecc, nu) {
-    var e0 = 999999.9,
-        m = 999999.9,
-        small = 0.00000001,
-        sine, cose;
+    let e0 = 999999.9,
+        m = 999999.9;
+    const small = 0.00000001;
+    let sine, cose;
 
     // --------------------------- circular ------------------------
     if (Math.abs(ecc) < small) {
-        m  = nu;
+        m = nu;
         e0 = nu;
-    }
-    else {
+    } else {
         // ---------------------- elliptical -----------------------
         if (ecc < 1.0 - small) {
             sine = (Math.sqrt(1.0 - ecc * ecc) * Math.sin(nu)) / (1.0 + ecc * Math.cos(nu));
             cose = (ecc + Math.cos(nu)) / (1.0 + ecc * Math.cos(nu));
-            e0  = Math.atan2(sine, cose);
-            m   = e0 - ecc * Math.sin(e0);
-        }
-        else {
+            e0 = Math.atan2(sine, cose);
+            m = e0 - ecc * Math.sin(e0);
+        } else {
             // -------------------- hyperbolic  --------------------
             if (ecc > 1.0 + small) {
-                if ((ecc > 1.0) &&
-                    (Math.abs(nu) + 0.00001 < Math.PI - Math.acos(1.0 / ecc))) {
+                if (ecc > 1.0 && Math.abs(nu) + 0.00001 < Math.PI - Math.acos(1.0 / ecc)) {
                     sine = (Math.sqrt(ecc * ecc - 1.0) * Math.sin(nu)) / (1.0 + ecc * Math.cos(nu));
-                    e0   = asinh(sine);
-                    m    = ecc * sinh(e0) - e0;
-                }
-                else {
+                    e0 = Math.asinh(sine);
+                    m = ecc * Math.sinh(e0) - e0;
+                } else {
                     // ----------------- parabolic ---------------------
-                    if (Math.abs(nu) < 168.0 * Math.PI / 180.0) {
+                    if (Math.abs(nu) < (168.0 * Math.PI) / 180.0) {
                         e0 = Math.tan(nu * 0.5);
-                        m  = e0 + (e0 * e0 * e0) / 3.0;
+                        m = e0 + (e0 * e0 * e0) / 3.0;
                     }
                 }
             }
         }
     }
-
 
     if (ecc < 1.0) {
         m = m % (2.0 * Math.PI);
@@ -101,3 +82,4 @@ function newtonnu(ecc, nu) {
     return [e0, m];
 }
 
+export { newtonnu };
