@@ -20,6 +20,7 @@
     },
     "scripts": {
         "dev": "vite serve viz --port 9999",
+        "fetch-tles": "python3 scripts/fetch_tles.py",
         "test": "vitest run",
         "test:watch": "vitest",
         "lint": "eslint .",
@@ -32,7 +33,6 @@
         "eslint": "^9.0.0",
         "prettier": "^3.0.0",
         "vite": "^6.0.0",
-        "vite-plugin-cesium": "^1.2.23",
         "vitest": "^3.0.0"
     },
     "dependencies": {

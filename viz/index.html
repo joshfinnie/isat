@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>iSat — Satellite Tracker</title>
+        <link rel="stylesheet" href="/cesium/Widgets/widgets.css" />
         <style>
             html,
             body,
@@ -32,6 +33,8 @@
     <body>
         <div id="cesiumContainer"></div>
         <div id="status">Loading TLEs…</div>
+        <!-- Must be set before the Cesium module loads so internal asset fetches resolve correctly -->
+        <script>window.CESIUM_BASE_URL = '/cesium/';</script>
         <script type="module" src="./index.js"></script>
     </body>
 </html>

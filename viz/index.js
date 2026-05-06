@@ -1,8 +1,7 @@
 import * as Cesium from "cesium";
-import "cesium/Build/Cesium/Widgets/widgets.css";
 import { twoline2rv, sgp4, jday, gstime } from "../js/index.js";
 
-const TLE_URL = "https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle";
+const TLE_URL = "/tle/cubesat.txt";
 const WHICHCONST = 72;
 
 const status = document.getElementById("status");
@@ -44,9 +43,6 @@ function currentJd(now) {
 
 async function main() {
     const viewer = new Cesium.Viewer("cesiumContainer", {
-        imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-            url: "https://tile.openstreetmap.org/",
-        }),
         baseLayerPicker: false,
         geocoder: false,
         homeButton: true,
@@ -63,7 +59,10 @@ async function main() {
     try {
         const res = await fetch(TLE_URL);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        tleData = parseTleText(await res.text());
+        const text = await res.text();
+        console.log("Fetched TLE text length:", text.length);
+        tleData = parseTleText(text);
+        console.log("Parsed TLE count:", tleData.length);
     } catch (err) {
         status.textContent = `Failed to load TLEs: ${err.message}`;
         return;
@@ -75,11 +74,17 @@ async function main() {
     const parsed = tleData.flatMap(({ name, line1, line2 }) => {
         try {
             const [satrec] = twoline2rv(WHICHCONST, line1, line2, "c", "e");
+            if (satrec.error !== 0) {
+                console.warn(`SGP4 init error ${satrec.error} for ${name}`);
+            }
             return satrec.error === 0 ? [{ name, satrec }] : [];
-        } catch {
+        } catch (e) {
+            console.error(`SGP4 exception for ${name}:`, e);
             return [];
         }
     });
+
+    console.log("Successfully initialized satrecs:", parsed.length);
 
     // Compute initial positions at current time — skip any that fail propagation
     const now = new Date();
@@ -89,10 +94,20 @@ async function main() {
     const points = new Cesium.PointPrimitiveCollection();
     viewer.scene.primitives.add(points);
 
+    let nanCount = 0;
+    let propErrorCount = 0;
+
     const satellites = parsed.flatMap(({ name, satrec }) => {
         const tsince = (jd0 - satrec.jdsatepoch) * 1440;
         const [updated, r] = sgp4(satrec, tsince);
-        if (updated.error !== 0) return [];
+        if (updated.error !== 0) {
+            propErrorCount++;
+            return [];
+        }
+        if (isNaN(r[0]) || isNaN(r[1]) || isNaN(r[2])) {
+            nanCount++;
+            return [];
+        }
         const primitive = points.add({
             position: eciToCartesian3(r, gst0),
             color: Cesium.Color.YELLOW,
@@ -101,6 +116,9 @@ async function main() {
         });
         return [{ name, satrec, primitive }];
     });
+
+    console.log(`Propagation summary: ${satellites.length} success, ${propErrorCount} errors, ${nanCount} NaNs`);
+
 
     status.textContent = `Tracking ${satellites.length} satellites`;
 
@@ -112,7 +130,11 @@ async function main() {
         for (const { satrec, primitive } of satellites) {
             const tsince = (jd - satrec.jdsatepoch) * 1440;
             const [updated, r] = sgp4(satrec, tsince);
-            if (updated.error !== 0) continue;
+            if (updated.error !== 0 || isNaN(r[0]) || isNaN(r[1]) || isNaN(r[2])) {
+                primitive.show = false;
+                continue;
+            }
+            primitive.show = true;
             primitive.position = eciToCartesian3(r, gst);
         }
     });

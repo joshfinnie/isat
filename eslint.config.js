@@ -2,7 +2,7 @@ import js from "@eslint/js";
 
 export default [
     {
-        ignores: ["node_modules/**", "viz/cesium/**", "doc/**", "jasmine/**"],
+        ignores: ["node_modules/**", "viz/public/cesium/**", "doc/**", "jasmine/**"],
     },
     js.configs.recommended,
     {
@@ -34,6 +34,7 @@ export default [
                 setInterval: "readonly",
                 clearInterval: "readonly",
                 setTimeout: "readonly",
+                fetch: "readonly",
                 Cesium: "readonly",
             },
         },

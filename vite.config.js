@@ -1,9 +1,13 @@
 import { defineConfig } from "vite";
-import cesium from "vite-plugin-cesium";
 
 export default defineConfig({
     root: "viz",
-    plugins: [cesium()],
+    define: {
+        CESIUM_BASE_URL: JSON.stringify("/cesium/"),
+    },
+    optimizeDeps: {
+        exclude: ["cesium"],
+    },
     server: {
         port: 9999,
         proxy: {
