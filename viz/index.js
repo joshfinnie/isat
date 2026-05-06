@@ -117,8 +117,9 @@ async function main() {
         return [{ name, satrec, primitive }];
     });
 
-    console.log(`Propagation summary: ${satellites.length} success, ${propErrorCount} errors, ${nanCount} NaNs`);
-
+    console.log(
+        `Propagation summary: ${satellites.length} success, ${propErrorCount} errors, ${nanCount} NaNs`
+    );
 
     status.textContent = `Tracking ${satellites.length} satellites`;
 

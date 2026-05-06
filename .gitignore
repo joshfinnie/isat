@@ -40,3 +40,11 @@ sgp4/docs/pasta.html
 /Miura_Thesis_CD/SGP4 MATLAB/tmatall.out
 /Miura_Thesis_CD/SGP4 MATLAB/TESTS.out
 /js/octave-core
+
+# Generated assets
+viz/tle/*.txt
+viz/public/cesium/
+
+# Claude configuration
+.claude/
+memory/
