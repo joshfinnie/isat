@@ -8,7 +8,7 @@ describe("dspace", () => {
     // 5
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -62,7 +62,7 @@ describe("dspace", () => {
     // 4632
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -114,7 +114,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -166,7 +166,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -218,7 +218,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -270,7 +270,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -324,7 +324,7 @@ describe("dspace", () => {
     // 6251
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -378,7 +378,7 @@ describe("dspace", () => {
     // 8195
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -430,7 +430,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -482,7 +482,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -534,7 +534,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -586,7 +586,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -638,7 +638,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -690,7 +690,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -742,7 +742,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -794,7 +794,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -846,7 +846,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -898,7 +898,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -950,7 +950,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1002,7 +1002,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1054,7 +1054,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1106,7 +1106,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1158,7 +1158,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1210,7 +1210,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1262,7 +1262,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1314,7 +1314,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1366,7 +1366,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1418,7 +1418,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1470,7 +1470,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1522,7 +1522,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1574,7 +1574,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1626,7 +1626,7 @@ describe("dspace", () => {
     });
 
     test("-1.197359551623e-11,  6.453213834121e-11, -3.893722738131e-12, -7.364857538023e-12,  2.576960140946e-12,  4.361455592714e-12, -2.528789465953e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.197359551623e-11,
             6.453213834121e-11,
             -3.893722738131e-12,
@@ -1678,7 +1678,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1732,7 +1732,7 @@ describe("dspace", () => {
     // 9880
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1784,7 +1784,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1836,7 +1836,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1888,7 +1888,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1940,7 +1940,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -1992,7 +1992,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2044,7 +2044,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2096,7 +2096,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2148,7 +2148,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2200,7 +2200,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2252,7 +2252,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2304,7 +2304,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2356,7 +2356,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2408,7 +2408,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2460,7 +2460,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2512,7 +2512,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2564,7 +2564,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2616,7 +2616,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2668,7 +2668,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2720,7 +2720,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2772,7 +2772,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2824,7 +2824,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2876,7 +2876,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2928,7 +2928,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -2980,7 +2980,7 @@ describe("dspace", () => {
     });
 
     test("-1.223066000340e-11,  7.174605316403e-11, -4.151751044682e-12, -8.877536621154e-12,  3.097256488149e-12,  5.507367501422e-12, -3.254911516032e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.22306600034e-11,
             7.174605316403e-11,
             -4.151751044682e-12,
@@ -3032,7 +3032,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3086,7 +3086,7 @@ describe("dspace", () => {
     // 9998
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3138,7 +3138,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3190,7 +3190,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3242,7 +3242,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3294,7 +3294,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3346,7 +3346,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3398,7 +3398,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3450,7 +3450,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3502,7 +3502,7 @@ describe("dspace", () => {
     });
 
     test(" 0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3554,7 +3554,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3606,7 +3606,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3658,7 +3658,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3710,7 +3710,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3762,7 +3762,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3814,7 +3814,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3868,7 +3868,7 @@ describe("dspace", () => {
     // 11801
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3920,7 +3920,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -3972,7 +3972,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4024,7 +4024,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4076,7 +4076,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4128,7 +4128,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4182,7 +4182,7 @@ describe("dspace", () => {
     // 14128
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4234,7 +4234,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4286,7 +4286,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4338,7 +4338,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4390,7 +4390,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4442,7 +4442,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4494,7 +4494,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4546,7 +4546,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4598,7 +4598,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4650,7 +4650,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4702,7 +4702,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4754,7 +4754,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4806,7 +4806,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4858,7 +4858,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4910,7 +4910,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -4962,7 +4962,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5014,7 +5014,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5066,7 +5066,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5118,7 +5118,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5170,7 +5170,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5222,7 +5222,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5274,7 +5274,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5326,7 +5326,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5378,7 +5378,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5430,7 +5430,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5482,7 +5482,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5536,7 +5536,7 @@ describe("dspace", () => {
     // 16925
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5588,7 +5588,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5640,7 +5640,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5692,7 +5692,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5744,7 +5744,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5796,7 +5796,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5848,7 +5848,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5900,7 +5900,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -5952,7 +5952,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6004,7 +6004,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6056,7 +6056,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6108,7 +6108,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6160,7 +6160,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6212,7 +6212,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6266,7 +6266,7 @@ describe("dspace", () => {
     // 20413
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6318,7 +6318,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6370,7 +6370,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6422,7 +6422,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6474,7 +6474,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6526,7 +6526,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6578,7 +6578,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6630,7 +6630,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6682,7 +6682,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6734,7 +6734,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6786,7 +6786,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6838,7 +6838,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6890,7 +6890,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6942,7 +6942,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -6994,7 +6994,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7046,7 +7046,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7098,7 +7098,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7150,7 +7150,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7202,7 +7202,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7254,7 +7254,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7306,7 +7306,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7358,7 +7358,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7410,7 +7410,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7462,7 +7462,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7514,7 +7514,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7566,7 +7566,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -7618,7 +7618,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7672,7 +7672,7 @@ describe("dspace", () => {
     // 21897
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7724,7 +7724,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7776,7 +7776,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7828,7 +7828,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7880,7 +7880,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7932,7 +7932,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -7984,7 +7984,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8036,7 +8036,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8088,7 +8088,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8140,7 +8140,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8192,7 +8192,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8244,7 +8244,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8296,7 +8296,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8348,7 +8348,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8400,7 +8400,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8452,7 +8452,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8504,7 +8504,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8556,7 +8556,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8608,7 +8608,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8660,7 +8660,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8712,7 +8712,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8764,7 +8764,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8816,7 +8816,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8868,7 +8868,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8920,7 +8920,7 @@ describe("dspace", () => {
     });
 
     test("1.358430480330e-11,  8.393534226859e-11, -7.731467500396e-12, -1.225068944742e-11,  4.702956210526e-12,  8.003291640479e-12, -6.224656265138e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.35843048033e-11,
             8.393534226859e-11,
             -7.731467500396e-12,
@@ -8975,7 +8975,7 @@ describe("dspace", () => {
     // *** error: t:= 494.202867 *** code =   1
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9029,7 +9029,7 @@ describe("dspace", () => {
     // 22674
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9081,7 +9081,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9133,7 +9133,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9185,7 +9185,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9237,7 +9237,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9289,7 +9289,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9341,7 +9341,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9393,7 +9393,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9445,7 +9445,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9497,7 +9497,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9549,7 +9549,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9601,7 +9601,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9653,7 +9653,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9705,7 +9705,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9757,7 +9757,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9809,7 +9809,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9861,7 +9861,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9913,7 +9913,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -9965,7 +9965,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10017,7 +10017,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10069,7 +10069,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10121,7 +10121,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10173,7 +10173,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10225,7 +10225,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10277,7 +10277,7 @@ describe("dspace", () => {
     });
 
     test("1.241189028817e-11,  8.551864262335e-11, -6.602089272382e-12, -1.302466004394e-11,  4.891528985291e-12,  8.891260588609e-12, -6.477888050339e-12, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -1.241189028817e-11,
             8.551864262335e-11,
             -6.602089272382e-12,
@@ -10329,7 +10329,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10383,7 +10383,7 @@ describe("dspace", () => {
     // 23177
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10435,7 +10435,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10487,7 +10487,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10539,7 +10539,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10591,7 +10591,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10643,7 +10643,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10695,7 +10695,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10747,7 +10747,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10799,7 +10799,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10851,7 +10851,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10903,7 +10903,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -10955,7 +10955,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11007,7 +11007,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11059,7 +11059,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11113,7 +11113,7 @@ describe("dspace", () => {
     // 23333
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11165,7 +11165,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11217,7 +11217,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11269,7 +11269,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11321,7 +11321,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11373,7 +11373,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11425,7 +11425,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11477,7 +11477,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11529,7 +11529,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11581,7 +11581,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11633,7 +11633,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11685,7 +11685,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11737,7 +11737,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11789,7 +11789,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11841,7 +11841,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11893,7 +11893,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11947,7 +11947,7 @@ describe("dspace", () => {
     // 23599
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -11999,7 +11999,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12051,7 +12051,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12103,7 +12103,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12155,7 +12155,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12207,7 +12207,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12259,7 +12259,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12311,7 +12311,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12363,7 +12363,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12415,7 +12415,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12467,7 +12467,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12519,7 +12519,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12571,7 +12571,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12623,7 +12623,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12675,7 +12675,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12727,7 +12727,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12779,7 +12779,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12831,7 +12831,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12883,7 +12883,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12935,7 +12935,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -12987,7 +12987,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13039,7 +13039,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13091,7 +13091,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13143,7 +13143,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13195,7 +13195,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13247,7 +13247,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13299,7 +13299,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13351,7 +13351,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13403,7 +13403,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13455,7 +13455,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13507,7 +13507,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13559,7 +13559,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13611,7 +13611,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13663,7 +13663,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13715,7 +13715,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13767,7 +13767,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13819,7 +13819,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13871,7 +13871,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13925,7 +13925,7 @@ describe("dspace", () => {
     // 24208
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -13977,7 +13977,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14029,7 +14029,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14081,7 +14081,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14133,7 +14133,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14185,7 +14185,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14237,7 +14237,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14289,7 +14289,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14341,7 +14341,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14393,7 +14393,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14445,7 +14445,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14497,7 +14497,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14549,7 +14549,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14601,7 +14601,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14655,7 +14655,7 @@ describe("dspace", () => {
     // 25954
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14707,7 +14707,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14759,7 +14759,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14811,7 +14811,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14863,7 +14863,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14915,7 +14915,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -14967,7 +14967,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15019,7 +15019,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15071,7 +15071,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15123,7 +15123,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15175,7 +15175,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15227,7 +15227,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15279,7 +15279,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15331,7 +15331,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15383,7 +15383,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15435,7 +15435,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15487,7 +15487,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15539,7 +15539,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15591,7 +15591,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15643,7 +15643,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15695,7 +15695,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15747,7 +15747,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15799,7 +15799,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15851,7 +15851,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15903,7 +15903,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -15955,7 +15955,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16007,7 +16007,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16061,7 +16061,7 @@ describe("dspace", () => {
     // 26900
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16113,7 +16113,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16165,7 +16165,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16217,7 +16217,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -16269,7 +16269,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16323,7 +16323,7 @@ describe("dspace", () => {
     // 26975
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16375,7 +16375,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16427,7 +16427,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16479,7 +16479,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16531,7 +16531,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16583,7 +16583,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16635,7 +16635,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16687,7 +16687,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16739,7 +16739,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16791,7 +16791,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16843,7 +16843,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16895,7 +16895,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16947,7 +16947,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -16999,7 +16999,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17051,7 +17051,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17103,7 +17103,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17155,7 +17155,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17207,7 +17207,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17259,7 +17259,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17311,7 +17311,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17363,7 +17363,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17415,7 +17415,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17467,7 +17467,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17519,7 +17519,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17571,7 +17571,7 @@ describe("dspace", () => {
     });
 
     test("9.786807233862e-12,  4.375070167297e-11, -7.299736059955e-13, -3.088972920727e-12,  1.175930799908e-12,  1.666014658389e-12, -5.223073387126e-13, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             -9.786807233862e-12,
             4.375070167297e-11,
             -7.299736059955e-13,
@@ -17625,7 +17625,7 @@ describe("dspace", () => {
     // 28057
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17679,7 +17679,7 @@ describe("dspace", () => {
     // 28129
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17731,7 +17731,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17783,7 +17783,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17835,7 +17835,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17887,7 +17887,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17939,7 +17939,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -17991,7 +17991,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18043,7 +18043,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18095,7 +18095,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18147,7 +18147,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18199,7 +18199,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18251,7 +18251,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18303,7 +18303,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18358,7 +18358,7 @@ describe("dspace", () => {
     // *** error: t:= 1560.000000 *** code =   1
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18412,7 +18412,7 @@ describe("dspace", () => {
     // 28623
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18464,7 +18464,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18516,7 +18516,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18568,7 +18568,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18620,7 +18620,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18672,7 +18672,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18724,7 +18724,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18776,7 +18776,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18828,7 +18828,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18880,7 +18880,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18932,7 +18932,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -18984,7 +18984,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19036,7 +19036,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19088,7 +19088,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19142,7 +19142,7 @@ describe("dspace", () => {
     // 28626
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19194,7 +19194,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19246,7 +19246,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19298,7 +19298,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19350,7 +19350,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19402,7 +19402,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19454,7 +19454,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19506,7 +19506,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19558,7 +19558,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19610,7 +19610,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19662,7 +19662,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19714,7 +19714,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,
@@ -19766,7 +19766,7 @@ describe("dspace", () => {
     });
 
     test("0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00,  0.000000000000e+00, ", function () {
-        const [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm] = dspace(
+        const { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm } = dspace(
             0.0,
             0.0,
             0.0,

@@ -260,7 +260,7 @@ function dspace(
         nm = no + dndt;
     }
 
-    return [atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm];
+    return { atime, em, argpm, inclm, xli, mm, xni, nodem, dndt, nm };
 }
 
 export { dspace };

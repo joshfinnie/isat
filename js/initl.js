@@ -132,7 +132,7 @@ function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode = "i") {
         gsto = gsto + twopi;
     }
 
-    return [
+    return {
         ainv,
         ao,
         con41,
@@ -149,7 +149,7 @@ function initl(ecco, epoch, inclo, no, satn, xke, j2, opsmode = "i") {
         sinio,
         gsto,
         no,
-    ];
+    };
 }
 
 export { initl };

@@ -406,7 +406,7 @@ function dsinit(
         nm = no + dndt;
     }
 
-    return [
+    return {
         em,
         argpm,
         inclm,
@@ -438,7 +438,7 @@ function dsinit(
         xlamo,
         xli,
         xni,
-    ];
+    };
 }
 
 export { dsinit };

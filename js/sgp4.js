@@ -235,7 +235,17 @@ function sgp4(satrec, tsince) {
     inclm = satrec.inclo;
     if (satrec.method === "d") {
         tc = satrec.t;
-        [satrec.atime, em, argpm, inclm, satrec.xli, mm, satrec.xni, nodem, , nm] = dspace(
+        ({
+            atime: satrec.atime,
+            em,
+            argpm,
+            inclm,
+            xli: satrec.xli,
+            mm,
+            xni: satrec.xni,
+            nodem,
+            nm,
+        } = dspace(
             satrec.d2201,
             satrec.d2211,
             satrec.d3210,
@@ -272,7 +282,7 @@ function sgp4(satrec, tsince) {
             satrec.xni,
             nodem,
             nm
-        );
+        ));
     } // if method = d
 
     if (nm <= 0.0) {
@@ -314,7 +324,13 @@ function sgp4(satrec, tsince) {
     sinip = sinim;
     cosip = cosim;
     if (satrec.method === "d") {
-        [ep, xincp, nodep, argpp, mp] = dpper(
+        ({
+            ep,
+            inclp: xincp,
+            nodep,
+            argpp,
+            mp,
+        } = dpper(
             satrec.e3,
             satrec.ee2,
             satrec.peo,
@@ -355,7 +371,7 @@ function sgp4(satrec, tsince) {
             argpp,
             mp,
             satrec.opsmode || "i"
-        );
+        ));
 
         if (xincp < 0.0) {
             xincp = -xincp;

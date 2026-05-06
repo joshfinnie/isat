@@ -332,7 +332,7 @@ function dscom(epoch, ep, argpp, tc, inclp, nodep, np) {
     xh2 = -2.0 * s2 * z22;
     xh3 = -2.0 * s2 * (z23 - z21);
 
-    return [
+    return {
         sinim,
         cosim,
         sinomm,
@@ -414,7 +414,7 @@ function dscom(epoch, ep, argpp, tc, inclp, nodep, np) {
         z33,
         zmol,
         zmos,
-    ];
+    };
 }
 
 export { dscom };

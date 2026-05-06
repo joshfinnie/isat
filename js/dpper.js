@@ -246,7 +246,7 @@ function dpper(
         }
     } // if init == 'n'
 
-    return [ep, inclp, nodep, argpp, mp];
+    return { ep, inclp, nodep, argpp, mp };
 }
 
 export { dpper };
