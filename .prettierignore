@@ -1,6 +1,8 @@
 # Vendor and legacy
 jasmine/
 viz/cesium/
+viz/static/
+viz/tle/
 Gruntfile.js
 
 # Claude configuration
