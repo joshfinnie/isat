@@ -4,7 +4,7 @@
     "description": "Interactive Satellite Tracker",
     "repository": {
         "type": "git",
-        "url": "git://github.com/koansys/isat.git"
+        "url": "git+https://github.com/joshfinnie/isat.git"
     },
     "type": "module",
     "main": "./js/index.js",
